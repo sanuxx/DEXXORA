@@ -24,10 +24,11 @@
       <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
     </div>
     <ul class="nav-links">
-      <li><button onclick="showPage('home')" id="nav-home" class="nav-active">Home</button></li>
+      <li><button onclick="showPage('home')" id="nav-home">Home</button></li>
+      <li><button onclick="showPage('about')" id="nav-about">About</button></li>
+      <li><button onclick="showPage('services')" id="nav-services">Services</button></li>
       <li><button onclick="showPage('expert')" id="nav-expert">Expert Hub</button></li>
       <li><button onclick="showPage('industries')" id="nav-industries">Industries</button></li>
-      <li><button onclick="showPage('about')" id="nav-about">About Us</button></li>
       <li class="nav-dropdown">
         <button class="nav-dropdown-btn">More <svg viewBox="0 0 24 24">
             <polyline points="6 9 12 15 18 9" />
@@ -59,9 +60,10 @@
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <button onclick="showPage('home');toggleMenu()">Home</button>
+    <button onclick="showPage('about');toggleMenu()">About</button>
+    <button onclick="showPage('services');toggleMenu()">Services</button>
     <button onclick="showPage('expert');toggleMenu()">Expert Hub</button>
     <button onclick="showPage('industries');toggleMenu()">Industries</button>
-    <button onclick="showPage('about');toggleMenu()">About Us</button>
     <div class="mobile-more-label">More</div>
     <button class="mobile-sub" onclick="showPage('solution');toggleMenu()" style="display:none;">Solution Hub</button>
     <button class="mobile-sub" onclick="showPage('aiproduct');toggleMenu()">AI-Led Product Development</button>
@@ -87,7 +89,7 @@
       <div class="hero-stats">
         <div class="hero-stat">
           <div class="hero-stat-label">Coverage</div>
-          <div class="hero-stat-val">9 sectors served</div>
+          <div class="hero-stat-val">7 sectors served</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-label">Model</div>
@@ -103,94 +105,76 @@
     <!-- Industries intro — premium -->
     <section class="premium-statement-section premium-statement-light">
       <div class="premium-statement-inner">
-        <p class="premium-statement-text premium-statement-text-dark">Operational intelligence is universal in principle, but specific in practice. The decisions that define a bank are not the decisions that define a manufacturer. Our Expert Hub brings cross-sector pattern recognition, and then translates it into the <em>language, realities, and outcomes of your industry.</em></p>
+        <p class="premium-statement-text premium-statement-text-dark">Operational intelligence is universal in principle, but specific in practice. The decisions that define a bank are not the decisions that define a manufacturer. The workflows that matter in hospitality are not the ones that matter in logistics. The way human expertise and AI come together is shaped by the realities of the sector. Our Expert Hub brings cross-sector pattern recognition, then translates it into the <em>language, realities, and outcomes of your industry.</em></p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <span class="s-eyebrow">Sectors we serve</span>
-        <h2 class="s-title">Nine sectors.<br><em>One consistent approach.</em></h2>
+        <h2 class="s-title">Seven sectors.<br><em>One consistent approach.</em></h2>
         <div class="industry-grid" style="margin-top:48px;">
           <div class="industry-card">
             <div class="industry-card-img"><img
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop"
-                alt="Banking and financial services"></div>
+                src="https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=800&auto=format&fit=crop"
+                alt="Manufacturing Operations"></div>
             <div class="industry-card-body">
-              <h3>Banking &amp; Financial Services</h3>
-              <p>Risk, compliance, and customer operations built on real-time decisions.</p>
-            </div>
-          </div>
-          <div class="industry-card">
-            <div class="industry-card-img"><img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop"
-                alt="Insurance operations"></div>
-            <div class="industry-card-body">
-              <h3>Insurance</h3>
-              <p>Underwriting, claims, and distribution re-engineered around predictive intelligence.</p>
+              <h3>Manufacturing Operations</h3>
+              <p>Move from reactive production to connected, intelligent factory operations. Visibility across machines, lines, and supply flows in real time.</p>
             </div>
           </div>
           <div class="industry-card">
             <div class="industry-card-img"><img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
-                alt="Telecommunications operations"></div>
+                alt="Apparel and Textile Operations"></div>
             <div class="industry-card-body">
-              <h3>Telecommunications</h3>
-              <p>Network, customer, and commercial operations connected into a unified decision layer.</p>
+              <h3>Apparel &amp; Textile Operations</h3>
+              <p>Align production with demand as it shifts. Improve shopfloor visibility, quality, and supply decisions in one operating view.</p>
             </div>
           </div>
           <div class="industry-card">
             <div class="industry-card-img"><img
-                src="https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=800&auto=format&fit=crop"
-                alt="Manufacturing operations"></div>
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop"
+                alt="Insurance and Financial Operations"></div>
             <div class="industry-card-body">
-              <h3>Manufacturing</h3>
-              <p>Production, supply, and quality operations driven by integrated signals and prescriptive action.</p>
+              <h3>Insurance &amp; Financial Operations</h3>
+              <p>Transform underwriting, claims, and compliance from manual processes into intelligent, decision-driven operations.</p>
             </div>
           </div>
           <div class="industry-card">
             <div class="industry-card-img"><img
-                src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?q=80&w=800&auto=format&fit=crop"
-                alt="Retail and consumer operations"></div>
+                src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=800&auto=format&fit=crop"
+                alt="Agriculture and Agri Operations"></div>
             <div class="industry-card-body">
-              <h3>Retail &amp; Consumer</h3>
-              <p>Merchandising, inventory, and customer experience linked through real-time operational intelligence.</p>
+              <h3>Agriculture &amp; Agri Operations</h3>
+              <p>Connect farm, supply chain, and market activity into one intelligence layer. Traceability, yield, and logistics in a single operating view.</p>
             </div>
           </div>
           <div class="industry-card">
             <div class="industry-card-img"><img
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=800&auto=format&fit=crop"
-                alt="Healthcare and life sciences"></div>
+                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop"
+                alt="Hospitality and Experience Operations"></div>
             <div class="industry-card-body">
-              <h3>Healthcare &amp; Life Sciences</h3>
-              <p>Clinical, operational, and compliance decisions sharpened through connected data and workflows.</p>
+              <h3>Hospitality &amp; Experience Operations</h3>
+              <p>Unify guest experience, facilities, and revenue operations into one intelligent environment. Faster decisions. Consistent performance.</p>
             </div>
           </div>
           <div class="industry-card">
             <div class="industry-card-img"><img
                 src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop"
-                alt="Logistics and supply chain operations"></div>
+                alt="Logistics and Supply Chain Operations"></div>
             <div class="industry-card-body">
-              <h3>Logistics &amp; Supply Chain</h3>
-              <p>End-to-end visibility, predictive disruption management, and intelligent fulfilment.</p>
+              <h3>Logistics &amp; Supply Chain Operations</h3>
+              <p>Replace siloed tracking and planning with end-to-end operational intelligence. Fulfilment, routing, and performance in real time.</p>
             </div>
           </div>
           <div class="industry-card">
             <div class="industry-card-img"><img
-                src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop"
-                alt="Energy and utilities operations"></div>
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=800&auto=format&fit=crop"
+                alt="Sports and Health Operations"></div>
             <div class="industry-card-body">
-              <h3>Energy &amp; Utilities</h3>
-              <p>Asset, field, and customer operations optimised through real-time intelligence.</p>
-            </div>
-          </div>
-          <div class="industry-card">
-            <div class="industry-card-img"><img
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
-                alt="Public sector operations"></div>
-            <div class="industry-card-body">
-              <h3>Public Sector</h3>
-              <p>Citizen services and operational programs strengthened through transparent, decision-ready data.</p>
+              <h3>Sports &amp; Health Operations</h3>
+              <p>Integrate performance, health, and operational data across programmes. Evidence-driven decisions at scale.</p>
             </div>
           </div>
         </div>
@@ -226,40 +210,45 @@
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
               <polyline points="22,6 12,13 2,6" />
             </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
-          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg><span>Colombo, Sri Lanka</span></div>
+          <a href="https://linkedin.com/company/dexxora" target="_blank" class="footer-contact-item" style="text-decoration:none;color:inherit;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
+          </a>
         </div>
         <div>
           <p class="footer-col-heading">Navigate</p>
           <ul class="footer-links">
             <li><button onclick="showPage('home')">Home</button></li>
-            <li><button onclick="showPage('about')">About Us</button></li>
-            <li><button onclick="showPage('contact')">Contact Us</button></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer-col-heading">Services</p>
-          <ul class="footer-links">
+            <li><button onclick="showPage('about')">About</button></li>
+            <li><button onclick="showPage('services')">Services</button></li>
             <li><button onclick="showPage('expert')">Expert Hub</button></li>
-            <li><button onclick="showPage('aiproduct')">AI-Led Product Development</button></li>
+            <li><button onclick="showPage('industries')">Industries</button></li>
+            <li><button onclick="showPage('contact')">Contact</button></li>
           </ul>
         </div>
         <div>
-          <p class="footer-col-heading">Focus Areas</p>
+          <p class="footer-col-heading">Connect</p>
           <ul class="footer-links">
-            <li><button onclick="showPage('industries')">Industry 4.0 Strategy</button></li>
-            <li><button onclick="showPage('industries')">Operational Intelligence</button></li>
-            <li><button onclick="showPage('expert')">Architecture Design</button></li>
-            <li><button onclick="showPage('expert')">Data &amp; Integration</button></li>
-            <li><button onclick="showPage('expert')">Transformation Governance</button></li>
+            <li><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></li>
+            <li><a href="https://linkedin.com/company/dexxora" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-heading">Legal</p>
+          <ul class="footer-links">
+            <li><a>Privacy Policy</a></li>
+            <li><a>Terms of Use</a></li>
+            <li><a>Cookie Notice</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <div>&copy; 2026 Dexxora. All rights reserved.</div>
-        <div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a><a>Cookie Notice</a></div>
+        <div class="footer-bottom-links">
+          <a>Privacy Policy</a>
+          <a>Terms of Use</a>
+          <a>Cookie Notice</a>
+        </div>
       </div>
     </footer>
   </div>
@@ -268,6 +257,7 @@
       var map = {
         home: 'home.html',
         about: 'about.html',
+        services: 'services.html',
         expert: 'expert.html',
         industries: 'industries.html',
         aiproduct: 'aiproduct.html',

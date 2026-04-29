@@ -113,14 +113,14 @@
       font-weight: 600;
       letter-spacing: 1.2px;
       text-transform: uppercase;
-      margin-bottom: 28px;
+      margin-bottom: 56px;
     }
 
     .hero-slide-inner h1 {
       font-size: clamp(2.4rem, 5vw, 4rem);
       font-weight: 700;
-      line-height: 1.08;
-      margin-bottom: 32px;
+      line-height: 1.25;
+      margin-bottom: 64px;
       letter-spacing: -1.5px;
       color: #fff;
     }
@@ -134,7 +134,7 @@
 
     .hero-slide-inner .hero-btns {
       display: flex;
-      gap: 14px;
+      gap: 18px;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -4180,11 +4180,11 @@
       .hero-slide.active-slide {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         min-height: calc(100vh - 72px);
         min-height: calc(100dvh - 72px);
-        padding: 96px 20px 48px;
+        padding: 80px 20px 48px;
       }
 
       .hero-slide-inner {
@@ -4199,8 +4199,10 @@
       }
 
       .hero-slide-inner .hero-kicker {
-        font-size: .68rem;
+        font-size: .62rem;
         margin-bottom: 16px;
+        text-align: center;
+        max-width: 300px;
       }
 
       .hero-slide-inner h1 {
@@ -4589,7 +4591,8 @@
       }
 
       .hero-slide.active-slide {
-        padding: 88px 16px 44px;
+        padding: 60px 16px 44px;
+        justify-content: center;
       }
 
       .hero>.hero-content {
@@ -4641,7 +4644,8 @@
         padding: 10px 0;
       }
 
-      .about-hero {
+      .about-hero,
+      .services-hero {
         padding: 96px 20px 40px;
         justify-content: flex-start;
         align-items: center;
@@ -4659,7 +4663,8 @@
       }
 
       .hero-slide.active-slide {
-        padding: 80px 14px 40px;
+        padding: 56px 14px 40px;
+        justify-content: center;
       }
 
       .hero-inner {
@@ -4757,7 +4762,8 @@
         padding: 40px 14px;
       }
 
-      .contact-hero-new {
+      .contact-hero-new,
+      .services-hero {
         padding: 96px 20px 40px;
         justify-content: flex-start;
       }
@@ -5467,6 +5473,12 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
+    }
+    @media(max-width:900px) {
+      .about-who-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+    @media(max-width:768px) {
+      .about-who-grid { padding: 0 !important; }
     }
 
     /* Expert Hub: WHAT CLIENTS GET 2×2 */

@@ -23,10 +23,11 @@
       <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
     </div>
     <ul class="nav-links">
-      <li><button onclick="showPage('home')" id="nav-home" class="nav-active">Home</button></li>
+      <li><button onclick="showPage('home')" id="nav-home">Home</button></li>
+      <li><button onclick="showPage('about')" id="nav-about">About</button></li>
+      <li><button onclick="showPage('services')" id="nav-services">Services</button></li>
       <li><button onclick="showPage('expert')" id="nav-expert">Expert Hub</button></li>
       <li><button onclick="showPage('industries')" id="nav-industries">Industries</button></li>
-      <li><button onclick="showPage('about')" id="nav-about">About Us</button></li>
       <li class="nav-dropdown">
         <button class="nav-dropdown-btn">More <svg viewBox="0 0 24 24">
             <polyline points="6 9 12 15 18 9" />
@@ -58,9 +59,10 @@
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <button onclick="showPage('home');toggleMenu()">Home</button>
+    <button onclick="showPage('about');toggleMenu()">About</button>
+    <button onclick="showPage('services');toggleMenu()">Services</button>
     <button onclick="showPage('expert');toggleMenu()">Expert Hub</button>
     <button onclick="showPage('industries');toggleMenu()">Industries</button>
-    <button onclick="showPage('about');toggleMenu()">About Us</button>
     <div class="mobile-more-label">More</div>
     <button class="mobile-sub" onclick="showPage('solution');toggleMenu()" style="display:none;">Solution Hub</button>
     <button class="mobile-sub" onclick="showPage('aiproduct');toggleMenu()">AI-Led Product Development</button>
@@ -389,41 +391,45 @@
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
               <polyline points="22,6 12,13 2,6" />
             </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
-          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg><span>Colombo, Sri Lanka</span></div>
+          <a href="https://linkedin.com/company/dexxora" target="_blank" class="footer-contact-item" style="text-decoration:none;color:inherit;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
+          </a>
         </div>
         <div>
           <p class="footer-col-heading">Navigate</p>
           <ul class="footer-links">
             <li><button onclick="showPage('home')">Home</button></li>
-            <li><button onclick="showPage('about')">About Us</button></li>
-            <li><button onclick="showPage('contact')">Contact Us</button></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer-col-heading">Services</p>
-          <ul class="footer-links">
+            <li><button onclick="showPage('about')">About</button></li>
+            <li><button onclick="showPage('services')">Services</button></li>
             <li><button onclick="showPage('expert')">Expert Hub</button></li>
-
-            <li><button onclick="showPage('aiproduct')">AI-Led Product Development</button></li>
+            <li><button onclick="showPage('industries')">Industries</button></li>
+            <li><button onclick="showPage('contact')">Contact</button></li>
           </ul>
         </div>
         <div>
-          <p class="footer-col-heading">Focus Areas</p>
+          <p class="footer-col-heading">Connect</p>
           <ul class="footer-links">
-            <li><button onclick="showPage('industries')">Industry 4.0 Strategy</button></li>
-            <li><button onclick="showPage('industries')">Operational Intelligence</button></li>
-            <li><button onclick="showPage('expert')">Architecture Design</button></li>
-            <li><button onclick="showPage('expert')">Data &amp; Integration</button></li>
-            <li><button onclick="showPage('expert')">Transformation Governance</button></li>
+            <li><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></li>
+            <li><a href="https://linkedin.com/company/dexxora" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-heading">Legal</p>
+          <ul class="footer-links">
+            <li><a>Privacy Policy</a></li>
+            <li><a>Terms of Use</a></li>
+            <li><a>Cookie Notice</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <div>&copy; 2026 Dexxora. All rights reserved.</div>
-        <div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a><a>Cookie Notice</a></div>
+        <div class="footer-bottom-links">
+          <a>Privacy Policy</a>
+          <a>Terms of Use</a>
+          <a>Cookie Notice</a>
+        </div>
       </div>
     </footer>
   </div>
@@ -432,6 +438,7 @@
       var map = {
         home: 'home.html',
         about: 'about.html',
+        services: 'services.html',
         expert: 'expert.html',
         industries: 'industries.html',
         aiproduct: 'aiproduct.html',
