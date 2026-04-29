@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Contact Dexxora: Start a Conversation</title>
+  <meta name="description" content="Talk to Dexxora about operational intelligence, transformation, and decision-driven operations. We welcome conversations with leaders building intelligent enterprises." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Multi-page: always show page content */
+    .page { display: block !important; opacity: 1 !important; }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-brand" onclick="showPage('home')">
+      <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
+    </div>
+    <ul class="nav-links">
+      <li><button onclick="showPage('home')" id="nav-home" class="nav-active">Home</button></li>
+      <li><button onclick="showPage('expert')" id="nav-expert">Expert Hub</button></li>
+      <li><button onclick="showPage('industries')" id="nav-industries">Industries</button></li>
+      <li><button onclick="showPage('about')" id="nav-about">About Us</button></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-btn">More <svg viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9" />
+          </svg></button>
+        <div class="nav-dropdown-menu">
+          <button onclick="showPage('solution')" id="nav-solution" style="display:none;">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            </svg>Solution Hub
+          </button>
+          <button onclick="showPage('aiproduct')" id="nav-aiproduct">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 3" />
+            </svg>AI-Led Product Development
+          </button>
+        </div>
+      </li>
+      <li><button onclick="showPage('contact')" id="nav-contact" class="nav-cta-btn">Start a Conversation</button></li>
+    </ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <button onclick="showPage('home');toggleMenu()">Home</button>
+    <button onclick="showPage('expert');toggleMenu()">Expert Hub</button>
+    <button onclick="showPage('industries');toggleMenu()">Industries</button>
+    <button onclick="showPage('about');toggleMenu()">About Us</button>
+    <div class="mobile-more-label">More</div>
+    <button class="mobile-sub" onclick="showPage('solution');toggleMenu()" style="display:none;">Solution Hub</button>
+    <button class="mobile-sub" onclick="showPage('aiproduct');toggleMenu()">AI-Led Product Development</button>
+    <button onclick="showPage('contact');toggleMenu()">Start a Conversation</button>
+  </div>
+  <div class="page" id="page-contact">
+
+    <!-- HERO -->
+    <div class="contact-hero-new">
+      <div class="contact-hero-orb contact-hero-orb-1"></div>
+      <div class="contact-hero-orb contact-hero-orb-2"></div>
+      <div class="contact-hero-grid-bg"></div>
+      <div style="position:relative;z-index:2;text-align:center;">
+        <span class="s-eyebrow"
+          style="color:var(--neon-blue);justify-content:center;display:inline-flex;margin-bottom:20px;">CONTACT</span>
+        <h1 class="contact-hero-h1">Let's talk about how your <span>organisation operates.</span></h1>
+        <p class="contact-hero-sub">We welcome conversations with leaders seeking to build intelligent, decision-driven operations.</p>
+      </div>
+    </div>
+
+    <!-- CONTACT BODY -->
+    <section class="contact-body-section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- LEFT: Info -->
+          <div class="contact-info-col">
+            <div class="contact-info-card">
+              <h3>Tell us about what you're trying to solve.</h3>
+              <p class="contact-info-desc">We welcome conversations with leaders seeking to build intelligent, decision-driven operations. Fill in the form and a member of our Expert Hub will be in touch within two business days.</p>
+              <div class="contact-detail-new">
+                <div class="contact-detail-icon-new">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-detail-label">Email</div>
+                  <a href="mailto:hello@dexxora.com" class="contact-detail-value">hello@dexxora.com</a>
+                </div>
+              </div>
+              <div class="contact-detail-new">
+                <div class="contact-detail-icon-new">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-detail-label">Location</div>
+                  <div class="contact-detail-value">Colombo, Sri Lanka</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- What to expect -->
+            <div class="contact-expect-card">
+              <div class="contact-expect-title">What to expect</div>
+              <div class="contact-expect-item">
+                <div class="contact-expect-dot"></div>
+                <span>A member of our Expert Hub will be in touch within two business days</span>
+              </div>
+              <div class="contact-expect-item">
+                <div class="contact-expect-dot"></div>
+                <span>An initial conversation to understand your operational context</span>
+              </div>
+              <div class="contact-expect-item">
+                <div class="contact-expect-dot"></div>
+                <span>A clear view of how Dexxora's model applies to your environment</span>
+              </div>
+              <div class="contact-expect-item">
+                <div class="contact-expect-dot"></div>
+                <span>A defined next step, not a sales pitch</span>
+              </div>
+            </div>
+
+            <!-- About Dexxora note -->
+            <div class="contact-note-card">
+              <p>Dexxora works with organisations across banking, insurance, telecommunications, manufacturing, retail, healthcare, logistics, energy, and the public sector — wherever operational complexity meets the need for real-time decision intelligence.</p>
+            </div>
+          </div>
+
+          <!-- RIGHT: Form -->
+          <div class="contact-form-col">
+            <div class="contact-form-card" id="contactFormCard">
+              <div class="contact-form-header">
+                <h3>Tell us about what you're trying to solve.</h3>
+                <p>Fill in the form and we'll get back to you shortly.</p>
+              </div>
+
+              <!-- Success state (hidden by default) -->
+              <div class="contact-success" id="contactSuccess" style="display:none;">
+                <div class="contact-success-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                </div>
+                <h3>Message Sent!</h3>
+                <p>Thank you. We've received your message, and a member of our Expert Hub will be in touch within two business days.</p>
+                <button class="btn-outline-blue" onclick="resetContactForm()" style="margin-top:20px;">Send Another
+                  Message</button>
+              </div>
+
+              <!-- Form -->
+              <div id="contactFormFields">
+                <div class="form-group">
+                  <label>Full Name <span class="form-required">*</span></label>
+                  <input type="text" id="cf_first" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                  <label>Work Email <span class="form-required">*</span></label>
+                  <input type="email" id="cf_email" placeholder="you@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label>Company <span class="form-required">*</span></label>
+                  <input type="text" id="cf_org" placeholder="Your company name" required>
+                </div>
+                <div class="form-group">
+                  <label>Role / Title</label>
+                  <input type="text" id="cf_last" placeholder="Your role or title">
+                </div>
+                <div class="form-group">
+                  <label>Industry</label>
+                  <select id="cf_area">
+                    <option value="">Select your industry...</option>
+                    <option>Banking &amp; Financial Services</option>
+                    <option>Insurance</option>
+                    <option>Telecommunications</option>
+                    <option>Manufacturing</option>
+                    <option>Retail &amp; Consumer</option>
+                    <option>Healthcare &amp; Life Sciences</option>
+                    <option>Logistics &amp; Supply Chain</option>
+                    <option>Energy &amp; Utilities</option>
+                    <option>Public Sector</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>What you're looking to address</label>
+                  <textarea id="cf_message"
+                    placeholder="Tell us about the operational challenge or decision you're trying to sharpen..."
+                    required></textarea>
+                </div>
+                <div class="form-group">
+                  <label>How did you hear about us?</label>
+                  <select id="cf_source">
+                    <option value="">Select an option...</option>
+                    <option>LinkedIn</option>
+                    <option>Referral</option>
+                    <option>Web search</option>
+                    <option>Industry event</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <p style="font-size:.78rem;color:var(--text-muted);line-height:1.6;margin-bottom:20px;font-family:'Inter',sans-serif;">By submitting this form, you agree to Dexxora contacting you about your enquiry. See our Privacy Policy for how we handle your information.</p>
+                <div class="form-error" id="formError" style="display:none;">Please fill in all required fields
+                  correctly.</div>
+                <button class="btn-primary contact-submit-btn" id="contactSubmitBtn" onclick="submitContactForm()">
+                  <span id="submitBtnText">Start the Conversation</span>
+                  <svg id="submitBtnIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                  <svg id="submitBtnSpinner" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" style="display:none;animation:spin 1s linear infinite;">
+                    <path
+                      d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ENQUIRY ROUTING -->
+    <section class="section" style="background:var(--bg-silver);">
+      <div class="container" style="max-width:960px;">
+        <div style="text-align:center;margin-bottom:48px;">
+          <span class="s-eyebrow" style="justify-content:center;">ENQUIRY ROUTING</span>
+          <h2 class="s-title">Talking to the right part of Dexxora.</h2>
+          <p style="font-size:1rem;color:var(--text-muted);line-height:1.75;font-family:'Inter',sans-serif;margin:16px auto 0;max-width:600px;">Whatever the nature of your enquiry, it will reach the right person. Use the options below to help us route it faster.</p>
+        </div>
+        <div class="enquiry-routing-grid">
+          <div style="padding:32px 28px;background:#fff;border:1px solid var(--border-light);border-radius:var(--card-radius);">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(0,87,255,0.06);border:1px solid rgba(0,87,255,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:10px;">New engagements</h4>
+            <p style="font-size:.85rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0 0 14px;">For new engagement enquiries, contact us directly.</p>
+            <a href="mailto:hello@dexxora.com" style="font-size:.82rem;color:var(--neon-blue);font-family:'Inter',sans-serif;text-decoration:none;font-weight:600;">hello@dexxora.com</a>
+          </div>
+          <div style="padding:32px 28px;background:#fff;border:1px solid var(--border-light);border-radius:var(--card-radius);">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(0,87,255,0.06);border:1px solid rgba(0,87,255,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:10px;">Expert Hub partnerships</h4>
+            <p style="font-size:.85rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0 0 14px;">For senior practitioners interested in joining the Expert Hub.</p>
+            <a href="mailto:experts@dexxora.com" style="font-size:.82rem;color:var(--neon-blue);font-family:'Inter',sans-serif;text-decoration:none;font-weight:600;">experts@dexxora.com</a>
+          </div>
+          <div style="padding:32px 28px;background:#fff;border:1px solid var(--border-light);border-radius:var(--card-radius);">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(0,87,255,0.06);border:1px solid rgba(0,87,255,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:10px;">Media &amp; speaking</h4>
+            <p style="font-size:.85rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0 0 14px;">For media, press, and speaking enquiries.</p>
+            <a href="mailto:media@dexxora.com" style="font-size:.82rem;color:var(--neon-blue);font-family:'Inter',sans-serif;text-decoration:none;font-weight:600;">media@dexxora.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-main">
+        <div>
+          <div class="footer-brand">
+            <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
+            <div class="brand-text"><span class="brand-name">Dexxora</span></div>
+          </div>
+          <p class="footer-tagline">Operational Intelligence Transformation Advisory</p>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg><span>Colombo, Sri Lanka</span></div>
+        </div>
+        <div>
+          <p class="footer-col-heading">Navigate</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('home')">Home</button></li>
+            <li><button onclick="showPage('about')">About Us</button></li>
+            <li><button onclick="showPage('contact')">Contact Us</button></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-heading">Services</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('expert')">Expert Hub</button></li>
+
+            <li><button onclick="showPage('aiproduct')">AI-Led Product Development</button></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-heading">Focus Areas</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('industries')">Industry 4.0 Strategy</button></li>
+            <li><button onclick="showPage('industries')">Operational Intelligence</button></li>
+            <li><button onclick="showPage('expert')">Architecture Design</button></li>
+            <li><button onclick="showPage('expert')">Data &amp; Integration</button></li>
+            <li><button onclick="showPage('expert')">Transformation Governance</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Dexxora. All rights reserved.</div>
+        <div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a><a>Cookie Notice</a></div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    function showPage(name) {
+      var map = {
+        home: 'home.html',
+        about: 'about.html',
+        expert: 'expert.html',
+        industries: 'industries.html',
+        aiproduct: 'aiproduct.html',
+        solution: 'solution.html',
+        contact: 'contact.html'
+      };
+      window.location.href = map[name] || 'index.html';
+    }
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+    function initGapAnimations() {
+      const cards = document.querySelectorAll('#page-home .gap-card');
+      const obs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate-in'); }); }, { threshold: .15 });
+      cards.forEach(c => obs.observe(c));
+    }
+
+    function initFlowchart() {
+      const steps = document.querySelectorAll('#fcWrap .fc-step');
+      if (!steps.length) return;
+      steps.forEach(s => s.classList.remove('fc-visible'));
+      const obs = new IntersectionObserver(es => {
+        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fc-visible'); obs.unobserve(e.target); } });
+      }, { threshold: .2 });
+      steps.forEach(s => obs.observe(s));
+    }
+
+    // HOME HERO SLIDER
+    let currentSlide = 1;
+    let sliderTimer = null;
+
+    function goToSlide(n) {
+      const slides = document.querySelectorAll('#home-hero .hero-slide');
+      const dots = document.querySelectorAll('#home-hero .slider-dot');
+      slides.forEach(s => s.classList.remove('active-slide'));
+      dots.forEach(d => d.classList.remove('active-dot'));
+      currentSlide = n;
+      const target = document.getElementById('slide-' + n);
+      if (target) { target.classList.add('active-slide'); }
+      if (dots[n - 1]) dots[n - 1].classList.add('active-dot');
+      resetSliderTimer();
+    }
+
+    function nextSlide() {
+      const total = document.querySelectorAll('#home-hero .hero-slide').length;
+      goToSlide(currentSlide >= total ? 1 : currentSlide + 1);
+    }
+
+    function prevSlide() {
+      const total = document.querySelectorAll('#home-hero .hero-slide').length;
+      goToSlide(currentSlide <= 1 ? total : currentSlide - 1);
+    }
+
+    function resetSliderTimer() {
+      if (sliderTimer) clearInterval(sliderTimer);
+      sliderTimer = setInterval(nextSlide, 5000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initGapAnimations();
+      resetSliderTimer();
+    });
+    // CONTACT FORM
+    function submitContactForm() {
+      const name = document.getElementById('cf_first').value.trim();
+      const email = document.getElementById('cf_email').value.trim();
+      const org = document.getElementById('cf_org').value.trim();
+      const msg = document.getElementById('cf_message').value.trim();
+      const errEl = document.getElementById('formError');
+      const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!name || !email || !org || !emailRx.test(email)) {
+        errEl.style.display = 'block';
+        errEl.textContent = !email || !emailRx.test(email)
+          ? 'Please enter a valid work email address.'
+          : 'Please fill in all required fields.';
+        return;
+      }
+      errEl.style.display = 'none';
+
+      const btn = document.getElementById('contactSubmitBtn');
+      const btnText = document.getElementById('submitBtnText');
+      const btnIcon = document.getElementById('submitBtnIcon');
+      const spinner = document.getElementById('submitBtnSpinner');
+      btn.disabled = true;
+      btnText.textContent = 'Sending…';
+      btnIcon.style.display = 'none';
+      spinner.style.display = 'inline-block';
+
+      const role = document.getElementById('cf_last').value.trim();
+      const industry = document.getElementById('cf_area').value;
+      const source = document.getElementById('cf_source') ? document.getElementById('cf_source').value : '';
+      const body = `Name: ${name}\nEmail: ${email}\nCompany: ${org}\nRole: ${role || '—'}\nIndustry: ${industry || '—'}\nHow they heard: ${source || '—'}\n\nWhat they're looking to address:\n${msg || '—'}`;
+
+      const mailto = `mailto:hello@dexxora.com?subject=Enquiry from ${encodeURIComponent(name)} — Dexxora Website&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+
+      setTimeout(() => {
+        document.getElementById('contactFormFields').style.display = 'none';
+        document.getElementById('contactSuccess').style.display = 'block';
+        btn.disabled = false;
+        btnText.textContent = 'Start the Conversation';
+        btnIcon.style.display = 'inline-block';
+        spinner.style.display = 'none';
+      }, 800);
+    }
+
+    function resetContactForm() {
+      ['cf_first', 'cf_last', 'cf_email', 'cf_org', 'cf_message'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+      ['cf_area', 'cf_source'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+      document.getElementById('formError').style.display = 'none';
+      document.getElementById('contactFormFields').style.display = 'block';
+      document.getElementById('contactSuccess').style.display = 'none';
+    }
+
+    // Set active nav item
+    (function() {
+      document.querySelectorAll('.nav-links button, .nav-links a').forEach(function(b) { b.classList.remove('nav-active'); });
+      var btn = document.getElementById('nav-contact');
+      if (btn) btn.classList.add('nav-active');
+    })();
+  </script>
+</body>
+
+</html>

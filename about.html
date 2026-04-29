@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>About Dexxora: Our Vision, Mission, and Values</title>
+  <meta name="description" content="Dexxora is an advisory firm founded to close the gap between enterprise systems and intelligent operations. Learn about our vision, mission, and the principles that guide our work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Multi-page: always show page content */
+    .page { display: block !important; opacity: 1 !important; }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-brand" onclick="showPage('home')">
+      <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
+    </div>
+    <ul class="nav-links">
+      <li><button onclick="showPage('home')" id="nav-home" class="nav-active">Home</button></li>
+      <li><button onclick="showPage('expert')" id="nav-expert">Expert Hub</button></li>
+      <li><button onclick="showPage('industries')" id="nav-industries">Industries</button></li>
+      <li><button onclick="showPage('about')" id="nav-about">About Us</button></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-btn">More <svg viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9" />
+          </svg></button>
+        <div class="nav-dropdown-menu">
+          <button onclick="showPage('solution')" id="nav-solution" style="display:none;">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            </svg>Solution Hub
+          </button>
+          <button onclick="showPage('aiproduct')" id="nav-aiproduct">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 3" />
+            </svg>AI-Led Product Development
+          </button>
+        </div>
+      </li>
+      <li><button onclick="showPage('contact')" id="nav-contact" class="nav-cta-btn">Start a Conversation</button></li>
+    </ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <button onclick="showPage('home');toggleMenu()">Home</button>
+    <button onclick="showPage('expert');toggleMenu()">Expert Hub</button>
+    <button onclick="showPage('industries');toggleMenu()">Industries</button>
+    <button onclick="showPage('about');toggleMenu()">About Us</button>
+    <div class="mobile-more-label">More</div>
+    <button class="mobile-sub" onclick="showPage('solution');toggleMenu()" style="display:none;">Solution Hub</button>
+    <button class="mobile-sub" onclick="showPage('aiproduct');toggleMenu()">AI-Led Product Development</button>
+    <button onclick="showPage('contact');toggleMenu()">Start a Conversation</button>
+  </div>
+  <div class="page" id="page-about">
+
+    <!-- HERO -->
+    <div class="about-hero">
+      <div class="about-hero-bg-grid"></div>
+      <div class="about-hero-orb about-hero-orb-1"></div>
+      <div class="about-hero-orb about-hero-orb-2"></div>
+      <div style="position:relative;z-index:2;">
+        <span class="s-eyebrow" style="color:var(--neon-blue);justify-content:center;display:inline-flex;">ABOUT DEXXORA</span>
+        <h1>We exist to make<br><span>enterprises think.</span></h1>
+        <p style="font-size:1.1rem;color:rgba(255,255,255,0.7);line-height:1.75;max-width:620px;margin:20px auto 8px;font-family:'Inter',sans-serif;">Most organisations have built capacity to run. Dexxora builds capacity to decide: to see, to anticipate, and to act with intelligence at the core.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px;">
+          <button class="btn-primary" onclick="showPage('expert')">Explore our services <svg width="15" height="15"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></button>
+          <button class="btn-secondary" onclick="showPage('contact')">Meet the Expert Hub</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS STRIP -->
+    <div class="about-stats-strip">
+      <div class="about-stats-grid">
+        <div>
+          <div style="font-family:'Instrument Serif',Georgia,serif;font-size:2.2rem;font-weight:400;color:var(--text-main);letter-spacing:-.03em;">20+</div>
+          <div style="font-size:.8rem;color:var(--text-muted);font-family:'Inter',sans-serif;margin-top:4px;text-transform:uppercase;letter-spacing:1px;">Years combined experience</div>
+        </div>
+        <div>
+          <div style="font-family:'Instrument Serif',Georgia,serif;font-size:2.2rem;font-weight:400;color:var(--text-main);letter-spacing:-.03em;">9+</div>
+          <div style="font-size:.8rem;color:var(--text-muted);font-family:'Inter',sans-serif;margin-top:4px;text-transform:uppercase;letter-spacing:1px;">Industries served</div>
+        </div>
+        <div>
+          <div style="font-family:'Instrument Serif',Georgia,serif;font-size:2.2rem;font-weight:400;color:var(--text-main);letter-spacing:-.03em;">100%</div>
+          <div style="font-size:.8rem;color:var(--text-muted);font-family:'Inter',sans-serif;margin-top:4px;text-transform:uppercase;letter-spacing:1px;">Senior-led engagements</div>
+        </div>
+        <div>
+          <div style="font-family:'Instrument Serif',Georgia,serif;font-size:2.2rem;font-weight:400;color:var(--text-main);letter-spacing:-.03em;">0</div>
+          <div style="font-size:.8rem;color:var(--text-muted);font-family:'Inter',sans-serif;margin-top:4px;text-transform:uppercase;letter-spacing:1px;">Technology vendor partnerships</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHO WE ARE -->
+    <section class="premium-statement-section">
+      <div class="premium-statement-inner">
+        <p class="premium-statement-text">Dexxora is an Operational Intelligence Transformation advisory firm. We help organisations move beyond system implementation to achieve truly intelligent operations.</p>
+        <p class="premium-statement-text" style="margin-top:24px;opacity:.85;">While many organisations have invested heavily in ERP, CRM, and enterprise platforms, most remain constrained by fragmented workflows, delayed decisions, and limited visibility. We bridge that gap by designing and enabling operating models that seamlessly connect data, decisions, and workflows. The result is real-time, insight-driven enterprises powered by AI, advanced analytics, and intelligent automation.</p>
+        <p class="premium-statement-text" style="margin-top:24px;opacity:.85;">Our Expert Hub brings together <em>senior practitioners with decades of cross-industry experience</em> to deliver practical, execution-focused transformation.</p>
+      </div>
+    </section>
+
+    <!-- CORE VALUES -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <div style="text-align:center;max-width:680px;margin:0 auto 64px;">
+          <span class="s-eyebrow" style="justify-content:center;">CORE VALUES</span>
+          <h2 class="s-title">The principles that guide<br><em>every engagement.</em></h2>
+          <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;font-family:'Inter',sans-serif;">Five values shape every decision we make and every engagement we lead.</p>
+        </div>
+        <div class="about-values-grid">
+          <div style="padding:32px 24px;background:var(--bg-offwhite);border:1px solid var(--border-light);border-radius:var(--card-radius);text-align:center;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0057FF,#0ea5e9);"></div>
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,87,255,0.07);border:1px solid rgba(0,87,255,0.13);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:8px;">Integrity</h4>
+            <p style="font-size:.82rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0;">Transparent, accountable, and trusted in every engagement.</p>
+          </div>
+          <div style="padding:32px 24px;background:var(--bg-offwhite);border:1px solid var(--border-light);border-radius:var(--card-radius);text-align:center;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0057FF,#0ea5e9);"></div>
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,87,255,0.07);border:1px solid rgba(0,87,255,0.13);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:8px;">Excellence</h4>
+            <p style="font-size:.82rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0;">High-quality, outcome-driven execution without compromise.</p>
+          </div>
+          <div style="padding:32px 24px;background:var(--bg-offwhite);border:1px solid var(--border-light);border-radius:var(--card-radius);text-align:center;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0057FF,#0ea5e9);"></div>
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,87,255,0.07);border:1px solid rgba(0,87,255,0.13);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:8px;">Innovation</h4>
+            <p style="font-size:.82rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0;">Leveraging emerging technologies intelligently, not experimentally.</p>
+          </div>
+          <div style="padding:32px 24px;background:var(--bg-offwhite);border:1px solid var(--border-light);border-radius:var(--card-radius);text-align:center;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0057FF,#0ea5e9);"></div>
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,87,255,0.07);border:1px solid rgba(0,87,255,0.13);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:8px;">Collaboration</h4>
+            <p style="font-size:.82rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0;">Working as an extension of client leadership, not a vendor.</p>
+          </div>
+          <div style="padding:32px 24px;background:var(--bg-offwhite);border:1px solid var(--border-light);border-radius:var(--card-radius);text-align:center;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0057FF,#0ea5e9);"></div>
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,87,255,0.07);border:1px solid rgba(0,87,255,0.13);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:8px;">Results-Driven</h4>
+            <p style="font-size:.82rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0;">Focused on measurable business impact, not deliverable count.</p>
+          </div>
+        </div>
+
+        <!-- What makes Dexxora different -->
+        <div style="margin-top:72px;padding:48px 52px;background:var(--bg-dark);border-radius:16px;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 50% 70% at 5% 50%,rgba(0,87,255,0.1) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 95% 50%,rgba(14,165,233,0.07) 0%,transparent 55%);"></div>
+          <div class="about-diff-panel-grid" style="position:relative;z-index:1;">
+            <div>
+              <span class="s-eyebrow" style="color:var(--neon-blue);">WHAT MAKES US DIFFERENT</span>
+              <h3 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:400;color:#fff;line-height:1.2;margin-top:16px;letter-spacing:-.02em;">Not a vendor.<br>Not a system integrator.<br><em style="color:var(--neon-blue);">An Expert Hub.</em></h3>
+            </div>
+            <div class="about-diff-cards-grid">
+              <div style="padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;">
+                <div style="width:36px;height:36px;border-radius:8px;background:rgba(0,87,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0ea5e9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                </div>
+                <div style="font-size:.9rem;font-weight:600;color:#fff;margin-bottom:6px;font-family:'Inter',sans-serif;">Senior-led by default</div>
+                <div style="font-size:.82rem;color:rgba(255,255,255,0.5);line-height:1.65;font-family:'Inter',sans-serif;">Every engagement is staffed and governed by senior practitioners — not delegated down.</div>
+              </div>
+              <div style="padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;">
+                <div style="width:36px;height:36px;border-radius:8px;background:rgba(0,87,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0ea5e9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <div style="font-size:.9rem;font-weight:600;color:#fff;margin-bottom:6px;font-family:'Inter',sans-serif;">Vendor-neutral</div>
+                <div style="font-size:.82rem;color:rgba(255,255,255,0.5);line-height:1.65;font-family:'Inter',sans-serif;">No technology partnerships. No implementation incentives. Advice shaped entirely by what the client needs.</div>
+              </div>
+              <div style="padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;">
+                <div style="width:36px;height:36px;border-radius:8px;background:rgba(0,87,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0ea5e9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <div style="font-size:.9rem;font-weight:600;color:#fff;margin-bottom:6px;font-family:'Inter',sans-serif;">Outcome-anchored</div>
+                <div style="font-size:.82rem;color:rgba(255,255,255,0.5);line-height:1.65;font-family:'Inter',sans-serif;">Performance measured against business results, not deliverable completion or billable hours.</div>
+              </div>
+              <div style="padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;">
+                <div style="width:36px;height:36px;border-radius:8px;background:rgba(0,87,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0ea5e9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <div style="font-size:.9rem;font-weight:600;color:#fff;margin-bottom:6px;font-family:'Inter',sans-serif;">Architecture-first</div>
+                <div style="font-size:.82rem;color:rgba(255,255,255,0.5);line-height:1.65;font-family:'Inter',sans-serif;">Operating model and architecture are designed before any technology is selected or deployed.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION & MISSION — strategic anchor -->
+    <section class="about-belief-section">
+      <div class="container">
+        <div class="vision-mission-grid">
+          <div>
+            <span class="s-eyebrow" style="color:var(--neon-blue);">Vision</span>
+            <h2
+              style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;color:#fff;line-height:1.2;margin-top:16px;letter-spacing:-.02em;">
+              To become a trusted global partner in building <em style="color:var(--neon-blue);">intelligent, adaptive, and decision-driven enterprises.</em></h2>
+          </div>
+          <div>
+            <span class="s-eyebrow" style="color:var(--neon-blue);">Mission</span>
+            <h2
+              style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;color:#fff;line-height:1.2;margin-top:16px;letter-spacing:-.02em;">
+              We enable organisations to operate with intelligence at their core. Through integrated data and execution frameworks that deliver <em style="color:var(--neon-blue);">real-time visibility, sharper decisions, and measurable business impact.</em></h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY WE EXIST -->
+    <section class="section" style="background:var(--bg-silver);">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:56px;">
+          <span class="s-eyebrow" style="justify-content:center;">THE DEXXORA THESIS</span>
+          <h2 class="s-title" style="max-width:760px;margin:0 auto;">Transformation fails not because of technology, but because operations were never designed to be <em>intelligent.</em></h2>
+          <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;max-width:720px;margin:24px auto 0;font-family:'Inter',sans-serif;">For two decades, enterprises have invested in platforms, integrations, and digital programs. The systems are in place. The data exists. The talent is skilled. And yet decisions still move slowly. Visibility remains incomplete. Performance is measured long after it could have been influenced.</p>
+          <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;max-width:720px;margin:16px auto 0;font-family:'Inter',sans-serif;">Dexxora was founded to close that gap. We do not build systems. We do not rewrite strategy decks. We design and enable how organisations operate, so that intelligence stops being a report and starts being the default state of the business.</p>
+        </div>
+        <div class="about-think-grid">
+          <div class="about-think-card">
+            <div class="about-think-num">01</div>
+            <div class="about-think-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.12 2.12 0 1 1 3 3L7 19l-4 1 1-4z" />
+              </svg></div>
+            <h3>The systems are in place.</h3>
+            <p>For two decades, enterprises have invested in platforms, integrations, and digital programs. The data exists. The talent is skilled.</p>
+            <div class="about-think-bar"></div>
+          </div>
+          <div class="about-think-card">
+            <div class="about-think-num">02</div>
+            <div class="about-think-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M9 11l3 3L22 4" />
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+              </svg></div>
+            <h3>And yet decisions still move slowly.</h3>
+            <p>Visibility remains incomplete, and performance is measured long after it could have been influenced.</p>
+            <div class="about-think-bar"></div>
+          </div>
+          <div class="about-think-card">
+            <div class="about-think-num">03</div>
+            <div class="about-think-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10" />
+                <line x1="12" y1="20" x2="12" y2="4" />
+                <line x1="6" y1="20" x2="6" y2="14" />
+              </svg></div>
+            <h3>Dexxora was founded to close that gap.</h3>
+            <p>We design and enable how organisations operate, so that intelligence stops being a report and starts being the default state of the business.</p>
+            <div class="about-think-bar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING STATEMENT -->
+    <section class="about-closing-section">
+      <div class="container">
+        <div class="about-closing-inner">
+          <h2>See how we put this into practice.</h2>
+          <p>Dexxora partners with organisations ready to move from complexity to clarity, from activity to intelligence, from investment to performance.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="dark-band">
+      <div class="dark-band-inner">
+        <div class="dark-band-text">
+          <h2>The Expert Hub is how<br><span>intelligence gets built.</span></h2>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="showPage('expert')">Explore our services</button>
+          <button class="btn-secondary" onclick="showPage('contact')">Meet the Expert Hub</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-main">
+        <div>
+          <div class="footer-brand">
+            <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
+            <div class="brand-text"><span class="brand-name">Dexxora</span></div>
+          </div>
+          <p class="footer-tagline">Operational Intelligence Transformation Advisory</p>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg><span>Colombo, Sri Lanka</span></div>
+        </div>
+        <div>
+          <p class="footer-col-heading">Navigate</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('home')">Home</button></li>
+            <li><button onclick="showPage('about')">About Us</button></li>
+            <li><button onclick="showPage('contact')">Contact Us</button></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-heading">Services</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('expert')">Expert Hub</button></li>
+            <li><button onclick="showPage('aiproduct')">AI-Led Product Development</button></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-heading">Focus Areas</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('industries')">Industry 4.0 Strategy</button></li>
+            <li><button onclick="showPage('industries')">Operational Intelligence</button></li>
+            <li><button onclick="showPage('expert')">Architecture Design</button></li>
+            <li><button onclick="showPage('expert')">Data &amp; Integration</button></li>
+            <li><button onclick="showPage('expert')">Transformation Governance</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Dexxora. All rights reserved.</div>
+        <div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a><a>Cookie Notice</a></div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    function showPage(name) {
+      var map = {
+        home: 'home.html',
+        about: 'about.html',
+        expert: 'expert.html',
+        industries: 'industries.html',
+        aiproduct: 'aiproduct.html',
+        solution: 'solution.html',
+        contact: 'contact.html'
+      };
+      window.location.href = map[name] || 'index.html';
+    }
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+    function initGapAnimations() {
+      const cards = document.querySelectorAll('#page-home .gap-card');
+      const obs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate-in'); }); }, { threshold: .15 });
+      cards.forEach(c => obs.observe(c));
+    }
+
+    function initFlowchart() {
+      const steps = document.querySelectorAll('#fcWrap .fc-step');
+      if (!steps.length) return;
+      steps.forEach(s => s.classList.remove('fc-visible'));
+      const obs = new IntersectionObserver(es => {
+        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fc-visible'); obs.unobserve(e.target); } });
+      }, { threshold: .2 });
+      steps.forEach(s => obs.observe(s));
+    }
+
+    // HOME HERO SLIDER
+    let currentSlide = 1;
+    let sliderTimer = null;
+
+    function goToSlide(n) {
+      const slides = document.querySelectorAll('#home-hero .hero-slide');
+      const dots = document.querySelectorAll('#home-hero .slider-dot');
+      slides.forEach(s => s.classList.remove('active-slide'));
+      dots.forEach(d => d.classList.remove('active-dot'));
+      currentSlide = n;
+      const target = document.getElementById('slide-' + n);
+      if (target) { target.classList.add('active-slide'); }
+      if (dots[n - 1]) dots[n - 1].classList.add('active-dot');
+      resetSliderTimer();
+    }
+
+    function nextSlide() {
+      const total = document.querySelectorAll('#home-hero .hero-slide').length;
+      goToSlide(currentSlide >= total ? 1 : currentSlide + 1);
+    }
+
+    function prevSlide() {
+      const total = document.querySelectorAll('#home-hero .hero-slide').length;
+      goToSlide(currentSlide <= 1 ? total : currentSlide - 1);
+    }
+
+    function resetSliderTimer() {
+      if (sliderTimer) clearInterval(sliderTimer);
+      sliderTimer = setInterval(nextSlide, 5000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initGapAnimations();
+      resetSliderTimer();
+    });
+    // CONTACT FORM
+    function submitContactForm() {
+      const first = document.getElementById('cf_first').value.trim();
+      const last = document.getElementById('cf_last').value.trim();
+      const email = document.getElementById('cf_email').value.trim();
+      const msg = document.getElementById('cf_message').value.trim();
+      const errEl = document.getElementById('formError');
+      const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!first || !last || !email || !msg || !emailRx.test(email)) {
+        errEl.style.display = 'block';
+        errEl.textContent = !email || !emailRx.test(email)
+          ? 'Please enter a valid email address.'
+          : 'Please fill in all required fields.';
+        return;
+      }
+      errEl.style.display = 'none';
+
+      const btn = document.getElementById('contactSubmitBtn');
+      const btnText = document.getElementById('submitBtnText');
+      const btnIcon = document.getElementById('submitBtnIcon');
+      const spinner = document.getElementById('submitBtnSpinner');
+      btn.disabled = true;
+      btnText.textContent = 'Sending…';
+      btnIcon.style.display = 'none';
+      spinner.style.display = 'inline-block';
+
+      const org = document.getElementById('cf_org').value.trim();
+      const area = document.getElementById('cf_area').value;
+      const body = `Name: ${first} ${last}\nEmail: ${email}\nOrganisation: ${org || '—'}\nArea of Interest: ${area || '—'}\n\nMessage:\n${msg}`;
+
+      // Send via mailto as fallback (EmailJS / backend not available in static context)
+      const mailto = `mailto:hello@dexxora.com?subject=Enquiry from ${encodeURIComponent(first + ' ' + last)} — Dexxora Website&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+
+      // Show success state after short delay
+      setTimeout(() => {
+        document.getElementById('contactFormFields').style.display = 'none';
+        document.getElementById('contactSuccess').style.display = 'block';
+        btn.disabled = false;
+        btnText.textContent = 'Send Message';
+        btnIcon.style.display = 'inline-block';
+        spinner.style.display = 'none';
+      }, 800);
+    }
+
+    function resetContactForm() {
+      ['cf_first', 'cf_last', 'cf_email', 'cf_org', 'cf_message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('cf_area').value = '';
+      document.getElementById('formError').style.display = 'none';
+      document.getElementById('contactFormFields').style.display = 'block';
+      document.getElementById('contactSuccess').style.display = 'none';
+    }
+
+    // Set active nav item
+    (function() {
+      document.querySelectorAll('.nav-links button, .nav-links a').forEach(function(b) { b.classList.remove('nav-active'); });
+      var btn = document.getElementById('nav-about');
+      if (btn) btn.classList.add('nav-active');
+    })();
+  </script>
+</body>
+
+</html>

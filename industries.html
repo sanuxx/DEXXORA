@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Industries We Serve: Dexxora Operational Intelligence</title>
+  <meta name="description" content="Dexxora partners with organisations across banking, insurance, telecommunications, manufacturing, retail, healthcare, logistics, energy, and the public sector." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Multi-page: always show page content */
+    .page { display: block !important; opacity: 1 !important; }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-brand" onclick="showPage('home')">
+      <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
+    </div>
+    <ul class="nav-links">
+      <li><button onclick="showPage('home')" id="nav-home" class="nav-active">Home</button></li>
+      <li><button onclick="showPage('expert')" id="nav-expert">Expert Hub</button></li>
+      <li><button onclick="showPage('industries')" id="nav-industries">Industries</button></li>
+      <li><button onclick="showPage('about')" id="nav-about">About Us</button></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-btn">More <svg viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9" />
+          </svg></button>
+        <div class="nav-dropdown-menu">
+          <button onclick="showPage('solution')" id="nav-solution" style="display:none;">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            </svg>Solution Hub
+          </button>
+          <button onclick="showPage('aiproduct')" id="nav-aiproduct">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 3" />
+            </svg>AI-Led Product Development
+          </button>
+        </div>
+      </li>
+      <li><button onclick="showPage('contact')" id="nav-contact" class="nav-cta-btn">Start a Conversation</button></li>
+    </ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <button onclick="showPage('home');toggleMenu()">Home</button>
+    <button onclick="showPage('expert');toggleMenu()">Expert Hub</button>
+    <button onclick="showPage('industries');toggleMenu()">Industries</button>
+    <button onclick="showPage('about');toggleMenu()">About Us</button>
+    <div class="mobile-more-label">More</div>
+    <button class="mobile-sub" onclick="showPage('solution');toggleMenu()" style="display:none;">Solution Hub</button>
+    <button class="mobile-sub" onclick="showPage('aiproduct');toggleMenu()">AI-Led Product Development</button>
+    <button onclick="showPage('contact');toggleMenu()">Start a Conversation</button>
+  </div>
+  <div class="page" id="page-industries">
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=2072&auto=format&fit=crop"
+          alt="Operational intelligence across industries">
+      </div>
+      <div class="hero-content">
+        <div class="hero-kicker">INDUSTRIES WE SERVE</div>
+        <h1>Cross-sector pattern recognition.<br><span>Sector-specific outcomes.</span></h1>
+        <p style="font-size:1rem;color:rgba(255,255,255,0.7);line-height:1.75;max-width:560px;margin:20px 0 24px;font-family:'Inter',sans-serif;">We work across a wide range of industries, bringing the lessons of each into every engagement, and shaping our work to the realities of yours.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="showPage('contact')">Start a Conversation <svg width="16" height="16"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg></button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-label">Coverage</div>
+          <div class="hero-stat-val">9 sectors served</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-label">Model</div>
+          <div class="hero-stat-val">Unified transformation<br>approach</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-label">Delivery</div>
+          <div class="hero-stat-val">Expert Hub–led<br>engagements</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries intro — premium -->
+    <section class="premium-statement-section premium-statement-light">
+      <div class="premium-statement-inner">
+        <p class="premium-statement-text premium-statement-text-dark">Operational intelligence is universal in principle, but specific in practice. The decisions that define a bank are not the decisions that define a manufacturer. Our Expert Hub brings cross-sector pattern recognition, and then translates it into the <em>language, realities, and outcomes of your industry.</em></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="s-eyebrow">Sectors we serve</span>
+        <h2 class="s-title">Nine sectors.<br><em>One consistent approach.</em></h2>
+        <div class="industry-grid" style="margin-top:48px;">
+          <div class="industry-card">
+            <div class="industry-card-img"><img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop"
+                alt="Banking and financial services"></div>
+            <div class="industry-card-body">
+              <h3>Banking &amp; Financial Services</h3>
+              <p>Risk, compliance, and customer operations built on real-time decisions.</p>
+            </div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-card-img"><img
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop"
+                alt="Insurance operations"></div>
+            <div class="industry-card-body">
+              <h3>Insurance</h3>
+              <p>Underwriting, claims, and distribution re-engineered around predictive intelligence.</p>
+            </div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-card-img"><img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop"
+                alt="Telecommunications operations"></div>
+            <div class="industry-card-body">
+              <h3>Telecommunications</h3>
+              <p>Network, customer, and commercial operations connected into a unified decision layer.</p>
+            </div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-card-img"><img
+                src="https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=800&auto=format&fit=crop"
+                alt="Manufacturing operations"></div>
+            <div class="industry-card-body">
+              <h3>Manufacturing</h3>
+              <p>Production, supply, and quality operations driven by integrated signals and prescriptive action.</p>
+            </div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-card-img"><img
+                src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?q=80&w=800&auto=format&fit=crop"
+                alt="Retail and consumer operations"></div>
+            <div class="industry-card-body">
+              <h3>Retail &amp; Consumer</h3>
+              <p>Merchandising, inventory, and customer experience linked through real-time operational intelligence.</p>
+            </div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-card-img"><img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=800&auto=format&fit=crop"
+                alt="Healthcare and life sciences"></div>
+            <div class="industry-card-body">
+              <h3>Healthcare &amp; Life Sciences</h3>
+              <p>Clinical, operational, and compliance decisions sharpened through connected data and workflows.</p>
+            </div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-card-img"><img
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop"
+                alt="Logistics and supply chain operations"></div>
+            <div class="industry-card-body">
+              <h3>Logistics &amp; Supply Chain</h3>
+              <p>End-to-end visibility, predictive disruption management, and intelligent fulfilment.</p>
+            </div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-card-img"><img
+                src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop"
+                alt="Energy and utilities operations"></div>
+            <div class="industry-card-body">
+              <h3>Energy &amp; Utilities</h3>
+              <p>Asset, field, and customer operations optimised through real-time intelligence.</p>
+            </div>
+          </div>
+          <div class="industry-card">
+            <div class="industry-card-img"><img
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop"
+                alt="Public sector operations"></div>
+            <div class="industry-card-body">
+              <h3>Public Sector</h3>
+              <p>Citizen services and operational programs strengthened through transparent, decision-ready data.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Consistent approach section -->
+        <div style="margin-top:72px;padding:52px;background:var(--bg-silver);border-radius:var(--card-radius-lg);">
+          <h2 class="s-title">The model travels. The context is yours.</h2>
+          <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;max-width:720px;font-family:'Inter',sans-serif;">Every Dexxora engagement uses the same four capabilities: Operating Model Design, Decision Architecture, Intelligence Layer, and Transformation Governance. What changes is the context: the regulatory environment, the operational rhythms, the data realities, and the decisions that matter most. Our Expert Hub brings practitioners with deep experience in your sector, alongside leaders who have seen the same problem solved in another.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="dark-band">
+      <div class="dark-band-inner">
+        <div class="dark-band-text">
+          <h2>Looking for an industry-specific<br><span>conversation?</span></h2>
+          <p style="font-size:.9rem;color:rgba(255,255,255,0.4);margin-top:12px;max-width:520px;line-height:1.7;font-family:'Inter',sans-serif;">Tell us about your sector and the decisions you're trying to sharpen.</p>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="showPage('contact')">Start a Conversation</button>
+          <button class="btn-secondary" onclick="showPage('expert')">Explore the Expert Hub</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-main">
+        <div>
+          <div class="footer-brand">
+            <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
+            <div class="brand-text"><span class="brand-name">Dexxora</span></div>
+          </div>
+          <p class="footer-tagline">Operational Intelligence Transformation Advisory</p>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg><span>Colombo, Sri Lanka</span></div>
+        </div>
+        <div>
+          <p class="footer-col-heading">Navigate</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('home')">Home</button></li>
+            <li><button onclick="showPage('about')">About Us</button></li>
+            <li><button onclick="showPage('contact')">Contact Us</button></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-heading">Services</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('expert')">Expert Hub</button></li>
+            <li><button onclick="showPage('aiproduct')">AI-Led Product Development</button></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-heading">Focus Areas</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('industries')">Industry 4.0 Strategy</button></li>
+            <li><button onclick="showPage('industries')">Operational Intelligence</button></li>
+            <li><button onclick="showPage('expert')">Architecture Design</button></li>
+            <li><button onclick="showPage('expert')">Data &amp; Integration</button></li>
+            <li><button onclick="showPage('expert')">Transformation Governance</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Dexxora. All rights reserved.</div>
+        <div class="footer-bottom-links"><a>Privacy Policy</a><a>Terms of Use</a><a>Cookie Notice</a></div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    function showPage(name) {
+      var map = {
+        home: 'home.html',
+        about: 'about.html',
+        expert: 'expert.html',
+        industries: 'industries.html',
+        aiproduct: 'aiproduct.html',
+        solution: 'solution.html',
+        contact: 'contact.html'
+      };
+      window.location.href = map[name] || 'index.html';
+    }
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+    function initGapAnimations() {
+      const cards = document.querySelectorAll('#page-home .gap-card');
+      const obs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate-in'); }); }, { threshold: .15 });
+      cards.forEach(c => obs.observe(c));
+    }
+
+    function initFlowchart() {
+      const steps = document.querySelectorAll('#fcWrap .fc-step');
+      if (!steps.length) return;
+      steps.forEach(s => s.classList.remove('fc-visible'));
+      const obs = new IntersectionObserver(es => {
+        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fc-visible'); obs.unobserve(e.target); } });
+      }, { threshold: .2 });
+      steps.forEach(s => obs.observe(s));
+    }
+
+    // HOME HERO SLIDER
+    let currentSlide = 1;
+    let sliderTimer = null;
+
+    function goToSlide(n) {
+      const slides = document.querySelectorAll('#home-hero .hero-slide');
+      const dots = document.querySelectorAll('#home-hero .slider-dot');
+      slides.forEach(s => s.classList.remove('active-slide'));
+      dots.forEach(d => d.classList.remove('active-dot'));
+      currentSlide = n;
+      const target = document.getElementById('slide-' + n);
+      if (target) { target.classList.add('active-slide'); }
+      if (dots[n - 1]) dots[n - 1].classList.add('active-dot');
+      resetSliderTimer();
+    }
+
+    function nextSlide() {
+      const total = document.querySelectorAll('#home-hero .hero-slide').length;
+      goToSlide(currentSlide >= total ? 1 : currentSlide + 1);
+    }
+
+    function prevSlide() {
+      const total = document.querySelectorAll('#home-hero .hero-slide').length;
+      goToSlide(currentSlide <= 1 ? total : currentSlide - 1);
+    }
+
+    function resetSliderTimer() {
+      if (sliderTimer) clearInterval(sliderTimer);
+      sliderTimer = setInterval(nextSlide, 5000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initGapAnimations();
+      resetSliderTimer();
+    });
+    // CONTACT FORM
+    function submitContactForm() {
+      const first = document.getElementById('cf_first').value.trim();
+      const last = document.getElementById('cf_last').value.trim();
+      const email = document.getElementById('cf_email').value.trim();
+      const msg = document.getElementById('cf_message').value.trim();
+      const errEl = document.getElementById('formError');
+      const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!first || !last || !email || !msg || !emailRx.test(email)) {
+        errEl.style.display = 'block';
+        errEl.textContent = !email || !emailRx.test(email)
+          ? 'Please enter a valid email address.'
+          : 'Please fill in all required fields.';
+        return;
+      }
+      errEl.style.display = 'none';
+
+      const btn = document.getElementById('contactSubmitBtn');
+      const btnText = document.getElementById('submitBtnText');
+      const btnIcon = document.getElementById('submitBtnIcon');
+      const spinner = document.getElementById('submitBtnSpinner');
+      btn.disabled = true;
+      btnText.textContent = 'Sending…';
+      btnIcon.style.display = 'none';
+      spinner.style.display = 'inline-block';
+
+      const org = document.getElementById('cf_org').value.trim();
+      const area = document.getElementById('cf_area').value;
+      const body = `Name: ${first} ${last}\nEmail: ${email}\nOrganisation: ${org || '—'}\nArea of Interest: ${area || '—'}\n\nMessage:\n${msg}`;
+
+      // Send via mailto as fallback (EmailJS / backend not available in static context)
+      const mailto = `mailto:hello@dexxora.com?subject=Enquiry from ${encodeURIComponent(first + ' ' + last)} — Dexxora Website&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+
+      // Show success state after short delay
+      setTimeout(() => {
+        document.getElementById('contactFormFields').style.display = 'none';
+        document.getElementById('contactSuccess').style.display = 'block';
+        btn.disabled = false;
+        btnText.textContent = 'Send Message';
+        btnIcon.style.display = 'inline-block';
+        spinner.style.display = 'none';
+      }, 800);
+    }
+
+    function resetContactForm() {
+      ['cf_first', 'cf_last', 'cf_email', 'cf_org', 'cf_message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('cf_area').value = '';
+      document.getElementById('formError').style.display = 'none';
+      document.getElementById('contactFormFields').style.display = 'block';
+      document.getElementById('contactSuccess').style.display = 'none';
+    }
+
+    // Set active nav item
+    (function() {
+      document.querySelectorAll('.nav-links button, .nav-links a').forEach(function(b) { b.classList.remove('nav-active'); });
+      var btn = document.getElementById('nav-industries');
+      if (btn) btn.classList.add('nav-active');
+    })();
+  </script>
+</body>
+
+</html>

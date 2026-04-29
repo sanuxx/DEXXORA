@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Dexxora: Operational Intelligence Transformation Advisory</title>
+  <meta name="description" content="Dexxora helps organisations build intelligent operations by connecting workflows, decisions, and data into a unified operating model. Senior practitioners. Measurable outcomes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Multi-page: always show page content */
+    .page { display: block !important; opacity: 1 !important; }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-brand" onclick="showPage('home')">
+      <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
+    </div>
+    <ul class="nav-links">
+      <li><button onclick="showPage('home')" id="nav-home" class="nav-active">Home</button></li>
+      <li><button onclick="showPage('expert')" id="nav-expert">Expert Hub</button></li>
+      <li><button onclick="showPage('industries')" id="nav-industries">Industries</button></li>
+      <li><button onclick="showPage('about')" id="nav-about">About Us</button></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-btn">More <svg viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9" />
+          </svg></button>
+        <div class="nav-dropdown-menu">
+          <button onclick="showPage('solution')" id="nav-solution" style="display:none;">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            </svg>Solution Hub
+          </button>
+          <button onclick="showPage('aiproduct')" id="nav-aiproduct">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 3" />
+            </svg>AI-Led Product Development
+          </button>
+        </div>
+      </li>
+      <li><button onclick="showPage('contact')" id="nav-contact" class="nav-cta-btn">Start a Conversation</button></li>
+    </ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <button onclick="showPage('home');toggleMenu()">Home</button>
+    <button onclick="showPage('expert');toggleMenu()">Expert Hub</button>
+    <button onclick="showPage('industries');toggleMenu()">Industries</button>
+    <button onclick="showPage('about');toggleMenu()">About Us</button>
+    <div class="mobile-more-label">More</div>
+    <button class="mobile-sub" onclick="showPage('solution');toggleMenu()" style="display:none;">Solution Hub</button>
+    <button class="mobile-sub" onclick="showPage('aiproduct');toggleMenu()">AI-Led Product Development</button>
+    <button onclick="showPage('contact');toggleMenu()">Start a Conversation</button>
+  </div>
+  <div class="page active" id="page-home">
+
+    <!-- HERO: 2-slide carousel -->
+    <section class="hero hero-slider" id="home-hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+          alt="Intelligent operations data network">
+      </div>
+      <!-- Slide 1 -->
+      <div class="hero-slide active-slide" id="slide-1">
+        <div class="hero-slide-inner">
+          <div class="hero-kicker">OPERATIONAL INTELLIGENCE TRANSFORMATION ADVISORY</div>
+          <h1>Most organisations have systems.<br><span>Few have intelligent operations.</span></h1>
+          <p style="font-size:1rem;color:rgba(255,255,255,0.7);line-height:1.75;max-width:560px;margin:20px 0 24px;font-family:'Inter',sans-serif;">Dexxora designs and enables operating models that connect workflows, decisions, and intelligence — so your enterprise doesn't just run; it thinks.</p>
+          <div class="hero-btns">
+            <button class="btn-primary" onclick="showPage('contact')">Start a Conversation <svg width="16" height="16"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></button>
+            <button class="btn-secondary" onclick="showPage('expert')">How we work</button>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="hero-slide" id="slide-2">
+        <div class="hero-slide-inner">
+          <div class="hero-kicker">OPERATIONAL INTELLIGENCE TRANSFORMATION ADVISORY</div>
+          <h1>Enabling Industry 5.0 through<br><span>intelligent factory operations.</span></h1>
+          <div class="hero-btns">
+            <button class="btn-primary" onclick="showPage('contact')">Start a Conversation <svg width="16" height="16"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></button>
+            <button class="btn-secondary" onclick="showPage('expert')">How we work</button>
+          </div>
+        </div>
+      </div>
+      <!-- Slide indicators -->
+      <div class="hero-slider-dots">
+        <button class="slider-dot active-dot" onclick="goToSlide(1)" aria-label="Slide 1"></button>
+        <button class="slider-dot" onclick="goToSlide(2)" aria-label="Slide 2"></button>
+      </div>
+      <button class="slider-arrow slider-prev" onclick="prevSlide()" aria-label="Previous">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <button class="slider-arrow slider-next" onclick="nextSlide()" aria-label="Next">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+    </section>
+
+    <!-- POSITIONING STATEMENT — premium -->
+    <section class="premium-statement-section premium-statement-light">
+      <div class="premium-statement-inner">
+        <p class="premium-statement-text premium-statement-text-dark">Organisations have invested heavily in ERP, CRM, and enterprise platforms. Yet workflows remain fragmented, decisions remain slow, and visibility remains incomplete. The gap is not technology. It is <em>how operations are designed to think.</em></p>
+      </div>
+    </section>
+
+    <!-- THREE-UP VALUE PROPOSITION -->
+    <section class="intel-gap-section" id="intel-gap">
+      <div class="intel-gap-inner">
+        <div class="intel-gap-header">
+          <span class="s-eyebrow">We close the gap between systems and intelligence.</span>
+          <h2>We close the gap between<br><em>systems and intelligence.</em></h2>
+        </div>
+        <div class="gap-cards-grid">
+          <div class="gap-card">
+            <div class="gap-card-number">01</div>
+            <div class="gap-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="3" width="7" height="18" rx="2"></rect>
+                <rect x="9.5" y="8" width="5" height="13" rx="2"></rect>
+                <rect x="17" y="6" width="5" height="15" rx="2"></rect>
+                <line x1="2" y1="21" x2="22" y2="21"></line>
+              </svg></div>
+            <h3>Operations, not systems</h3>
+            <p>Intelligence is embedded into how the business operates, not layered onto technology.</p>
+            <div class="gap-card-bottom"></div>
+          </div>
+          <div class="gap-card">
+            <div class="gap-card-number">02</div>
+            <div class="gap-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg></div>
+            <h3>Expertise, not methodology</h3>
+            <p>Senior practitioners lead every engagement. No generic frameworks. No vendor bias.</p>
+            <div class="gap-card-bottom"></div>
+          </div>
+          <div class="gap-card">
+            <div class="gap-card-number">03</div>
+            <div class="gap-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg></div>
+            <h3>Performance, not delivery</h3>
+            <p>Success is measured in decisions improved and outcomes achieved.</p>
+            <div class="gap-card-bottom"></div>
+          </div>
+          <div class="gap-card">
+            <div class="gap-card-number">04</div>
+            <div class="gap-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg></div>
+            <h3>Execution, not theory</h3>
+            <p>Practical models grounded in delivery experience, built to scale in the real world.</p>
+            <div class="gap-card-bottom"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE MODEL SECTION (What We Do), comes before Client Impact per PDF -->
+    <section class="section section-soft sig-model-section">
+      <div class="container">
+        <span class="s-eyebrow">What We Do</span>
+        <h2 class="s-title">We architect how your<br><em>organisation operates.</em></h2>
+        <p class="s-sub" style="margin-left:0;max-width:600px;">Four capabilities, working as a single connected system.</p>
+
+        <div class="sig-model-wrap">
+          <div class="sig-model-flow">
+            <div class="sig-card sig-card-light">
+              <div class="sig-badge sig-badge-light">Current state</div>
+              <h3 class="sig-card-title">Fragmented Operations</h3>
+              <p class="sig-card-desc">Disconnected workflows. Delayed decisions. Activity without intelligence.</p>
+              <ul class="sig-list">
+                <li><span class="sig-dot"></span>Siloed workflows</li>
+                <li><span class="sig-dot"></span>Delayed decisions</li>
+                <li><span class="sig-dot"></span>Incomplete visibility</li>
+                <li><span class="sig-dot"></span>Unmeasured performance</li>
+              </ul>
+            </div>
+            <div class="sig-arrow"></div>
+            <div class="sig-card sig-card-dark">
+              <div class="sig-badge sig-badge-dark">Dexxora Expert Hub</div>
+              <h3 class="sig-card-title sig-card-title-light">Operational Intelligence Transformation</h3>
+              <p class="sig-card-desc sig-card-desc-light">Define the operating model that turns fragmented operations
+                into one intelligent, decision‑driven environment.</p>
+              <ul class="sig-list sig-list-dark">
+                <li><span class="sig-dot sig-dot-light"></span>Operating model design</li>
+                <li><span class="sig-dot sig-dot-light"></span>Decision architecture</li>
+                <li><span class="sig-dot sig-dot-light"></span>Intelligence layer</li>
+                <li><span class="sig-dot sig-dot-light"></span>Transformation governance</li>
+              </ul>
+            </div>
+            <div class="sig-arrow"></div>
+            <div class="sig-card sig-card-light">
+              <div class="sig-badge sig-badge-light">Future state</div>
+              <h3 class="sig-card-title">Intelligent Operations</h3>
+              <p class="sig-card-desc">An operating environment where workflows, decisions, and performance move in real
+                time.</p>
+              <ul class="sig-list">
+                <li><span class="sig-dot"></span>Real‑time visibility</li>
+                <li><span class="sig-dot"></span>Informed decisions</li>
+                <li><span class="sig-dot"></span>Predictive operations</li>
+                <li><span class="sig-dot"></span>Sustained performance</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sig-notes">
+            <div class="sig-note"><strong>Operating Model Design. </strong>Transformation blueprints aligned with business goals and operational realities.</div>
+            <div class="sig-note"><strong>Decision Architecture. </strong>Structuring how decisions are made: faster, more accurate, more consistent.</div>
+            <div class="sig-note"><strong>Intelligence Layer. </strong>Data, AI, and predictive models that power real-time and prescriptive decisions.</div>
+            <div class="sig-note"><strong>Transformation Governance. </strong>Intelligent workflows, automation, and expert-led governance that sustain performance.</div>
+          </div>
+        </div>
+        <div style="margin-top:40px;">
+          <button class="btn-primary" onclick="showPage('expert')">Explore our services <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERT HUB TEASER -->
+    <section class="ci-section">
+      <div class="container">
+        <div class="outcome-header-grid">
+          <div>
+            <span class="s-eyebrow" style="color:var(--neon-blue);">THE DEXXORA DIFFERENCE</span>
+            <h2 class="s-title s-title-light" style="margin-top:16px;">Not a system integrator. Not a consulting firm.<br><em style="font-style:italic;color:var(--neon-blue);">An Expert Hub.</em></h2>
+          </div>
+          <div>
+            <p style="font-size:1.05rem;color:rgba(255,255,255,0.65);line-height:1.75;font-family:'Inter',sans-serif;margin:0 0 24px;">
+              Transformation fails not because of technology, but because operations were never designed to be intelligent. Our Expert Hub brings senior practitioners with decades of cross-industry experience directly into your transformation. We scale to the engagement and stay accountable for the outcome.</p>
+            <button class="btn-primary" onclick="showPage('expert')">Meet the Expert Hub <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+          </div>
+        </div>
+
+        <!-- Industries Strip -->
+        <div class="outcome-pillars-grid">
+
+          <div style="padding:52px 40px;background:#05111E;position:relative;transition:background .3s;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:32px;">
+              <span style="font-family:'Instrument Serif',Georgia,serif;font-size:3rem;font-weight:400;color:var(--neon-blue);line-height:1;letter-spacing:-.02em;">01</span>
+              <div style="width:36px;height:36px;border-radius:50%;background:rgba(0,200,255,0.08);border:1px solid rgba(0,200,255,0.25);display:flex;align-items:center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0EA5E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+            </div>
+            <h3 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.9rem;font-weight:400;color:#fff;line-height:1.15;margin:6px 0 14px;letter-spacing:-.02em;">Banking &amp; Financial Services</h3>
+            <p style="font-family:'Inter',sans-serif;font-size:.88rem;color:rgba(255,255,255,0.55);line-height:1.7;margin:0;">Risk, compliance, and customer operations built on real-time decisions.</p>
+          </div>
+
+          <div style="padding:52px 40px;background:#05111E;position:relative;transition:background .3s;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:32px;">
+              <span style="font-family:'Instrument Serif',Georgia,serif;font-size:3rem;font-weight:400;color:var(--neon-blue);line-height:1;letter-spacing:-.02em;">02</span>
+              <div style="width:36px;height:36px;border-radius:50%;background:rgba(0,200,255,0.08);border:1px solid rgba(0,200,255,0.25);display:flex;align-items:center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0EA5E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6l2 4-2 2a10 10 0 0 0 6 6l2-2 4 2v6a2 2 0 0 1-2 2A18 18 0 0 1 2 5a2 2 0 0 1 2-2"/></svg>
+              </div>
+            </div>
+            <h3 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.9rem;font-weight:400;color:#fff;line-height:1.15;margin:6px 0 14px;letter-spacing:-.02em;">Manufacturing</h3>
+            <p style="font-family:'Inter',sans-serif;font-size:.88rem;color:rgba(255,255,255,0.55);line-height:1.7;margin:0;">Production, supply, and quality operations driven by integrated signals and prescriptive action.</p>
+          </div>
+
+          <div style="padding:52px 40px;background:#05111E;position:relative;transition:background .3s;">
+            <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:32px;">
+              <span style="font-family:'Instrument Serif',Georgia,serif;font-size:3rem;font-weight:400;color:var(--neon-blue);line-height:1;letter-spacing:-.02em;">03</span>
+              <div style="width:36px;height:36px;border-radius:50%;background:rgba(0,200,255,0.08);border:1px solid rgba(0,200,255,0.25);display:flex;align-items:center;justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0EA5E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+            </div>
+            <h3 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.9rem;font-weight:400;color:#fff;line-height:1.15;margin:6px 0 14px;letter-spacing:-.02em;">Healthcare &amp; Life Sciences</h3>
+            <p style="font-family:'Inter',sans-serif;font-size:.88rem;color:rgba(255,255,255,0.55);line-height:1.7;margin:0;">Clinical, operational, and compliance decisions sharpened through connected data and workflows.</p>
+          </div>
+
+        </div>
+
+        <!-- Industries CTA -->
+        <div style="margin-top:40px;">
+          <span class="s-eyebrow" style="color:rgba(255,255,255,0.5);">Cross-sector pattern recognition.</span>
+          <p style="font-size:1rem;color:rgba(255,255,255,0.65);line-height:1.75;font-family:'Inter',sans-serif;margin:16px 0 24px;max-width:680px;">We work across banking, insurance, telecommunications, manufacturing, retail, healthcare, logistics, energy, and the public sector, bringing lessons from each into every engagement.</p>
+          <button class="btn-primary" onclick="showPage('industries')" style="flex-shrink:0;">See industries <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <div class="dark-band">
+      <div class="dark-band-inner">
+        <div class="dark-band-text">
+          <h2>Ready to operate with intelligence<br><span>at the core?</span></h2>
+          <p style="font-size:.9rem;color:rgba(255,255,255,0.4);margin-top:12px;max-width:520px;line-height:1.7;font-family:'Inter',sans-serif;">We welcome conversations with leaders building the next generation of intelligent operations.</p>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="showPage('contact')">Start a Conversation</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-main">
+        <!-- Brand col -->
+        <div>
+          <div class="footer-brand">
+            <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
+            <div class="brand-text"><span class="brand-name">Dexxora</span></div>
+          </div>
+          <p class="footer-tagline">Operational Intelligence Transformation Advisory</p>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg><span>Colombo, Sri Lanka</span></div>
+        </div>
+        <!-- Company col -->
+        <div>
+          <p class="footer-col-heading">Navigate</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('home')">Home</button></li>
+            <li><button onclick="showPage('about')">About Us</button></li>
+            <li><button onclick="showPage('contact')">Contact Us</button></li>
+          </ul>
+        </div>
+        <!-- Services col -->
+        <div>
+          <p class="footer-col-heading">Services</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('expert')">Expert Hub</button></li>
+            <li><button onclick="showPage('aiproduct')">AI-Led Product Development</button></li>
+          </ul>
+        </div>
+        <!-- Focus col -->
+        <div>
+          <p class="footer-col-heading">Focus Areas</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('industries')">Industry 4.0 Strategy</button></li>
+            <li><button onclick="showPage('industries')">Operational Intelligence</button></li>
+            <li><button onclick="showPage('expert')">Architecture Design</button></li>
+            <li><button onclick="showPage('expert')">Data &amp; Integration</button></li>
+            <li><button onclick="showPage('expert')">Transformation Governance</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Dexxora. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a>Privacy Policy</a>
+          <a>Terms of Use</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    function showPage(name) {
+      var map = {
+        home: 'home.html',
+        about: 'about.html',
+        expert: 'expert.html',
+        industries: 'industries.html',
+        aiproduct: 'aiproduct.html',
+        solution: 'solution.html',
+        contact: 'contact.html'
+      };
+      window.location.href = map[name] || 'index.html';
+    }
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+    function initGapAnimations() {
+      const cards = document.querySelectorAll('#page-home .gap-card');
+      const obs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate-in'); }); }, { threshold: .15 });
+      cards.forEach(c => obs.observe(c));
+    }
+
+    function initFlowchart() {
+      const steps = document.querySelectorAll('#fcWrap .fc-step');
+      if (!steps.length) return;
+      steps.forEach(s => s.classList.remove('fc-visible'));
+      const obs = new IntersectionObserver(es => {
+        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fc-visible'); obs.unobserve(e.target); } });
+      }, { threshold: .2 });
+      steps.forEach(s => obs.observe(s));
+    }
+
+    // HOME HERO SLIDER
+    let currentSlide = 1;
+    let sliderTimer = null;
+
+    function goToSlide(n) {
+      const slides = document.querySelectorAll('#home-hero .hero-slide');
+      const dots = document.querySelectorAll('#home-hero .slider-dot');
+      slides.forEach(s => s.classList.remove('active-slide'));
+      dots.forEach(d => d.classList.remove('active-dot'));
+      currentSlide = n;
+      const target = document.getElementById('slide-' + n);
+      if (target) { target.classList.add('active-slide'); }
+      if (dots[n - 1]) dots[n - 1].classList.add('active-dot');
+      resetSliderTimer();
+    }
+
+    function nextSlide() {
+      const total = document.querySelectorAll('#home-hero .hero-slide').length;
+      goToSlide(currentSlide >= total ? 1 : currentSlide + 1);
+    }
+
+    function prevSlide() {
+      const total = document.querySelectorAll('#home-hero .hero-slide').length;
+      goToSlide(currentSlide <= 1 ? total : currentSlide - 1);
+    }
+
+    function resetSliderTimer() {
+      if (sliderTimer) clearInterval(sliderTimer);
+      sliderTimer = setInterval(nextSlide, 5000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initGapAnimations();
+      resetSliderTimer();
+    });
+    // CONTACT FORM
+    function submitContactForm() {
+      const first = document.getElementById('cf_first').value.trim();
+      const last = document.getElementById('cf_last').value.trim();
+      const email = document.getElementById('cf_email').value.trim();
+      const msg = document.getElementById('cf_message').value.trim();
+      const errEl = document.getElementById('formError');
+      const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!first || !last || !email || !msg || !emailRx.test(email)) {
+        errEl.style.display = 'block';
+        errEl.textContent = !email || !emailRx.test(email)
+          ? 'Please enter a valid email address.'
+          : 'Please fill in all required fields.';
+        return;
+      }
+      errEl.style.display = 'none';
+
+      const btn = document.getElementById('contactSubmitBtn');
+      const btnText = document.getElementById('submitBtnText');
+      const btnIcon = document.getElementById('submitBtnIcon');
+      const spinner = document.getElementById('submitBtnSpinner');
+      btn.disabled = true;
+      btnText.textContent = 'Sending…';
+      btnIcon.style.display = 'none';
+      spinner.style.display = 'inline-block';
+
+      const org = document.getElementById('cf_org').value.trim();
+      const area = document.getElementById('cf_area').value;
+      const body = `Name: ${first} ${last}\nEmail: ${email}\nOrganisation: ${org || '—'}\nArea of Interest: ${area || '—'}\n\nMessage:\n${msg}`;
+
+      // Send via mailto as fallback (EmailJS / backend not available in static context)
+      const mailto = `mailto:hello@dexxora.com?subject=Enquiry from ${encodeURIComponent(first + ' ' + last)} — Dexxora Website&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+
+      // Show success state after short delay
+      setTimeout(() => {
+        document.getElementById('contactFormFields').style.display = 'none';
+        document.getElementById('contactSuccess').style.display = 'block';
+        btn.disabled = false;
+        btnText.textContent = 'Send Message';
+        btnIcon.style.display = 'inline-block';
+        spinner.style.display = 'none';
+      }, 800);
+    }
+
+    function resetContactForm() {
+      ['cf_first', 'cf_last', 'cf_email', 'cf_org', 'cf_message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('cf_area').value = '';
+      document.getElementById('formError').style.display = 'none';
+      document.getElementById('contactFormFields').style.display = 'block';
+      document.getElementById('contactSuccess').style.display = 'none';
+    }
+
+    // Set active nav item
+    (function() {
+      document.querySelectorAll('.nav-links button, .nav-links a').forEach(function(b) { b.classList.remove('nav-active'); });
+      var btn = document.getElementById('nav-home');
+      if (btn) btn.classList.add('nav-active');
+    })();
+  </script>
+</body>
+
+</html>

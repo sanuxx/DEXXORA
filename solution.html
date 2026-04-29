@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Solution Hub — Dexxora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Multi-page: always show page content */
+    .page { display: block !important; opacity: 1 !important; }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-brand" onclick="showPage('home')">
+      <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
+    </div>
+    <ul class="nav-links">
+      <li><button onclick="showPage('home')" id="nav-home" class="nav-active">Home</button></li>
+      <li><button onclick="showPage('expert')" id="nav-expert">Expert Hub</button></li>
+      <li><button onclick="showPage('industries')" id="nav-industries">Industries</button></li>
+      <li><button onclick="showPage('about')" id="nav-about">About Us</button></li>
+      <li class="nav-dropdown">
+        <button class="nav-dropdown-btn">More <svg viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9" />
+          </svg></button>
+        <div class="nav-dropdown-menu">
+          <button onclick="showPage('solution')" id="nav-solution" style="display:none;">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            </svg>Solution Hub
+          </button>
+          <button onclick="showPage('aiproduct')" id="nav-aiproduct">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 3" />
+            </svg>AI-Led Product Development
+          </button>
+        </div>
+      </li>
+      <li><button onclick="showPage('contact')" id="nav-contact" class="nav-cta-btn">Contact Us</button></li>
+    </ul>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <button onclick="showPage('home');toggleMenu()">Home</button>
+    <button onclick="showPage('expert');toggleMenu()">Expert Hub</button>
+    <button onclick="showPage('industries');toggleMenu()">Industries</button>
+    <button onclick="showPage('about');toggleMenu()">About Us</button>
+    <div class="mobile-more-label">More</div>
+    <button class="mobile-sub" onclick="showPage('solution');toggleMenu()" style="display:none;">Solution Hub</button>
+    <button class="mobile-sub" onclick="showPage('aiproduct');toggleMenu()">AI-Led Product Development</button>
+    <button onclick="showPage('contact');toggleMenu()">Contact Us</button>
+  </div>
+  <div class="page" id="page-solution" style="display:none!important;">
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2072&auto=format&fit=crop"
+          alt="Technology solutions and platforms">
+      </div>
+      <div class="hero-content">
+        <div class="hero-kicker">Dexxora Solution Hub</div>
+        <h1>Enabling transformation through <span>curated solutions.</span></h1>
+        <div class="hero-btns">
+          <a href="#solutions" class="btn-primary">View Portfolio <svg width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg></a>
+          <button class="btn-secondary" onclick="showPage('expert')">Expert Hub</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-label">Portfolio</div>
+          <div class="hero-stat-val">Industrial IoT, Insurance,<br>Agriculture, Digital Experience</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-label">Model</div>
+          <div class="hero-stat-val">Curated &amp; validated</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-label">Independence</div>
+          <div class="hero-stat-val">Separate from<br>advisory services</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-statement-section">
+      <div class="premium-statement-inner">
+        <p class="premium-statement-text">Solution Hub operates independently from Dexxora's advisory services,
+          providing direct access to platforms proven in real operational environments, while the Expert Hub defines the
+          operating model in transformation engagements, ensuring <em>solutions follow the model</em> — not the other
+          way around.</p>
+      </div>
+    </section>
+    <div class="container">
+      <span class="s-eyebrow">Portfolio</span>
+      <h2 class="s-title">Four platforms. Four operational domains.</h2>
+      <p class="s-sub" style="margin-left:0;margin-right:0;text-align:left;">Each solution is selected for its ability
+        to integrate into enterprise operations and deliver real‑world intelligence. Never for commercial relationships.
+      </p>
+      <div class="solution-grid">
+        <div class="solution-card">
+          <div class="solution-card-img"><img
+              src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop"
+              alt="SkyveGen AIoT platform"></div>
+          <div class="solution-card-body">
+            <div class="solution-card-num">Industrial IoT</div>
+            <h3>SkyveGen</h3>
+            <div class="capability-tags" style="margin:0 0 10px;"><span class="capability-tag">Powered by
+                SkyveGen</span></div>
+            <p><strong>Powered by SkyveGen.</strong> AIoT, MES, and Edge AI. Real‑time telemetry, predictive
+              maintenance, digital twins, and operational visibility across connected environments.</p>
+          </div>
+        </div>
+        <div class="solution-card">
+          <div class="solution-card-img"><img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+              alt="SureCore insurance platform"></div>
+          <div class="solution-card-body">
+            <div class="solution-card-num">Insurance</div>
+            <h3>SureCore + DIGIEYE + DIGIMED</h3>
+            <div class="capability-tags" style="margin:0 0 10px;"><span class="capability-tag">Powered by
+                SureCore</span><span class="capability-tag">DIGIS Global</span></div>
+            <p><strong>Powered by SureCore and DIGIS Global.</strong> Core insurance operations with claims
+              intelligence. Underwriting, policy lifecycle, remote motor inspection, and digital medical claims.</p>
+          </div>
+        </div>
+        <div class="solution-card">
+          <div class="solution-card-img"><img
+              src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=800&auto=format&fit=crop"
+              alt="Bileeta Poultry ERP"></div>
+          <div class="solution-card-body">
+            <div class="solution-card-num">Agriculture</div>
+            <h3>Bileeta Poultry ERP</h3>
+            <div class="capability-tags" style="margin:0 0 10px;"><span class="capability-tag">Powered by Bileeta</span>
+            </div>
+            <p><strong>Powered by Bileeta.</strong> Smart agriculture platform digitising the poultry value chain.
+              Breeding, hatchery, grow‑out, processing, distribution, and farm‑to‑fork traceability.</p>
+          </div>
+        </div>
+        <div class="solution-card">
+          <div class="solution-card-img"><img
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop"
+              alt="VirtualTour360 digital experience"></div>
+          <div class="solution-card-body">
+            <div class="solution-card-num">Digital Experience</div>
+            <h3>VirtualTour360</h3>
+            <div class="capability-tags" style="margin:0 0 10px;"><span class="capability-tag">Powered by VirtualTour360
+                Pty Ltd</span></div>
+            <p><strong>Powered by VirtualTour360 Pty Ltd.</strong> Immersive virtual environments. Showrooms,
+              interactive 3D tours, and spatial experiences for customer engagement and remote collaboration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <div class="dark-band">
+      <div class="dark-band-inner">
+        <div class="dark-band-text">
+          <h2>Technology without an operating model<br><span>is just more technology.</span></h2>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="showPage('expert')">Define Your Model</button>
+          <button class="btn-secondary" onclick="showPage('contact')">Talk to Us</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-main">
+        <!-- Brand col -->
+        <div>
+          <div class="footer-brand">
+            <div class="logo-mark"><img src="blue gradient logo_180 X 40 px.png" alt="Dexxora"></div>
+            <div class="brand-text"><span class="brand-name">Dexxora</span></div>
+          </div>
+          <p class="footer-tagline">Operational Intelligence Transformation. From fragmented operations to intelligent
+            performance.</p>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg><span>Colombo, Sri Lanka</span></div>
+        </div>
+        <!-- Company col -->
+        <div>
+          <p class="footer-col-heading">Company</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('home')">Home</button></li>
+            <li><button onclick="showPage('about')">About Us</button></li>
+            <li><button onclick="showPage('contact')">Contact Us</button></li>
+          </ul>
+        </div>
+        <!-- Services col -->
+        <div>
+          <p class="footer-col-heading">Services</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('expert')">Expert Hub</button></li>
+            <li><button onclick="showPage('aiproduct')">AI-Led Product Development</button></li>
+          </ul>
+        </div>
+        <!-- Focus col -->
+        <div>
+          <p class="footer-col-heading">Focus Areas</p>
+          <ul class="footer-links">
+            <li><button onclick="showPage('industries')">Industry 4.0 Strategy</button></li>
+            <li><button onclick="showPage('industries')">Operational Intelligence</button></li>
+            <li><button onclick="showPage('expert')">Architecture Design</button></li>
+            <li><button onclick="showPage('expert')">Data &amp; Integration</button></li>
+            <li><button onclick="showPage('expert')">Transformation Governance</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Dexxora. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a>Privacy Policy</a>
+          <a>Terms of Use</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    function showPage(name) {
+      var map = {
+        home: 'home.html',
+        about: 'about.html',
+        expert: 'expert.html',
+        industries: 'industries.html',
+        aiproduct: 'aiproduct.html',
+        solution: 'solution.html',
+        contact: 'contact.html'
+      };
+      window.location.href = map[name] || 'index.html';
+    }
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+    function initGapAnimations() {
+      const cards = document.querySelectorAll('#page-home .gap-card');
+      const obs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate-in'); }); }, { threshold: .15 });
+      cards.forEach(c => obs.observe(c));
+    }
+
+    function initFlowchart() {
+      const steps = document.querySelectorAll('#fcWrap .fc-step');
+      if (!steps.length) return;
+      steps.forEach(s => s.classList.remove('fc-visible'));
+      const obs = new IntersectionObserver(es => {
+        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('fc-visible'); obs.unobserve(e.target); } });
+      }, { threshold: .2 });
+      steps.forEach(s => obs.observe(s));
+    }
+
+    // HOME HERO SLIDER
+    let currentSlide = 1;
+    let sliderTimer = null;
+
+    function goToSlide(n) {
+      const slides = document.querySelectorAll('#home-hero .hero-slide');
+      const dots = document.querySelectorAll('#home-hero .slider-dot');
+      slides.forEach(s => s.classList.remove('active-slide'));
+      dots.forEach(d => d.classList.remove('active-dot'));
+      currentSlide = n;
+      const target = document.getElementById('slide-' + n);
+      if (target) { target.classList.add('active-slide'); }
+      if (dots[n - 1]) dots[n - 1].classList.add('active-dot');
+      resetSliderTimer();
+    }
+
+    function nextSlide() {
+      const total = document.querySelectorAll('#home-hero .hero-slide').length;
+      goToSlide(currentSlide >= total ? 1 : currentSlide + 1);
+    }
+
+    function prevSlide() {
+      const total = document.querySelectorAll('#home-hero .hero-slide').length;
+      goToSlide(currentSlide <= 1 ? total : currentSlide - 1);
+    }
+
+    function resetSliderTimer() {
+      if (sliderTimer) clearInterval(sliderTimer);
+      sliderTimer = setInterval(nextSlide, 5000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initGapAnimations();
+      resetSliderTimer();
+    });
+    // CONTACT FORM
+    function submitContactForm() {
+      const first = document.getElementById('cf_first').value.trim();
+      const last = document.getElementById('cf_last').value.trim();
+      const email = document.getElementById('cf_email').value.trim();
+      const msg = document.getElementById('cf_message').value.trim();
+      const errEl = document.getElementById('formError');
+      const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!first || !last || !email || !msg || !emailRx.test(email)) {
+        errEl.style.display = 'block';
+        errEl.textContent = !email || !emailRx.test(email)
+          ? 'Please enter a valid email address.'
+          : 'Please fill in all required fields.';
+        return;
+      }
+      errEl.style.display = 'none';
+
+      const btn = document.getElementById('contactSubmitBtn');
+      const btnText = document.getElementById('submitBtnText');
+      const btnIcon = document.getElementById('submitBtnIcon');
+      const spinner = document.getElementById('submitBtnSpinner');
+      btn.disabled = true;
+      btnText.textContent = 'Sending…';
+      btnIcon.style.display = 'none';
+      spinner.style.display = 'inline-block';
+
+      const org = document.getElementById('cf_org').value.trim();
+      const area = document.getElementById('cf_area').value;
+      const body = `Name: ${first} ${last}\nEmail: ${email}\nOrganisation: ${org || '—'}\nArea of Interest: ${area || '—'}\n\nMessage:\n${msg}`;
+
+      // Send via mailto as fallback (EmailJS / backend not available in static context)
+      const mailto = `mailto:hello@dexxora.com?subject=Enquiry from ${encodeURIComponent(first + ' ' + last)} — Dexxora Website&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+
+      // Show success state after short delay
+      setTimeout(() => {
+        document.getElementById('contactFormFields').style.display = 'none';
+        document.getElementById('contactSuccess').style.display = 'block';
+        btn.disabled = false;
+        btnText.textContent = 'Send Message';
+        btnIcon.style.display = 'inline-block';
+        spinner.style.display = 'none';
+      }, 800);
+    }
+
+    function resetContactForm() {
+      ['cf_first', 'cf_last', 'cf_email', 'cf_org', 'cf_message'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+      document.getElementById('cf_area').value = '';
+      document.getElementById('formError').style.display = 'none';
+      document.getElementById('contactFormFields').style.display = 'block';
+      document.getElementById('contactSuccess').style.display = 'none';
+    }
+
+    // Set active nav item
+    (function() {
+      document.querySelectorAll('.nav-links button, .nav-links a').forEach(function(b) { b.classList.remove('nav-active'); });
+      var btn = document.getElementById('nav-solution');
+      if (btn) btn.classList.add('nav-active');
+    })();
+  </script>
+</body>
+
+</html>
