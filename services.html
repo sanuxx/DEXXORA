@@ -8,298 +8,595 @@
   <meta name="description" content="Dexxora's four capabilities — Operating Model Design, Decision Architecture, Intelligence Layer, and Transformation Governance — combine into a single intelligent operating model." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
     .page { display: block !important; opacity: 1 !important; }
 
-    /* SERVICES PAGE STYLES */
-    .services-hero {
-      background: linear-gradient(160deg, #040d1c 0%, #071020 55%, #0b1d38 100%);
-      padding: 80px 48px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+    /* ─── HERO ─────────────────────────────────────────────── */
+    .srv-hero {
+      min-height: calc(100vh - 72px);
+      background: #040c1c;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: calc(100vh - 72px);
-      min-height: calc(100dvh - 72px);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 40px;
+      isolation: isolate;
     }
-    .services-hero-bg-grid {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background-image: linear-gradient(rgba(44,123,229,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(44,123,229,0.06) 1px, transparent 1px);
-      background-size: 60px 60px;
+    .srv-hero-noise {
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 20% 40%, rgba(37,99,235,0.22) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 70%, rgba(34,211,245,0.10) 0%, transparent 55%);
     }
-    .services-hero-orb {
-      position: absolute;
+    .srv-hero-grid {
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(37,99,235,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37,99,235,0.07) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+    }
+    .srv-hero-content {
+      position: relative; z-index: 1;
+      text-align: center;
+      max-width: 820px;
+    }
+    .srv-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      background: rgba(37,99,235,0.12);
+      border: 1px solid rgba(37,99,235,0.28);
+      border-radius: 999px;
+      padding: 6px 16px;
+      margin-bottom: 28px;
+    }
+    .srv-kicker::before {
+      content: '';
+      width: 6px; height: 6px;
       border-radius: 50%;
-      filter: blur(80px);
-      pointer-events: none;
-      z-index: 0;
+      background: #60a5fa;
+      display: block;
     }
-    .services-hero-orb-1 {
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(0,136,255,0.18) 0%, transparent 70%);
-      top: -100px; left: -80px;
-    }
-    .services-hero-orb-2 {
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(0,200,255,0.12) 0%, transparent 70%);
-      bottom: -60px; right: -60px;
-    }
-    .services-hero .services-hero-bg-grid,
-    .services-hero .services-hero-orb { position: absolute; }
-    .services-hero .hero-kicker,
-    .services-hero h1,
-    .services-hero p { position: relative; z-index: 1; }
-    .services-hero h1 {
-      color: #fff;
-      font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    .srv-hero-content h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.9rem, 3.8vw, 3rem);
       font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 20px;
-      max-width: 860px;
+      color: #fff;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
     }
-    .services-hero h1 span {
-      background: linear-gradient(135deg, #60a5fa, #2c7be5);
+    .srv-hero-content h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #60a5fa 0%, #22d3f5 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .services-hero p {
-      color: #8aabcc;
+    .srv-hero-content p {
+      color: rgba(255,255,255,0.55);
       font-size: 1.1rem;
-      max-width: 620px;
-      line-height: 1.75;
+      line-height: 1.8;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .srv-hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.03);
+      max-width: 580px;
       margin: 0 auto;
     }
+    .srv-stat {
+      flex: 1;
+      padding: 20px 24px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .srv-stat:last-child { border-right: none; }
+    .srv-stat-num {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #60a5fa;
+      display: block;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .srv-stat-label {
+      font-size: .74rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: .04em;
+    }
 
-    /* SERVICE CARDS */
-    .services-section {
+    /* ─── SERVICES TAB NAV ──────────────────────────────────── */
+    .srv-tab-wrap {
       background: #fff;
-      padding: 96px 52px;
+      border-bottom: 1px solid #e8eef8;
+      position: sticky;
+      top: 72px;
+      z-index: 90;
     }
-    .services-section + .services-section {
-      border-top: 1px solid #e8eef5;
-    }
-    .service-card-inner {
+    .srv-tab-inner {
       max-width: 1100px;
       margin: 0 auto;
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 0 24px;
+    }
+    .srv-tab-inner::-webkit-scrollbar { display: none; }
+    .srv-tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 24px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: .88rem;
+      font-weight: 600;
+      color: #7a90aa;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color .2s, border-color .2s;
+      flex-shrink: 0;
+    }
+    .srv-tab-btn:hover { color: #0f172a; }
+    .srv-tab-btn.active {
+      color: #2563eb;
+      border-bottom-color: #2563eb;
+    }
+    .srv-tab-icon {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(37,99,235,0.08);
+      flex-shrink: 0;
+      transition: background .2s;
+    }
+    .srv-tab-btn.active .srv-tab-icon { background: rgba(37,99,235,0.15); }
+    .srv-tab-icon svg { width: 16px; height: 16px; stroke: #2563eb; fill: none; stroke-width: 2; }
+
+    /* ─── SERVICE PANELS ────────────────────────────────────── */
+    .srv-panels { background: #fff; }
+    .srv-panel { display: none; }
+    .srv-panel.active { display: block; }
+
+    .srv-panel-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 40px;
       display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 64px;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
       align-items: start;
     }
-    .service-card-inner.reverse {
-      grid-template-columns: 2fr 1fr;
-    }
-    .service-card-inner.reverse .service-meta { order: 2; }
-    .service-card-inner.reverse .service-body { order: 1; }
 
-    .service-num {
-      font-size: .72rem;
+    /* Left col */
+    .srv-panel-left {}
+    .srv-panel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .7rem;
       font-weight: 700;
       letter-spacing: .14em;
-      color: #2c7be5;
       text-transform: uppercase;
-      margin-bottom: 16px;
-      display: block;
+      color: #2563eb;
+      background: rgba(37,99,235,0.07);
+      border-radius: 999px;
+      padding: 5px 13px;
+      margin-bottom: 20px;
     }
-    .service-meta h2 {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    .srv-panel-left h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
       font-weight: 800;
       color: #0a1628;
-      line-height: 1.18;
-      letter-spacing: -.02em;
-      margin-bottom: 12px;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
     }
-    .service-meta .service-subhead {
+    .srv-panel-left .srv-panel-desc {
       font-size: 1rem;
-      color: #4a6080;
-      line-height: 1.65;
-      max-width: 340px;
-    }
-
-    .service-body p {
-      font-size: 1rem;
-      color: #3d5166;
+      color: #475569;
       line-height: 1.8;
       margin-bottom: 32px;
     }
-    .service-body h4 {
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: #2c7be5;
-      margin-bottom: 16px;
+
+    /* Visual accent card */
+    .srv-panel-visual {
+      background: linear-gradient(135deg, #040c1c 0%, #0d1e3d 100%);
+      border-radius: 20px;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 32px;
     }
-    .service-includes {
+    .srv-panel-visual::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .srv-panel-visual-num {
+      font-family: 'Sora', sans-serif;
+      font-size: 4rem;
+      font-weight: 800;
+      color: rgba(96,165,250,0.15);
+      line-height: 1;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .srv-panel-visual-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 8px;
+      position: relative;
+    }
+    .srv-panel-visual-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      position: relative;
+    }
+
+    /* Outcome pills */
+    .srv-outcomes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .srv-outcome-pill {
+      font-size: .78rem;
+      font-weight: 600;
+      color: #2563eb;
+      background: rgba(37,99,235,0.07);
+      border: 1px solid rgba(37,99,235,0.16);
+      border-radius: 999px;
+      padding: 6px 14px;
+    }
+
+    /* Right col */
+    .srv-panel-right {}
+
+    .srv-panel-body-text {
+      font-size: 1rem;
+      color: #374151;
+      line-height: 1.85;
+      margin-bottom: 36px;
+    }
+
+    .srv-includes-heading {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #2563eb;
+      margin-bottom: 18px;
+    }
+
+    .srv-includes {
       list-style: none;
-      padding: 0; margin: 0;
+      padding: 0; margin: 0 0 36px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 0;
     }
-    .service-includes li {
+    .srv-includes li {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f4fa;
       font-size: .93rem;
-      color: #3d5166;
+      color: #374151;
       line-height: 1.6;
     }
-    .service-includes li::before {
-      content: '';
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #2c7be5;
+    .srv-includes li:first-child { border-top: 1px solid #f0f4fa; }
+    .srv-li-icon {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      background: rgba(37,99,235,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
-      margin-top: 8px;
+      margin-top: 1px;
     }
+    .srv-li-icon svg { width: 13px; height: 13px; stroke: #2563eb; fill: none; stroke-width: 2.5; }
 
-    /* HOW THEY COME TOGETHER */
-    .services-combine {
-      background: var(--bg-dark);
-      padding: 96px 52px;
-      text-align: center;
+    /* CTA link */
+    .srv-panel-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .9rem;
+      font-weight: 700;
+      color: #2563eb;
+      text-decoration: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      transition: gap .2s;
     }
-    .services-combine-inner {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .services-combine h2 {
-      color: #fff;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 800;
-      letter-spacing: -.03em;
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
-    .services-combine h2 span {
-      background: linear-gradient(135deg, #60a5fa, #2c7be5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .services-combine p {
-      color: rgba(255,255,255,0.6);
-      font-size: 1rem;
-      line-height: 1.8;
-      max-width: 680px;
-      margin: 0 auto;
-    }
+    .srv-panel-cta:hover { gap: 12px; }
+    .srv-panel-cta svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.5; }
 
-    /* FOUR STAGES */
-    .services-stages {
+    /* ─── HOW THEY CONNECT ──────────────────────────────────── */
+    .srv-connect {
       background: #f4f8ff;
-      padding: 96px 52px;
+      padding: 96px 40px;
     }
-    .services-stages-inner {
+    .srv-connect-inner {
       max-width: 1100px;
       margin: 0 auto;
     }
-    .stages-header {
+    .srv-connect-header {
       text-align: center;
       margin-bottom: 64px;
     }
-    .stages-header h2 {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
+    .srv-connect-header h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
       font-weight: 800;
       color: #0a1628;
-      letter-spacing: -.03em;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .srv-connect-header h2 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #2563eb, #22d3f5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .srv-connect-header p {
+      color: #475569;
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* Flow chain */
+    .srv-flow {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      position: relative;
+    }
+    .srv-flow-item {
+      flex: 1;
+      background: #fff;
+      border: 1px solid #dde7f3;
+      border-radius: 18px;
+      padding: 28px 24px;
+      position: relative;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .srv-flow-item:hover {
+      box-shadow: 0 8px 32px rgba(37,99,235,0.12);
+      transform: translateY(-3px);
+    }
+    .srv-flow-arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+      color: #b8cce4;
+      flex-shrink: 0;
+    }
+    .srv-flow-arrow svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; }
+    .srv-flow-num {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+    .srv-flow-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(34,211,245,0.08));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .srv-flow-icon svg { width: 20px; height: 20px; stroke: #2563eb; fill: none; stroke-width: 2; }
+    .srv-flow-item h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0a1628;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .srv-flow-item p {
+      font-size: .84rem;
+      color: #64748b;
+      line-height: 1.65;
+    }
+    .srv-flow-top-bar {
+      position: absolute;
+      top: 0; left: 16px; right: 16px;
+      height: 3px;
+      background: linear-gradient(90deg, #2563eb, #22d3f5);
+      border-radius: 3px 3px 0 0;
+    }
+
+    /* ─── STAGES ────────────────────────────────────────────── */
+    .srv-stages {
+      background: #040c1c;
+      padding: 96px 40px;
+    }
+    .srv-stages-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .srv-stages-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .srv-stages-header h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
       margin-bottom: 12px;
     }
-    .stages-header p {
-      color: #4a6080;
+    .srv-stages-header p {
+      color: rgba(255,255,255,0.5);
       font-size: 1rem;
-      max-width: 560px;
+      max-width: 500px;
       margin: 0 auto;
       line-height: 1.7;
     }
-    .stages-grid {
+    .srv-stages-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-      position: relative;
+      gap: 20px;
     }
-    .stage-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 32px 28px;
-      border: 1px solid #dde7f3;
+    .srv-stage {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 32px 26px;
       position: relative;
+      overflow: hidden;
+      transition: background .2s, border-color .2s;
     }
-    .stage-card::before {
-      content: '';
-      display: block;
-      height: 3px;
-      background: linear-gradient(90deg, #2c7be5, #60a5fa);
-      border-radius: 3px 3px 0 0;
+    .srv-stage:hover {
+      background: rgba(37,99,235,0.08);
+      border-color: rgba(37,99,235,0.3);
+    }
+    .srv-stage-glow {
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: -40px; right: -40px;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%);
+      border-radius: 50%;
     }
-    .stage-num {
-      font-size: .72rem;
+    .srv-stage-num {
+      font-size: .68rem;
       font-weight: 700;
       letter-spacing: .14em;
-      color: #2c7be5;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      color: #60a5fa;
+      margin-bottom: 14px;
     }
-    .stage-card h3 {
-      font-size: 1.05rem;
+    .srv-stage-dot {
+      width: 40px; height: 40px;
+      border-radius: 12px;
+      background: rgba(37,99,235,0.15);
+      border: 1px solid rgba(37,99,235,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .srv-stage-dot svg { width: 18px; height: 18px; stroke: #60a5fa; fill: none; stroke-width: 2; }
+    .srv-stage h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1rem;
       font-weight: 700;
-      color: #0a1628;
+      color: #fff;
       margin-bottom: 10px;
       line-height: 1.3;
     }
-    .stage-card p {
-      font-size: .88rem;
-      color: #4a6080;
+    .srv-stage p {
+      font-size: .84rem;
+      color: rgba(255,255,255,0.45);
       line-height: 1.7;
     }
 
-    /* CLOSING CTA */
-    .services-cta {
-      background: linear-gradient(135deg, #040d1c 0%, #071a35 100%);
-      padding: 80px 52px;
+    /* ─── CTA STRIP ─────────────────────────────────────────── */
+    .srv-cta {
+      background: linear-gradient(135deg, #0d1e3d 0%, #040c1c 100%);
+      padding: 96px 40px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    .services-cta h2 {
-      color: #fff;
-      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    .srv-cta::before {
+      content: '';
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px; height: 300px;
+      background: radial-gradient(ellipse, rgba(37,99,235,0.2) 0%, transparent 70%);
+    }
+    .srv-cta-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+    .srv-cta h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
       font-weight: 800;
-      letter-spacing: -.03em;
-      margin-bottom: 32px;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .srv-cta p {
+      color: rgba(255,255,255,0.5);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+    .srv-cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
-    /* RESPONSIVE */
+    /* ─── RESPONSIVE ────────────────────────────────────────── */
     @media(max-width: 1024px) {
-      .service-card-inner,
-      .service-card-inner.reverse {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-      .service-card-inner.reverse .service-meta { order: 0; }
-      .service-card-inner.reverse .service-body { order: 0; }
-      .stages-grid { grid-template-columns: repeat(2, 1fr); }
+      .srv-panel-layout { grid-template-columns: 1fr; gap: 48px; }
+      .srv-flow { flex-direction: column; gap: 16px; }
+      .srv-flow-arrow { transform: rotate(90deg); justify-content: center; padding: 4px 0; }
+      .srv-stages-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media(max-width: 768px) {
-      .services-section { padding: 64px 20px; }
-      .services-combine { padding: 64px 20px; }
-      .services-stages { padding: 64px 20px; }
-      .services-cta { padding: 56px 20px; }
+      .srv-hero { padding: 64px 24px; }
+      .srv-hero-stats { flex-direction: column; max-width: 260px; }
+      .srv-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .srv-stat:last-child { border-bottom: none; }
+      .srv-panel-layout { padding: 56px 24px; }
+      .srv-connect { padding: 64px 24px; }
+      .srv-stages { padding: 64px 24px; }
+      .srv-cta { padding: 64px 24px; }
     }
-    @media(max-width: 600px) {
-      .stages-grid { grid-template-columns: 1fr; }
+    @media(max-width: 540px) {
+      .srv-stages-grid { grid-template-columns: 1fr; }
+      .srv-tab-btn span.tab-label { display: none; }
     }
   </style>
 </head>
@@ -316,15 +613,10 @@
       <li><button onclick="showPage('expert')" id="nav-expert">Expert Hub</button></li>
       <li><button onclick="showPage('industries')" id="nav-industries">Industries</button></li>
       <li class="nav-dropdown">
-        <button class="nav-dropdown-btn">More <svg viewBox="0 0 24 24">
-            <polyline points="6 9 12 15 18 9" />
-          </svg></button>
+        <button class="nav-dropdown-btn">More <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg></button>
         <div class="nav-dropdown-menu">
           <button onclick="showPage('aiproduct')" id="nav-aiproduct">
-            <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 8v4l3 3" />
-            </svg>AI-Led Product Development
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></svg>AI-Led Product Development
           </button>
         </div>
       </li>
@@ -332,9 +624,7 @@
     </ul>
     <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
       <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-        <line x1="3" y1="12" x2="21" y2="12" />
-        <line x1="3" y1="6" x2="21" y2="6" />
-        <line x1="3" y1="18" x2="21" y2="18" />
+        <line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" />
       </svg>
     </button>
   </nav>
@@ -352,148 +642,413 @@
   <div class="page active" id="page-services">
 
     <!-- HERO -->
-    <div class="services-hero">
-      <div class="hero-bg">
-        <img src="images/hero-services.jpg" alt="Services intelligent operations">
-      </div>
-      <div class="services-hero-bg-grid"></div>
-      <div class="services-hero-orb services-hero-orb-1"></div>
-      <div class="services-hero-orb services-hero-orb-2"></div>
-      <div class="hero-kicker">WHAT WE DO</div>
-      <h1>We design and enable <span>human-centric, AI-enabled</span> operating models.</h1>
-      <p>Four connected capabilities that turn fragmented operations into intelligent, adaptive enterprises ready for Industry 5.0.</p>
-    </div>
-
-    <!-- SERVICE 01 -->
-    <div class="services-section">
-      <div class="service-card-inner">
-        <div class="service-meta">
-          <span class="service-num">Service 01</span>
-          <h2>Operating Model Design</h2>
-          <p class="service-subhead">Transformation blueprints built on how your organisation actually works.</p>
-        </div>
-        <div class="service-body">
-          <p>We design transformation blueprints aligned with business goals and operational realities, not aspirational org charts. Our models define how workflows, decisions, and intelligence fit together, with clear ownership and measurable outcomes at every layer.</p>
-          <h4>What's included</h4>
-          <ul class="service-includes">
-            <li>Current-state operating model assessment</li>
-            <li>Target-state model design aligned to strategic priorities</li>
-            <li>Workflow, data, and decision-flow mapping</li>
-            <li>Transition roadmap and transformation blueprint</li>
-          </ul>
+    <section class="srv-hero">
+      <div class="hero-bg"><img src="images/hero-services.jpg" alt="Services intelligent operations"></div>
+      <div class="srv-hero-noise"></div>
+      <div class="srv-hero-grid"></div>
+      <div class="srv-hero-content">
+        <div class="srv-kicker">What We Do</div>
+        <h1>Four capabilities.<br><em>One intelligent operating model.</em></h1>
+        <div class="srv-hero-stats">
+          <div class="srv-stat">
+            <span class="srv-stat-num">4</span>
+            <span class="srv-stat-label">Core Capabilities</span>
+          </div>
+          <div class="srv-stat">
+            <span class="srv-stat-num">1</span>
+            <span class="srv-stat-label">Unified Model</span>
+          </div>
+          <div class="srv-stat">
+            <span class="srv-stat-num">∞</span>
+            <span class="srv-stat-label">Scale Potential</span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- SERVICE 02 -->
-    <div class="services-section" style="background:#f8fbff;">
-      <div class="service-card-inner reverse">
-        <div class="service-meta">
-          <span class="service-num">Service 02</span>
-          <h2>Decision Architecture</h2>
-          <p class="service-subhead">Structuring how decisions are made: faster, more accurate, more consistent.</p>
-        </div>
-        <div class="service-body">
-          <p>Most decisions in large organisations move through implicit, inconsistent channels. We make them explicit. We design decision frameworks that define who decides, on what data, and within which guardrails. The result turns judgment into an operational asset that scales.</p>
-          <h4>What's included</h4>
-          <ul class="service-includes">
-            <li>Decision inventory and latency diagnostic</li>
-            <li>Decision rights and accountability design</li>
-            <li>Policy, threshold, and escalation structures</li>
-            <li>Embedded decision support at the workflow level</li>
-          </ul>
-        </div>
+    <!-- POSITIONING STATEMENT -->
+    <section class="premium-statement-section premium-statement-light">
+      <div class="premium-statement-inner">
+        <p class="premium-statement-text premium-statement-text-dark">Human-centric, AI-enabled transformation — turning fragmented operations into adaptive enterprises ready for <em>Industry 5.0.</em></p>
       </div>
-    </div>
+    </section>
 
-    <!-- SERVICE 03 -->
-    <div class="services-section">
-      <div class="service-card-inner">
-        <div class="service-meta">
-          <span class="service-num">Service 03</span>
-          <h2>Intelligence Layer</h2>
-          <p class="service-subhead">The data, models, and signals that power real-time and prescriptive decisions.</p>
-        </div>
-        <div class="service-body">
-          <p>We integrate and structure enterprise data to power real-time insights, predictive models, and prescriptive decision-making. The intelligence layer is not a dashboard. It is the connective tissue that makes every workflow and every decision smarter than the one before it.</p>
-          <h4>What's included</h4>
-          <ul class="service-includes">
-            <li>Data architecture and integration design</li>
-            <li>Analytics, AI, and predictive model selection</li>
-            <li>Real-time signal and alerting frameworks</li>
-            <li>Prescriptive decision support integrated into operations</li>
-          </ul>
-        </div>
+    <!-- STICKY TAB NAV -->
+    <div class="srv-tab-wrap">
+      <div class="srv-tab-inner">
+        <button class="srv-tab-btn active" onclick="switchTab(0)" id="tab-0">
+          <div class="srv-tab-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>
+          </div>
+          <span class="tab-label">Operating Model Design</span>
+        </button>
+        <button class="srv-tab-btn" onclick="switchTab(1)" id="tab-1">
+          <div class="srv-tab-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+          </div>
+          <span class="tab-label">Decision Architecture</span>
+        </button>
+        <button class="srv-tab-btn" onclick="switchTab(2)" id="tab-2">
+          <div class="srv-tab-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="tab-label">Intelligence Layer</span>
+        </button>
+        <button class="srv-tab-btn" onclick="switchTab(3)" id="tab-3">
+          <div class="srv-tab-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="tab-label">Transformation Governance</span>
+        </button>
       </div>
     </div>
 
-    <!-- SERVICE 04 -->
-    <div class="services-section" style="background:#f8fbff;">
-      <div class="service-card-inner reverse">
-        <div class="service-meta">
-          <span class="service-num">Service 04</span>
-          <h2>Transformation Governance &amp; Execution</h2>
-          <p class="service-subhead">Turning design into daily performance, with expert-led governance.</p>
+    <!-- PANEL 01 — Operating Model Design -->
+    <div class="srv-panels">
+      <div class="srv-panel active" id="panel-0">
+        <div class="srv-panel-layout">
+          <div class="srv-panel-left">
+            <div class="srv-panel-badge">Service 01</div>
+            <h2>Operating Model Design</h2>
+            <p class="srv-panel-desc">Transformation blueprints built on how your organisation actually works — not aspirational org charts.</p>
+            <div class="srv-panel-visual" style="padding:0;overflow:hidden;min-height:220px;">
+              <img src="images/srv-operating-model.jpg" alt="Operating Model Design" style="width:100%;height:220px;object-fit:cover;object-position:center;filter:brightness(0.45) saturate(0.7);border-radius:20px;">
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 28px;">
+                <div class="srv-panel-visual-label">Foundation</div>
+                <div class="srv-panel-visual-title">Blueprint for intelligent operations</div>
+              </div>
+            </div>
+            <div class="srv-outcomes">
+              <span class="srv-outcome-pill">Clear ownership</span>
+              <span class="srv-outcome-pill">Measurable outcomes</span>
+              <span class="srv-outcome-pill">Aligned workflows</span>
+              <span class="srv-outcome-pill">Transition roadmap</span>
+            </div>
+          </div>
+          <div class="srv-panel-right">
+            <p class="srv-panel-body-text">We design transformation blueprints aligned with business goals and operational realities. Our models define how workflows, decisions, and intelligence fit together — with clear ownership and measurable outcomes at every layer. The result is a practical architecture that people can actually adopt and sustain.</p>
+            <div class="srv-includes-heading">What's Included</div>
+            <ul class="srv-includes">
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Current-state operating model assessment
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Target-state model design aligned to strategic priorities
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Workflow, data, and decision-flow mapping
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Transition roadmap and transformation blueprint
+              </li>
+            </ul>
+            <button class="srv-panel-cta" onclick="showPage('contact')">
+              Discuss this capability
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
         </div>
-        <div class="service-body">
-          <p>Designs do not transform organisations. Execution does. We drive adoption through intelligent workflows, automation, and expert-led governance, ensuring that every layer of the operating model is sustained, measured, and continuously improved.</p>
-          <h4>What's included</h4>
-          <ul class="service-includes">
-            <li>Transformation governance operating model</li>
-            <li>Adoption, change, and capability-building programs</li>
-            <li>Performance monitoring and value realisation tracking</li>
-            <li>On-demand expert-led execution support</li>
-          </ul>
+      </div>
+
+      <!-- PANEL 02 — Decision Architecture -->
+      <div class="srv-panel" id="panel-1">
+        <div class="srv-panel-layout">
+          <div class="srv-panel-left">
+            <div class="srv-panel-badge">Service 02</div>
+            <h2>Decision Architecture</h2>
+            <p class="srv-panel-desc">Structuring how decisions are made: faster, more accurate, more consistent at every level.</p>
+            <div class="srv-panel-visual" style="padding:0;overflow:hidden;min-height:220px;">
+              <img src="images/srv-decision.jpg" alt="Decision Architecture" style="width:100%;height:220px;object-fit:cover;object-position:center;filter:brightness(0.45) saturate(0.7);border-radius:20px;">
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 28px;">
+                <div class="srv-panel-visual-label">Structure</div>
+                <div class="srv-panel-visual-title">Turning judgment into an operational asset</div>
+              </div>
+            </div>
+            <div class="srv-outcomes">
+              <span class="srv-outcome-pill">Decision rights</span>
+              <span class="srv-outcome-pill">Reduced latency</span>
+              <span class="srv-outcome-pill">Accountability design</span>
+              <span class="srv-outcome-pill">Embedded support</span>
+            </div>
+          </div>
+          <div class="srv-panel-right">
+            <p class="srv-panel-body-text">Most decisions in large organisations move through implicit, inconsistent channels. We make them explicit. We design decision frameworks that define who decides, on what data, and within which guardrails. The result turns judgment into an operational asset that scales — and stops expensive delays from compounding at every tier.</p>
+            <div class="srv-includes-heading">What's Included</div>
+            <ul class="srv-includes">
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Decision inventory and latency diagnostic
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Decision rights and accountability design
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Policy, threshold, and escalation structures
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Embedded decision support at the workflow level
+              </li>
+            </ul>
+            <button class="srv-panel-cta" onclick="showPage('contact')">
+              Discuss this capability
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 03 — Intelligence Layer -->
+      <div class="srv-panel" id="panel-2">
+        <div class="srv-panel-layout">
+          <div class="srv-panel-left">
+            <div class="srv-panel-badge">Service 03</div>
+            <h2>Intelligence Layer</h2>
+            <p class="srv-panel-desc">The data, models, and signals that power real-time and prescriptive decisions across the enterprise.</p>
+            <div class="srv-panel-visual" style="padding:0;overflow:hidden;min-height:220px;">
+              <img src="images/srv-intelligence.jpg" alt="Intelligence Layer" style="width:100%;height:220px;object-fit:cover;object-position:center;filter:brightness(0.45) saturate(0.7);border-radius:20px;">
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 28px;">
+                <div class="srv-panel-visual-label">Connective tissue</div>
+                <div class="srv-panel-visual-title">Real-time insight, predictive decision-making</div>
+              </div>
+            </div>
+            <div class="srv-outcomes">
+              <span class="srv-outcome-pill">Real-time visibility</span>
+              <span class="srv-outcome-pill">Predictive models</span>
+              <span class="srv-outcome-pill">Prescriptive ops</span>
+              <span class="srv-outcome-pill">Signal frameworks</span>
+            </div>
+          </div>
+          <div class="srv-panel-right">
+            <p class="srv-panel-body-text">We integrate and structure enterprise data to power real-time insights, predictive models, and prescriptive decision-making. The intelligence layer is not a dashboard — it is the connective tissue that makes every workflow and every decision smarter than the one before it. It is where raw data becomes operational advantage.</p>
+            <div class="srv-includes-heading">What's Included</div>
+            <ul class="srv-includes">
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Data architecture and integration design
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Analytics, AI, and predictive model selection
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Real-time signal and alerting frameworks
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Prescriptive decision support integrated into operations
+              </li>
+            </ul>
+            <button class="srv-panel-cta" onclick="showPage('contact')">
+              Discuss this capability
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 04 — Transformation Governance -->
+      <div class="srv-panel" id="panel-3">
+        <div class="srv-panel-layout">
+          <div class="srv-panel-left">
+            <div class="srv-panel-badge">Service 04</div>
+            <h2>Transformation Governance &amp; Execution</h2>
+            <p class="srv-panel-desc">Turning design into daily performance, with expert-led governance that sustains results.</p>
+            <div class="srv-panel-visual" style="padding:0;overflow:hidden;min-height:220px;">
+              <img src="images/srv-governance.jpg" alt="Transformation Governance" style="width:100%;height:220px;object-fit:cover;object-position:center;filter:brightness(0.45) saturate(0.7);border-radius:20px;">
+              <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 28px;">
+                <div class="srv-panel-visual-label">Execution</div>
+                <div class="srv-panel-visual-title">Designs that stick, adoption that scales</div>
+              </div>
+            </div>
+            <div class="srv-outcomes">
+              <span class="srv-outcome-pill">Adoption programs</span>
+              <span class="srv-outcome-pill">Value tracking</span>
+              <span class="srv-outcome-pill">Expert execution</span>
+              <span class="srv-outcome-pill">Continuous improvement</span>
+            </div>
+          </div>
+          <div class="srv-panel-right">
+            <p class="srv-panel-body-text">Designs do not transform organisations — execution does. We drive adoption through intelligent workflows, automation, and expert-led governance, ensuring that every layer of the operating model is sustained, measured, and continuously improved. This is where strategy becomes performance, not just a slide deck.</p>
+            <div class="srv-includes-heading">What's Included</div>
+            <ul class="srv-includes">
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Transformation governance operating model
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Adoption, change, and capability-building programs
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Performance monitoring and value realisation tracking
+              </li>
+              <li>
+                <div class="srv-li-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                On-demand expert-led execution support
+              </li>
+            </ul>
+            <button class="srv-panel-cta" onclick="showPage('contact')">
+              Discuss this capability
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- HOW THEY COME TOGETHER -->
-    <div class="services-combine">
-      <div class="services-combine-inner">
-        <div class="hero-kicker" style="margin-bottom:16px;">HOW THEY COME TOGETHER</div>
-        <h2>From <span>fragmented operations</span> to intelligent operations.</h2>
-        <p style="margin-top:20px;">The four capabilities combine into a single operating model. Together, they move organisations from disconnected workflows and delayed decisions to real-time visibility, predictive operations, and sustained performance.</p>
+    <!-- HOW THEY CONNECT -->
+    <section class="srv-connect">
+      <div class="srv-connect-inner">
+        <div class="srv-connect-header">
+          <div class="srv-kicker" style="display:inline-flex;margin-bottom:20px;">How They Connect</div>
+          <h2>From fragmented operations<br>to <em>intelligent operations.</em></h2>
+          <p>The four capabilities combine into a single model — moving organisations from disconnected workflows to real-time, predictive, sustained performance.</p>
+        </div>
+        <div class="srv-flow">
+          <div class="srv-flow-item">
+            <div class="srv-flow-top-bar"></div>
+            <div class="srv-flow-num">01</div>
+            <div class="srv-flow-icon">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>
+            </div>
+            <h3>Operating Model Design</h3>
+            <p>Sets the blueprint — workflows, ownership, and the target state of the enterprise.</p>
+          </div>
+          <div class="srv-flow-arrow">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="srv-flow-item">
+            <div class="srv-flow-top-bar"></div>
+            <div class="srv-flow-num">02</div>
+            <div class="srv-flow-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+            </div>
+            <h3>Decision Architecture</h3>
+            <p>Structures who decides what — embedding clear logic within every workflow.</p>
+          </div>
+          <div class="srv-flow-arrow">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="srv-flow-item">
+            <div class="srv-flow-top-bar"></div>
+            <div class="srv-flow-num">03</div>
+            <div class="srv-flow-icon">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Intelligence Layer</h3>
+            <p>Feeds every decision with real-time signals, models, and predictive insight.</p>
+          </div>
+          <div class="srv-flow-arrow">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+          <div class="srv-flow-item">
+            <div class="srv-flow-top-bar"></div>
+            <div class="srv-flow-num">04</div>
+            <div class="srv-flow-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Transformation Governance</h3>
+            <p>Ensures adoption sticks, performance is tracked, and value is realised continuously.</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- FOUR STAGES -->
-    <div class="services-stages">
-      <div class="services-stages-inner">
-        <div class="stages-header">
-          <div class="hero-kicker" style="margin-bottom:12px;">TRANSFORMATION FRAMEWORK</div>
+    <!-- STAGES -->
+    <section class="srv-stages">
+      <div class="srv-stages-inner">
+        <div class="srv-stages-header">
+          <div class="srv-kicker" style="display:inline-flex;margin-bottom:20px;background:rgba(37,99,235,0.15);border-color:rgba(37,99,235,0.35);color:#60a5fa;">Transformation Framework</div>
           <h2>Assess. Design. Govern. Deploy.</h2>
           <p>A deliberate path from current state to scaled intelligent operations.</p>
         </div>
-        <div class="stages-grid">
-          <div class="stage-card">
-            <div class="stage-num">Stage 01</div>
-            <h3>Assess &amp; Define</h3>
-            <p>Evaluate the current operating environment. Identify where decisions break down, where visibility is missing, and where intelligence is needed.</p>
+        <div class="flowchart-wrap" id="fcWrapFramework" style="text-align: left;">
+          <style>
+            #fcWrapFramework .fc-title { color: #fff; }
+            #fcWrapFramework .fc-desc { color: rgba(255,255,255,0.6); }
+            #fcWrapFramework .fc-num { color: #60a5fa; }
+          </style>
+          <div class="fc-step fc-visible">
+            <div class="fc-center">
+              <div class="fc-node"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg></div>
+              <div class="fc-connector"></div>
+            </div>
+            <div class="fc-body">
+              <div class="fc-num">Stage 01</div>
+              <div class="fc-title">Assess &amp; Define</div>
+              <div class="fc-desc">Evaluate the current operating environment. Identify where decisions break down, where visibility is missing, and where intelligence is needed.</div>
+            </div>
           </div>
-          <div class="stage-card">
-            <div class="stage-num">Stage 02</div>
-            <h3>Design the Operating Model</h3>
-            <p>Develop a tailored transformation roadmap. Align workflows, decisions, and intelligence into a single coherent model.</p>
+          <div class="fc-step fc-visible">
+            <div class="fc-center">
+              <div class="fc-node"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+                </svg></div>
+              <div class="fc-connector"></div>
+            </div>
+            <div class="fc-body">
+              <div class="fc-num">Stage 02</div>
+              <div class="fc-title">Design the Operating Model</div>
+              <div class="fc-desc">Develop a tailored transformation roadmap. Align workflows, decisions, and intelligence into a single coherent model.</div>
+            </div>
           </div>
-          <div class="stage-card">
-            <div class="stage-num">Stage 03</div>
-            <h3>Govern the Transformation</h3>
-            <p>Establish the intelligence, governance, and execution pathways that translate the model into daily performance.</p>
+          <div class="fc-step fc-visible">
+            <div class="fc-center">
+              <div class="fc-node"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg></div>
+              <div class="fc-connector"></div>
+            </div>
+            <div class="fc-body">
+              <div class="fc-num">Stage 03</div>
+              <div class="fc-title">Govern the Transformation</div>
+              <div class="fc-desc">Establish the intelligence, governance, and execution pathways that translate the model into daily performance.</div>
+            </div>
           </div>
-          <div class="stage-card">
-            <div class="stage-num">Stage 04</div>
-            <h3>Deploy &amp; Scale</h3>
-            <p>Where required, support adoption and scale intelligent operations across the enterprise.</p>
+          <div class="fc-step fc-visible">
+            <div class="fc-center">
+              <div class="fc-node"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+                </svg></div>
+            </div>
+            <div class="fc-body">
+              <div class="fc-num">Stage 04</div>
+              <div class="fc-title">Deploy &amp; Scale</div>
+              <div class="fc-desc">Where required, support adoption and scale intelligent operations across the enterprise for lasting impact.</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- CLOSING CTA -->
-    <div class="services-cta">
-      <h2>Let's design how your organisation operates.</h2>
-      <button class="btn-primary" onclick="showPage('contact')">Start a Conversation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+    <div style="background:#040c1c;padding:80px 52px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(37,99,235,0.18) 0%,transparent 70%);"></div>
+      <div style="position:relative;z-index:1;max-width:640px;margin:0 auto;">
+        <p style="font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#60a5fa;margin-bottom:20px;">Design your operations</p>
+        <h2 style="font-family:'Sora',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:#fff;line-height:1.2;letter-spacing:-0.03em;margin-bottom:16px;">Let's design how your<br><em style="font-style:normal;color:#f59e0b;">organisation operates.</em></h2>
+        <p style="color:rgba(255,255,255,0.55);font-size:1rem;line-height:1.75;margin-bottom:36px;">Whether you're starting from scratch or scaling what already works, we meet you where you are.</p>
+        <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="showPage('contact')">Start a Conversation</button>
+          <button class="btn-secondary" onclick="showPage('expert')">Meet the Expert Hub</button>
+        </div>
+      </div>
     </div>
 
     <!-- FOOTER -->
@@ -505,10 +1060,7 @@
             <div class="brand-text"><span class="brand-name">Dexxora</span></div>
           </div>
           <p class="footer-tagline">Operational Intelligence Transformation Advisory</p>
-          <div class="footer-contact-item"><svg viewBox="0 0 24 24">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-              <polyline points="22,6 12,13 2,6" />
-            </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
+          <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@dexxora.com">info@dexxora.com</a></div>
           <a href="https://linkedin.com/company/dexxora" target="_blank" class="footer-contact-item" style="text-decoration:none;color:inherit;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             <span>LinkedIn</span>
@@ -518,10 +1070,11 @@
           <p class="footer-col-heading">Navigate</p>
           <ul class="footer-links">
             <li><button onclick="showPage('home')">Home</button></li>
-            <li><button onclick="showPage('about')">About Us</button></li>
+            <li><button onclick="showPage('about')">About</button></li>
             <li><button onclick="showPage('services')">Services</button></li>
             <li><button onclick="showPage('expert')">Expert Hub</button></li>
             <li><button onclick="showPage('industries')">Industries</button></li>
+            <li><button onclick="showPage('aiproduct')">AI-Led Product Development</button></li>
             <li><button onclick="showPage('contact')">Contact</button></li>
           </ul>
         </div>
@@ -557,18 +1110,22 @@
   <script>
     function showPage(name) {
       var map = {
-        home: 'home.html',
-        about: 'about.html',
-        services: 'services.html',
-        expert: 'expert.html',
-        industries: 'industries.html',
-        aiproduct: 'aiproduct.html',
-        solution: 'solution.html',
-        contact: 'contact.html'
+        home: 'home.html', about: 'about.html', services: 'services.html',
+        expert: 'expert.html', industries: 'industries.html',
+        aiproduct: 'aiproduct.html', solution: 'solution.html', contact: 'contact.html'
       };
       window.location.href = map[name] || 'index.html';
     }
     function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+    function switchTab(index) {
+      document.querySelectorAll('.srv-tab-btn').forEach(function(btn, i) {
+        btn.classList.toggle('active', i === index);
+      });
+      document.querySelectorAll('.srv-panel').forEach(function(panel, i) {
+        panel.classList.toggle('active', i === index);
+      });
+    }
   </script>
 </body>
 </html>

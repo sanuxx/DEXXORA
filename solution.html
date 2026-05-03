@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
@@ -194,7 +194,7 @@
           <div class="footer-contact-item"><svg viewBox="0 0 24 24">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
               <polyline points="22,6 12,13 2,6" />
-            </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
+            </svg><a href="mailto:info@dexxora.com">info@dexxora.com</a></div>
           <div class="footer-contact-item"><svg viewBox="0 0 24 24">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
               <circle cx="12" cy="10" r="3" />
@@ -336,7 +336,7 @@
       const body = `Name: ${first} ${last}\nEmail: ${email}\nOrganisation: ${org || '—'}\nArea of Interest: ${area || '—'}\n\nMessage:\n${msg}`;
 
       // Send via mailto as fallback (EmailJS / backend not available in static context)
-      const mailto = `mailto:hello@dexxora.com?subject=Enquiry from ${encodeURIComponent(first + ' ' + last)} — Dexxora Website&body=${encodeURIComponent(body)}`;
+      const mailto = `mailto:info@dexxora.com?subject=Enquiry from ${encodeURIComponent(first + ' ' + last)} — Dexxora Website&body=${encodeURIComponent(body)}`;
       window.location.href = mailto;
 
       // Show success state after short delay

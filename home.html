@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
@@ -101,7 +101,7 @@
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <polyline points="9 18 15 12 9 6"></polyline>
               </svg></button>
-            <button class="btn-secondary" onclick="showPage('expert')">How we work</button>
+            <button class="btn-secondary" onclick="showPage('services')">How we work</button>
           </div>
         </div>
       </div>
@@ -129,62 +129,83 @@
       </div>
     </section>
 
-    <!-- THREE-UP VALUE PROPOSITION -->
-    <section class="intel-gap-section" id="intel-gap">
-      <div class="intel-gap-inner">
-        <div class="intel-gap-header">
-          <span class="s-eyebrow">We close the gap between systems and intelligence.</span>
-          <h2>We close the gap between<br><em>systems and intelligence.</em></h2>
-        </div>
-        <div class="gap-cards-grid">
-          <div class="gap-card">
-            <div class="gap-card-number">01</div>
-            <div class="gap-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <rect x="2" y="3" width="7" height="18" rx="2"></rect>
-                <rect x="9.5" y="8" width="5" height="13" rx="2"></rect>
-                <rect x="17" y="6" width="5" height="15" rx="2"></rect>
-                <line x1="2" y1="21" x2="22" y2="21"></line>
-              </svg></div>
-            <h3>Operations, not systems</h3>
-            <p>Intelligence is embedded into how the business operates, not layered onto technology.</p>
-            <div class="gap-card-bottom"></div>
+    <!-- VALUE PROPOSITION — staggered list layout -->
+    <section style="background:#fff;padding:clamp(48px,8vw,96px) clamp(20px,4vw,52px);">
+      <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start;">
+        <div>
+          <div class="ruled-heading">
+            <h2>We close the gap between<br><em>systems and intelligence.</em></h2>
           </div>
-          <div class="gap-card">
-            <div class="gap-card-number">02</div>
-            <div class="gap-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M8 12h8M12 8v8"></path>
-              </svg></div>
-            <h3>People and AI as one</h3>
-            <p>Operating models that amplify human judgment with AI, not replace it. The Industry 5.0 principle.</p>
-            <div class="gap-card-bottom"></div>
-          </div>
-          <div class="gap-card">
-            <div class="gap-card-number">03</div>
-            <div class="gap-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg></div>
-            <h3>Expertise, not methodology</h3>
-            <p>Senior practitioners lead every engagement. No generic frameworks. No vendor bias.</p>
-            <div class="gap-card-bottom"></div>
-          </div>
-          <div class="gap-card">
-            <div class="gap-card-number">04</div>
-            <div class="gap-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-              </svg></div>
-            <h3>Performance, not delivery</h3>
-            <p>Success is measured in decisions improved and outcomes achieved.</p>
-            <div class="gap-card-bottom"></div>
+          <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;font-family:'Inter',sans-serif;">Most enterprises have the systems. The data. The talent. What they lack is an operating model designed to connect them into a single, decision-driven environment.</p>
+          <div class="inline-stats" style="margin-top:40px;">
+            <div>
+              <div class="inline-stat-num">7+</div>
+              <div class="inline-stat-label">sectors served</div>
+            </div>
+            <div>
+              <div class="inline-stat-num">20+</div>
+              <div class="inline-stat-label">years avg. practitioner experience</div>
+            </div>
+            <div>
+              <div class="inline-stat-num">4</div>
+              <div class="inline-stat-label">integrated capabilities</div>
+            </div>
           </div>
         </div>
+        <ul class="stagger-list" id="intel-gap">
+          <li>
+            <div class="stagger-num">01</div>
+            <div>
+              <div class="stagger-title">Operations, not systems</div>
+              <div class="stagger-desc">Intelligence embedded into how the business operates — not layered onto technology after the fact.</div>
+            </div>
+          </li>
+          <li>
+            <div class="stagger-num">02</div>
+            <div>
+              <div class="stagger-title">People and AI as one</div>
+              <div class="stagger-desc">Operating models that amplify human judgment with AI, not replace it. The Industry 5.0 principle in practice.</div>
+            </div>
+          </li>
+          <li>
+            <div class="stagger-num">03</div>
+            <div>
+              <div class="stagger-title">Expertise, not methodology</div>
+              <div class="stagger-desc">Senior practitioners lead every engagement. No generic frameworks. No vendor bias. No junior teams.</div>
+            </div>
+          </li>
+          <li>
+            <div class="stagger-num">04</div>
+            <div>
+              <div class="stagger-title">Performance, not delivery</div>
+              <div class="stagger-desc">Success is measured in decisions improved and outcomes achieved — not in deliverables shipped.</div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
+
+    <!-- TICKER STRIP -->
+    <div class="ticker-strip">
+      <div class="ticker-track">
+        <span class="ticker-item">Operating Model Design</span>
+        <span class="ticker-item">Decision Architecture</span>
+        <span class="ticker-item">Intelligence Layer</span>
+        <span class="ticker-item">Transformation Governance</span>
+        <span class="ticker-item">Industry 5.0</span>
+        <span class="ticker-item">Human-Centric AI</span>
+        <span class="ticker-item">Operational Intelligence</span>
+        <span class="ticker-item">Expert Hub</span>
+        <span class="ticker-item">Operating Model Design</span>
+        <span class="ticker-item">Decision Architecture</span>
+        <span class="ticker-item">Intelligence Layer</span>
+        <span class="ticker-item">Transformation Governance</span>
+        <span class="ticker-item">Industry 5.0</span>
+        <span class="ticker-item">Human-Centric AI</span>
+        <span class="ticker-item">Operational Intelligence</span>
+        <span class="ticker-item">Expert Hub</span>
+      </div>
+    </div>
 
     <!-- SIGNATURE MODEL SECTION (What We Do), comes before Client Impact per PDF -->
     <section class="section section-soft sig-model-section">
@@ -192,6 +213,26 @@
         <span class="s-eyebrow">What We Do</span>
         <h2 class="s-title">We architect how your<br><em>organisation operates.</em></h2>
         <p class="s-sub" style="margin-left:0;max-width:600px;">Four capabilities, working as a single connected system.</p>
+
+        <!-- Industry image mosaic -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:48px;border-radius:16px;overflow:hidden;">
+          <div style="height:140px;overflow:hidden;position:relative;">
+            <img src="images/home-mosaic-manufacturing.jpg" alt="Manufacturing" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) saturate(0.8);transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;bottom:10px;left:12px;font-size:.68rem;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:.08em;text-transform:uppercase;font-family:'Inter',sans-serif;">Manufacturing</div>
+          </div>
+          <div style="height:140px;overflow:hidden;position:relative;">
+            <img src="images/home-mosaic-supply.jpg" alt="Supply Chain" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) saturate(0.8);transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;bottom:10px;left:12px;font-size:.68rem;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:.08em;text-transform:uppercase;font-family:'Inter',sans-serif;">Supply Chain</div>
+          </div>
+          <div style="height:140px;overflow:hidden;position:relative;">
+            <img src="images/home-mosaic-finance.jpg" alt="Financial Services" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) saturate(0.8);transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;bottom:10px;left:12px;font-size:.68rem;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:.08em;text-transform:uppercase;font-family:'Inter',sans-serif;">Financial Services</div>
+          </div>
+          <div style="height:140px;overflow:hidden;position:relative;">
+            <img src="images/home-mosaic-tech.jpg" alt="Technology" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7) saturate(0.8);transition:transform .4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;bottom:10px;left:12px;font-size:.68rem;font-weight:700;color:rgba(255,255,255,0.85);letter-spacing:.08em;text-transform:uppercase;font-family:'Inter',sans-serif;">Technology</div>
+          </div>
+        </div>
 
         <div class="sig-model-wrap">
           <div class="sig-model-flow">
@@ -249,79 +290,156 @@
     <!-- EXPERT HUB TEASER -->
     <section class="ci-section">
       <div class="container">
-        <div class="outcome-header-grid">
+        <div class="outcome-header-grid" style="align-items: start;">
           <div>
-            <span class="s-eyebrow" style="color:var(--neon-blue);">THE DEXXORA DIFFERENCE</span>
-            <h2 class="s-title s-title-light" style="margin-top:16px;">Not a system integrator. Not a consulting firm.<br><em style="font-style:italic;color:var(--neon-blue);">An Expert Hub.</em></h2>
+            <h2 class="s-title s-title-light" style="margin-top:0;">Not a system integrator. Not a consulting firm.<br><em style="font-style:italic;color:var(--neon-blue);">An Expert Hub.</em></h2>
+            <!-- Team portrait strip -->
+            <div style="display:flex;gap:12px;margin-top:28px;margin-bottom:24px;">
+              <div style="width:64px;height:64px;border-radius:50%;overflow:hidden;border:2px solid rgba(37,99,235,0.4);flex-shrink:0;">
+                <img src="1-Sanka--1080x1080px.png" alt="Sankka Weerasinghe" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div style="width:64px;height:64px;border-radius:50%;overflow:hidden;border:2px solid rgba(37,99,235,0.4);flex-shrink:0;">
+                <img src="2-Dulanjana-1080x1080px.png" alt="Dulanjana Silva" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div style="width:64px;height:64px;border-radius:50%;overflow:hidden;border:2px solid rgba(37,99,235,0.4);flex-shrink:0;">
+                <img src="3-Gayathri-1080x1080px.png" alt="Gayathri Karunanayake" style="width:100%;height:100%;object-fit:cover;object-position:25% top;">
+              </div>
+              <div style="width:64px;height:64px;border-radius:50%;overflow:hidden;border:2px solid rgba(37,99,235,0.4);flex-shrink:0;">
+                <img src="4-Rashika-1080x1080px.png" alt="Rashika De Silva" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div style="width:64px;height:64px;border-radius:50%;overflow:hidden;border:2px solid rgba(37,99,235,0.4);flex-shrink:0;">
+                <img src="5-Gihan-1080x1080px.png" alt="Gihan Kuruppu" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+            </div>
           </div>
           <div>
-            <p style="font-size:1.05rem;color:rgba(255,255,255,0.65);line-height:1.75;font-family:'Inter',sans-serif;margin:0 0 24px;">
-              Transformation fails not because of technology, but because operations were never designed to be intelligent. Our Expert Hub brings senior practitioners with decades of cross-industry experience directly into your transformation. We scale to the engagement and stay accountable for the outcome.</p>
+            <h2 class="s-title s-title-light" style="margin-bottom:24px;margin-top:0;">We bring lessons from every industry into every engagement.</h2>
             <button class="btn-primary" onclick="showPage('expert')">Meet the Expert Hub <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
           </div>
         </div>
 
         <!-- Industries Strip -->
-        <div style="margin-top:56px;padding:52px;background:linear-gradient(135deg,rgba(0,136,255,0.06) 0%,rgba(0,200,255,0.03) 100%);border-radius:24px;border:1px solid rgba(0,200,255,0.12);position:relative;overflow:hidden;">
+        <style>
+          .modern-chip {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            cursor: default;
+          }
+          .modern-chip::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+          }
+          .modern-chip:hover::before {
+            transform: translateX(100%);
+          }
+          .modern-chip:hover {
+            background: rgba(0, 136, 255, 0.08);
+            border-color: rgba(0, 200, 255, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0, 136, 255, 0.15);
+          }
+          .modern-chip .chip-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--neon-blue);
+            flex-shrink: 0;
+            box-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+          }
+          .modern-chip:hover .chip-dot {
+            transform: scale(1.4);
+            box-shadow: 0 0 16px rgba(0, 200, 255, 0.9);
+            background: #fff;
+          }
+          .modern-chip span {
+            font-size: .9rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            line-height: 1.3;
+            transition: color 0.3s;
+          }
+          .modern-chip:hover span {
+            color: #fff;
+          }
+        </style>
+        <div style="margin-top:56px;padding:52px;background:linear-gradient(135deg,rgba(5,14,31,0.6) 0%,rgba(7,22,40,0.8) 100%);border-radius:32px;border:1px solid rgba(255,255,255,0.06);position:relative;overflow:hidden;box-shadow: 0 24px 64px rgba(0,0,0,0.3) inset, 0 12px 32px rgba(0,0,0,0.15);">
           <!-- background accent -->
-          <div style="position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(0,136,255,0.1) 0%,transparent 70%);pointer-events:none;"></div>
+          <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(0,136,255,0.15) 0%,transparent 70%);pointer-events:none;filter:blur(20px);"></div>
 
-          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:48px;flex-wrap:wrap;">
-            <!-- Left: heading + body -->
-            <div style="flex:1;min-width:260px;max-width:420px;">
-              <span class="s-eyebrow" style="color:var(--neon-blue);">Cross-sector pattern recognition.</span>
-              <h3 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:400;color:#fff;line-height:1.2;letter-spacing:-.02em;margin:16px 0 20px;">We bring lessons from every industry into every engagement.</h3>
-              <p style="font-size:.93rem;color:rgba(255,255,255,0.55);line-height:1.75;font-family:'Inter',sans-serif;margin:0 0 28px;">Seven sectors. One consistent model, tuned to the context of yours.</p>
-              <button class="btn-primary" onclick="showPage('industries')">See industries <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+          <div style="display:flex;flex-direction:column;align-items:center;position:relative;z-index:1;">
+            <div style="margin-bottom:40px;text-align:center;">
+              <span class="s-eyebrow" style="color:var(--neon-blue);margin-bottom:0;justify-content:center;">Cross-sector pattern recognition.</span>
             </div>
 
-            <!-- Right: industry chips grid -->
-            <div style="flex:1;min-width:280px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-content:start;">
-              <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,0.04);border:1px solid rgba(0,200,255,0.15);border-radius:12px;transition:background .2s;">
-                <div style="width:8px;height:8px;border-radius:50%;background:var(--neon-blue);flex-shrink:0;box-shadow:0 0 8px rgba(0,200,255,0.6);"></div>
-                <span style="font-size:.85rem;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;font-weight:500;line-height:1.3;">Manufacturing Operations</span>
+            <!-- Industry chips flex grid -->
+            <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;width:100%;max-width:1000px;margin-bottom:48px;">
+              <div class="modern-chip" style="flex:1 1 30%;min-width:260px;">
+                <div class="chip-dot"></div>
+                <span>Manufacturing Operations</span>
               </div>
-              <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,0.04);border:1px solid rgba(0,200,255,0.15);border-radius:12px;">
-                <div style="width:8px;height:8px;border-radius:50%;background:var(--neon-blue);flex-shrink:0;box-shadow:0 0 8px rgba(0,200,255,0.6);"></div>
-                <span style="font-size:.85rem;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;font-weight:500;line-height:1.3;">Apparel &amp; Textile Operations</span>
+              <div class="modern-chip" style="flex:1 1 30%;min-width:260px;">
+                <div class="chip-dot"></div>
+                <span>Apparel &amp; Textile Operations</span>
               </div>
-              <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,0.04);border:1px solid rgba(0,200,255,0.15);border-radius:12px;">
-                <div style="width:8px;height:8px;border-radius:50%;background:var(--neon-blue);flex-shrink:0;box-shadow:0 0 8px rgba(0,200,255,0.6);"></div>
-                <span style="font-size:.85rem;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;font-weight:500;line-height:1.3;">Insurance &amp; Financial Operations</span>
+              <div class="modern-chip" style="flex:1 1 30%;min-width:260px;">
+                <div class="chip-dot"></div>
+                <span>Insurance &amp; Financial Operations</span>
               </div>
-              <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,0.04);border:1px solid rgba(0,200,255,0.15);border-radius:12px;">
-                <div style="width:8px;height:8px;border-radius:50%;background:var(--neon-blue);flex-shrink:0;box-shadow:0 0 8px rgba(0,200,255,0.6);"></div>
-                <span style="font-size:.85rem;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;font-weight:500;line-height:1.3;">Agriculture &amp; Agri Operations</span>
+              <div class="modern-chip" style="flex:1 1 45%;min-width:280px;">
+                <div class="chip-dot"></div>
+                <span>Agriculture &amp; Agri Operations</span>
               </div>
-              <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,0.04);border:1px solid rgba(0,200,255,0.15);border-radius:12px;">
-                <div style="width:8px;height:8px;border-radius:50%;background:var(--neon-blue);flex-shrink:0;box-shadow:0 0 8px rgba(0,200,255,0.6);"></div>
-                <span style="font-size:.85rem;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;font-weight:500;line-height:1.3;">Logistics &amp; Supply Chain Operations</span>
+              <div class="modern-chip" style="flex:1 1 45%;min-width:280px;">
+                <div class="chip-dot"></div>
+                <span>Logistics &amp; Supply Chain Operations</span>
               </div>
-              <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,0.04);border:1px solid rgba(0,200,255,0.15);border-radius:12px;">
-                <div style="width:8px;height:8px;border-radius:50%;background:var(--neon-blue);flex-shrink:0;box-shadow:0 0 8px rgba(0,200,255,0.6);"></div>
-                <span style="font-size:.85rem;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;font-weight:500;line-height:1.3;">Sports &amp; Health Operations</span>
+              <div class="modern-chip" style="flex:1 1 45%;min-width:280px;">
+                <div class="chip-dot"></div>
+                <span>Sports &amp; Health Operations</span>
               </div>
-              <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(255,255,255,0.04);border:1px solid rgba(0,200,255,0.15);border-radius:12px;grid-column:span 2;">
-                <div style="width:8px;height:8px;border-radius:50%;background:var(--neon-blue);flex-shrink:0;box-shadow:0 0 8px rgba(0,200,255,0.6);"></div>
-                <span style="font-size:.85rem;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;font-weight:500;line-height:1.3;">Hospitality &amp; Experience Operations</span>
+              <div class="modern-chip" style="flex:1 1 45%;min-width:280px;">
+                <div class="chip-dot"></div>
+                <span>Hospitality &amp; Experience Operations</span>
               </div>
             </div>
+
+            <button class="btn-primary" onclick="showPage('industries')">See industries <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="dark-band">
-      <div class="dark-band-inner">
-        <div class="dark-band-text">
-          <h2>Ready to operate with intelligence<br><span>at the core?</span></h2>
-          <p style="font-size:.9rem;color:rgba(255,255,255,0.4);margin-top:12px;max-width:520px;line-height:1.7;font-family:'Inter',sans-serif;">We welcome conversations with leaders building intelligent operations today and shaping the Industry 5.0 enterprises of tomorrow.</p>
+    <!-- CALL TO ACTION -->
+    <section style="background:var(--bg-dark2);padding:clamp(60px, 8vw, 100px) clamp(20px, 4vw, 52px);">
+      <div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap;">
+        <div style="max-width:650px;">
+          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(1.8rem, 3vw, 2.5rem);font-weight:800;color:#fff;line-height:1.2;margin-top:0;margin-bottom:16px;letter-spacing:-0.02em;">
+            Ready to operate with intelligence<br>
+            <span style="color:var(--neon-blue);">at the core?</span>
+          </h2>
+
         </div>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;">
-          <button class="btn-primary" onclick="showPage('contact')">Start a Conversation</button>
+        <div>
+          <button class="btn-primary" onclick="showPage('contact')" style="box-shadow: 0 0 32px rgba(37,99,235,0.6); padding: 16px 32px; font-size: 1rem;">Start a Conversation</button>
         </div>
       </div>
-    </div>
+    </section>
+
     <footer>
       <div class="footer-main">
         <!-- Brand col -->
@@ -334,7 +452,7 @@
           <div class="footer-contact-item"><svg viewBox="0 0 24 24">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
               <polyline points="22,6 12,13 2,6" />
-            </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
+            </svg><a href="mailto:info@dexxora.com">info@dexxora.com</a></div>
           <a href="https://linkedin.com/company/dexxora" target="_blank" class="footer-contact-item" style="text-decoration:none;color:inherit;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             <span>LinkedIn</span>
@@ -348,13 +466,14 @@
             <li><button onclick="showPage('services')">Services</button></li>
             <li><button onclick="showPage('expert')">Expert Hub</button></li>
             <li><button onclick="showPage('industries')">Industries</button></li>
+            <li><button onclick="showPage('aiproduct')">AI-Led Product Development</button></li>
             <li><button onclick="showPage('contact')">Contact</button></li>
           </ul>
         </div>
         <div>
           <p class="footer-col-heading">Connect</p>
           <ul class="footer-links">
-            <li><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></li>
+            <li><a href="mailto:info@dexxora.com">info@dexxora.com</a></li>
             <li><a href="https://linkedin.com/company/dexxora" target="_blank">LinkedIn</a></li>
           </ul>
         </div>
@@ -453,7 +572,7 @@
       const errEl = document.getElementById('formError');
       const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if (!first || !last || !email || !msg || !emailRx.test(email)) {
+      if (!first || !email || !msg || !emailRx.test(email)) {
         errEl.style.display = 'block';
         errEl.textContent = !email || !emailRx.test(email)
           ? 'Please enter a valid email address.'
@@ -467,16 +586,17 @@
       const btnIcon = document.getElementById('submitBtnIcon');
       const spinner = document.getElementById('submitBtnSpinner');
       btn.disabled = true;
-      btnText.textContent = 'Sending…';
+      btnText.textContent = 'Sending...';
       btnIcon.style.display = 'none';
       spinner.style.display = 'inline-block';
 
       const org = document.getElementById('cf_org').value.trim();
       const area = document.getElementById('cf_area').value;
-      const body = `Name: ${first} ${last}\nEmail: ${email}\nOrganisation: ${org || '—'}\nArea of Interest: ${area || '—'}\n\nMessage:\n${msg}`;
+      const role = document.getElementById('cf_last') ? document.getElementById('cf_last').value.trim() : '';
+      const body = `Name: ${first}\nRole: ${role || '-'}\nEmail: ${email}\nOrganisation: ${org || '-'}\nArea of Interest: ${area || '-'}\n\nMessage:\n${msg}`;
 
       // Send via mailto as fallback (EmailJS / backend not available in static context)
-      const mailto = `mailto:hello@dexxora.com?subject=Enquiry from ${encodeURIComponent(first + ' ' + last)} — Dexxora Website&body=${encodeURIComponent(body)}`;
+      const mailto = `mailto:info@dexxora.com?subject=Enquiry from ${encodeURIComponent(first)} - Dexxora Website&body=${encodeURIComponent(body)}`;
       window.location.href = mailto;
 
       // Show success state after short delay

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
@@ -82,7 +82,7 @@
       <div style="position:relative;z-index:2;">
         <span class="s-eyebrow" style="color:var(--neon-blue);justify-content:center;display:inline-flex;">ABOUT DEXXORA</span>
         <h1>We exist to make enterprises<br><span>operate with intelligence at the core.</span></h1>
-        <p style="font-size:1.1rem;color:rgba(255,255,255,0.7);line-height:1.75;max-width:620px;margin:20px auto 8px;font-family:'Inter',sans-serif;">Most organisations have built capacity to run. Dexxora builds capacity to decide: where human expertise, AI, and intelligent systems operate as one.</p>
+
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px;">
           <button class="btn-primary" onclick="showPage('services')">Explore our services <svg width="15" height="15"
               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -93,23 +93,160 @@
       </div>
     </div>
 
-    <!-- WHO WE ARE -->
-    <section style="background:#fff;padding:96px 52px;">
-      <div style="max-width:1100px;margin:0 auto;">
-        <div class="about-who-grid" style="display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;">
-          <div style="position:sticky;top:100px;">
-            <span class="s-eyebrow" style="color:var(--neon-blue2);">WHO WE ARE</span>
-            <h2 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:400;color:#0a1628;line-height:1.15;letter-spacing:-.02em;margin-top:16px;">An advisory firm built around <em style="color:var(--neon-blue2);">intelligent operations.</em></h2>
+    <!-- POSITIONING STATEMENT -->
+    <section class="premium-statement-section premium-statement-light">
+      <div class="premium-statement-inner">
+        <p class="premium-statement-text premium-statement-text-dark">Dexxora is an Operational Intelligence Transformation advisory firm. We help organizations evolve toward Industry 5.0, where human expertise, AI, and intelligent systems operate as a unified, adaptive ecosystem.</p>
+      </div>
+    </section>
+
+    <!-- WHO WE ARE — Creative Split Layout -->
+    <section style="background:var(--bg-silver);padding:clamp(72px,10vw,120px) clamp(20px,4vw,52px);position:relative;overflow:hidden;">
+      <style>
+        .wwa-wrap { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+        .wwa-left { position:relative; }
+        .wwa-right { position:relative; }
+        .wwa-orb {
+          position:absolute; width:320px; height:320px; border-radius:50%;
+          background:radial-gradient(circle, rgba(0,87,255,0.08) 0%, transparent 70%);
+          top:-60px; left:-80px; pointer-events:none;
+        }
+        .wwa-big-label {
+          font-family:'Sora',sans-serif;
+          font-size:clamp(3.5rem,8vw,7rem);
+          font-weight:900;
+          color:transparent;
+          -webkit-text-stroke:1.5px rgba(0,87,255,0.15);
+          line-height:1;
+          letter-spacing:-0.04em;
+          position:absolute;
+          top:-20px; left:-8px;
+          user-select:none;
+          pointer-events:none;
+        }
+        .wwa-eyebrow {
+          display:inline-flex; align-items:center; gap:10px;
+          font-family:'Inter',sans-serif; font-size:.72rem; font-weight:700;
+          letter-spacing:.14em; text-transform:uppercase; color:var(--neon-blue2);
+          margin-bottom:28px; position:relative; z-index:1;
+        }
+        .wwa-eyebrow::before {
+          content:''; width:28px; height:2px;
+          background:var(--neon-blue2); border-radius:2px;
+        }
+        .wwa-headline {
+          font-family:'Instrument Serif',Georgia,serif;
+          font-size:clamp(2.2rem,4vw,3.2rem);
+          font-weight:400; color:#0a1628;
+          line-height:1.15; letter-spacing:-.02em;
+          margin-bottom:28px; position:relative; z-index:1;
+        }
+        .wwa-headline em { color:var(--neon-blue2); font-style:normal; }
+        .wwa-body {
+          font-size:1rem; color:var(--text-muted); line-height:1.85;
+          font-family:'Inter',sans-serif; margin:0 0 36px;
+          position:relative; z-index:1; max-width:480px;
+        }
+        .wwa-pill {
+          display:inline-flex; align-items:center; gap:8px;
+          background:#fff; border:1px solid rgba(0,87,255,0.15);
+          border-radius:100px; padding:10px 20px;
+          font-size:.82rem; font-weight:600; color:var(--neon-blue2);
+          font-family:'Inter',sans-serif;
+          box-shadow:0 2px 12px rgba(0,87,255,0.07);
+        }
+        .wwa-pill svg { width:14px; height:14px; stroke:var(--neon-blue2); stroke-width:2; fill:none; }
+        .wwa-attr-list { display:flex; flex-direction:column; gap:0; position:relative; }
+        .wwa-attr-list::before {
+          content:''; position:absolute; left:20px; top:0; bottom:0; width:1px;
+          background:linear-gradient(180deg, rgba(0,87,255,0.25), rgba(0,200,255,0.08));
+        }
+        .wwa-attr {
+          display:flex; gap:28px; align-items:flex-start;
+          padding:28px 0 28px 0;
+          border-bottom:1px solid rgba(0,0,0,0.06);
+          transition:background 0.2s;
+        }
+        .wwa-attr:last-child { border-bottom:none; }
+        .wwa-attr-num-wrap {
+          flex-shrink:0; width:40px; height:40px;
+          background:#fff; border:1px solid rgba(0,87,255,0.15);
+          border-radius:50%; display:flex; align-items:center; justify-content:center;
+          position:relative; z-index:1;
+          box-shadow:0 2px 8px rgba(0,87,255,0.08);
+          transition:background 0.3s, border-color 0.3s;
+        }
+        .wwa-attr:hover .wwa-attr-num-wrap {
+          background:var(--neon-blue2); border-color:var(--neon-blue2);
+        }
+        .wwa-attr-num {
+          font-family:'Sora',sans-serif; font-size:.65rem; font-weight:800;
+          color:var(--neon-blue2); letter-spacing:.05em;
+          transition:color 0.3s;
+        }
+        .wwa-attr:hover .wwa-attr-num { color:#fff; }
+        .wwa-attr-content { flex:1; padding-top:8px; }
+        .wwa-attr-title {
+          font-family:'Sora',sans-serif; font-size:1rem; font-weight:700;
+          color:#0a1628; margin-bottom:6px; letter-spacing:-.01em;
+        }
+        .wwa-attr-desc {
+          font-size:.87rem; color:var(--text-muted);
+          line-height:1.7; font-family:'Inter',sans-serif; margin:0;
+        }
+        @media(max-width:860px) {
+          .wwa-wrap { grid-template-columns:1fr; gap:48px; }
+          .wwa-big-label { display:none; }
+        }
+      </style>
+
+      <div class="wwa-wrap">
+        <!-- LEFT: Statement -->
+        <div class="wwa-left">
+          <div class="wwa-orb"></div>
+          <div class="wwa-big-label">WHO</div>
+          <div class="wwa-eyebrow">WHO WE ARE</div>
+          <h2 class="wwa-headline">
+            Not a vendor.<br>Not a system integrator.<br>
+            <em>An Expert Hub.</em>
+          </h2>
+          <p class="wwa-body">Dexxora is an Operational Intelligence Transformation advisory firm. We help organizations evolve toward Industry 5.0 — where human expertise, AI, and intelligent systems operate as a unified, adaptive ecosystem.</p>
+          <div class="wwa-pill">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Senior-led · Vendor-neutral · Outcome-anchored
           </div>
-          <div style="display:flex;flex-direction:column;gap:36px;padding-top:8px;">
-            <div style="padding:36px;background:linear-gradient(135deg,#f0f6ff 0%,#e8f2ff 100%);border-radius:20px;border-left:4px solid var(--neon-blue2);">
-              <p style="font-size:1.1rem;color:#1a2e4a;line-height:1.85;font-family:'Inter',sans-serif;margin:0;">Dexxora is an Operational Intelligence Transformation advisory firm. We help organizations evolve toward Industry 5.0, where human expertise, AI, and intelligent systems operate as a unified, adaptive ecosystem.</p>
+        </div>
+
+        <!-- RIGHT: Attribute List -->
+        <div class="wwa-right">
+          <div class="wwa-attr-list">
+            <div class="wwa-attr">
+              <div class="wwa-attr-num-wrap"><span class="wwa-attr-num">01</span></div>
+              <div class="wwa-attr-content">
+                <div class="wwa-attr-title">Senior-led by default</div>
+                <p class="wwa-attr-desc">Every engagement is staffed and governed by senior practitioners — not delegated down to junior teams or managed from a distance.</p>
+              </div>
             </div>
-            <div style="padding:36px;background:#f8fbff;border-radius:20px;border:1px solid #dde7f3;">
-              <p style="font-size:1rem;color:#3d5166;line-height:1.85;font-family:'Inter',sans-serif;margin:0;">While many organisations have invested heavily in ERP, CRM, and enterprise platforms, most remain constrained by fragmented workflows, delayed decisions, and limited visibility. We bridge that gap by designing and enabling operating models that seamlessly connect data, decisions, and workflows. The result is real-time, insight-driven enterprises powered by AI, advanced analytics, and intelligent automation.</p>
+            <div class="wwa-attr">
+              <div class="wwa-attr-num-wrap"><span class="wwa-attr-num">02</span></div>
+              <div class="wwa-attr-content">
+                <div class="wwa-attr-title">Vendor-neutral</div>
+                <p class="wwa-attr-desc">No technology partnerships. No implementation incentives. Advice shaped entirely by what the client's operating model needs — not by commercial relationships.</p>
+              </div>
             </div>
-            <div style="padding:36px;background:#f8fbff;border-radius:20px;border:1px solid #dde7f3;">
-              <p style="font-size:1rem;color:#3d5166;line-height:1.85;font-family:'Inter',sans-serif;margin:0;">Our Expert Hub brings together <strong style="color:#1a2e4a;">senior practitioners with decades of cross-industry experience</strong> to deliver practical, execution-focused transformation.</p>
+            <div class="wwa-attr">
+              <div class="wwa-attr-num-wrap"><span class="wwa-attr-num">03</span></div>
+              <div class="wwa-attr-content">
+                <div class="wwa-attr-title">Outcome-anchored</div>
+                <p class="wwa-attr-desc">Performance measured against business results, not deliverable completion or billable hours. We succeed when the organisation's ability to decide and perform improves.</p>
+              </div>
+            </div>
+            <div class="wwa-attr">
+              <div class="wwa-attr-num-wrap"><span class="wwa-attr-num">04</span></div>
+              <div class="wwa-attr-content">
+                <div class="wwa-attr-title">Architecture-first</div>
+                <p class="wwa-attr-desc">Operating model and decision architecture are designed before any technology is selected or deployed. We design how you operate, then identify what enables it.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -117,185 +254,214 @@
     </section>
 
     <!-- CORE VALUES -->
-    <section class="section" style="background:#fff;">
-      <div class="container">
-        <div style="text-align:center;max-width:680px;margin:0 auto 64px;">
-          <span class="s-eyebrow" style="justify-content:center;">CORE VALUES</span>
-          <h2 class="s-title">The principles that guide<br><em>every engagement.</em></h2>
-          <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;font-family:'Inter',sans-serif;">Five values shape every decision we make and every engagement we lead.</p>
+    <section style="background:var(--bg-dark);padding:clamp(64px,10vw,112px) clamp(20px,4vw,52px);position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 50% at 20% 50%,rgba(0,87,255,0.08) 0%,transparent 65%),radial-gradient(ellipse 50% 60% at 80% 50%,rgba(14,165,233,0.05) 0%,transparent 60%);"></div>
+      <style>
+        .cv-card {
+          padding: 36px 32px;
+          background: rgba(255,255,255,0.03);
+          border: 1px solid rgba(255,255,255,0.07);
+          border-radius: 16px;
+          position: relative;
+          overflow: hidden;
+          transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+          cursor: default;
+        }
+        .cv-card::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(0,87,255,0.06) 0%, transparent 60%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          border-radius: 16px;
+        }
+        .cv-card:hover {
+          border-color: rgba(0,200,255,0.25);
+          background: rgba(255,255,255,0.05);
+          transform: translateY(-4px);
+        }
+        .cv-card:hover::before { opacity: 1; }
+        .cv-card:hover .cv-icon { box-shadow: 0 0 20px rgba(0,200,255,0.3); }
+        .cv-num {
+          font-family: 'Sora', sans-serif;
+          font-size: 0.65rem;
+          font-weight: 700;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          color: rgba(0,200,255,0.5);
+          margin-bottom: 20px;
+        }
+        .cv-icon {
+          width: 44px; height: 44px;
+          border-radius: 12px;
+          background: rgba(0,87,255,0.15);
+          border: 1px solid rgba(0,200,255,0.2);
+          display: flex; align-items: center; justify-content: center;
+          margin-bottom: 20px;
+          transition: box-shadow 0.3s ease;
+        }
+        .cv-icon svg { width: 20px; height: 20px; stroke: #60a5fa; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+        .cv-title {
+          font-family: 'Sora', sans-serif;
+          font-size: 1.1rem; font-weight: 700;
+          color: #fff;
+          margin-bottom: 10px;
+          letter-spacing: -0.02em;
+        }
+        .cv-desc {
+          font-size: 0.87rem;
+          color: rgba(255,255,255,0.5);
+          line-height: 1.75;
+          font-family: 'Inter', sans-serif;
+          margin: 0;
+        }
+        .cv-card-feature {
+          grid-column: 1 / -1;
+          padding: 44px 48px;
+          background: linear-gradient(135deg, rgba(0,87,255,0.18) 0%, rgba(14,165,233,0.1) 100%);
+          border: 1px solid rgba(0,200,255,0.2);
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 48px;
+          flex-wrap: wrap;
+          position: relative;
+          overflow: hidden;
+        }
+        .cv-card-feature::before {
+          content: '';
+          position: absolute;
+          right: -60px; top: -60px;
+          width: 220px; height: 220px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(0,200,255,0.12) 0%, transparent 70%);
+          pointer-events: none;
+        }
+      </style>
+      <div style="max-width:1100px;margin:0 auto;position:relative;z-index:1;">
+        <div style="text-align:center;max-width:640px;margin:0 auto 64px;">
+          <span class="s-eyebrow" style="justify-content:center;color:var(--neon-blue);">CORE VALUES</span>
+          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:#fff;line-height:1.2;letter-spacing:-0.03em;margin-top:16px;">The principles that guide<br><em style="font-style:normal;color:#60a5fa;">every engagement.</em></h2>
+          <p style="font-size:1rem;color:rgba(255,255,255,0.5);line-height:1.85;font-family:'Inter',sans-serif;margin-top:16px;">Five values shape every decision we make and every engagement we lead.</p>
         </div>
-        <div class="about-values-grid">
-          <div style="padding:32px 24px;background:var(--bg-offwhite);border:1px solid var(--border-light);border-radius:var(--card-radius);text-align:center;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0057FF,#0ea5e9);"></div>
-            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,87,255,0.07);border:1px solid rgba(0,87,255,0.13);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:8px;">Integrity</h4>
-            <p style="font-size:.82rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0;">Transparent, accountable, and trusted in every engagement.</p>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
+          <div class="cv-card">
+            <div class="cv-num">01</div>
+            <div class="cv-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="cv-title">Integrity</div>
+            <p class="cv-desc">Transparent, accountable, and trusted in every engagement. We say what we mean and deliver what we promise.</p>
           </div>
-          <div style="padding:32px 24px;background:var(--bg-offwhite);border:1px solid var(--border-light);border-radius:var(--card-radius);text-align:center;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0057FF,#0ea5e9);"></div>
-            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,87,255,0.07);border:1px solid rgba(0,87,255,0.13);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:8px;">Excellence</h4>
-            <p style="font-size:.82rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0;">High-quality, outcome-driven execution without compromise.</p>
+          <div class="cv-card">
+            <div class="cv-num">02</div>
+            <div class="cv-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="cv-title">Excellence</div>
+            <p class="cv-desc">High-quality, outcome-driven execution without compromise. We hold ourselves to the highest standard on every engagement.</p>
           </div>
-          <div style="padding:32px 24px;background:var(--bg-offwhite);border:1px solid var(--border-light);border-radius:var(--card-radius);text-align:center;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0057FF,#0ea5e9);"></div>
-            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,87,255,0.07);border:1px solid rgba(0,87,255,0.13);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-            </div>
-            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:8px;">Innovation</h4>
-            <p style="font-size:.82rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0;">Leveraging emerging technologies intelligently, not experimentally.</p>
+          <div class="cv-card">
+            <div class="cv-num">03</div>
+            <div class="cv-icon"><svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="cv-title">Innovation</div>
+            <p class="cv-desc">Leveraging emerging technologies intelligently, not experimentally. Intelligence must serve operational outcomes.</p>
           </div>
-          <div style="padding:32px 24px;background:var(--bg-offwhite);border:1px solid var(--border-light);border-radius:var(--card-radius);text-align:center;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0057FF,#0ea5e9);"></div>
-            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,87,255,0.07);border:1px solid rgba(0,87,255,0.13);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:8px;">Collaboration</h4>
-            <p style="font-size:.82rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0;">Working as an extension of client leadership, not a vendor.</p>
+          <div class="cv-card">
+            <div class="cv-num">04</div>
+            <div class="cv-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="cv-title">Collaboration</div>
+            <p class="cv-desc">Working as an extension of client leadership, not a vendor. We embed into your environment and share accountability for outcomes.</p>
           </div>
-          <div style="padding:32px 24px;background:var(--bg-offwhite);border:1px solid var(--border-light);border-radius:var(--card-radius);text-align:center;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0057FF,#0ea5e9);"></div>
-            <div style="width:44px;height:44px;border-radius:12px;background:rgba(0,87,255,0.07);border:1px solid rgba(0,87,255,0.13);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="stroke:#0057FF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-            </div>
-            <h4 style="font-family:'Instrument Serif',Georgia,serif;font-size:1.05rem;font-weight:400;color:var(--text-main);margin-bottom:8px;">Results-Driven</h4>
-            <p style="font-size:.82rem;color:var(--text-muted);line-height:1.65;font-family:'Inter',sans-serif;margin:0;">Focused on measurable business impact, not deliverable count.</p>
-          </div>
-        </div>
-
-        <!-- What makes Dexxora different -->
-        <div style="margin-top:72px;padding:48px 52px;background:var(--bg-dark);border-radius:16px;position:relative;overflow:hidden;">
-          <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 50% 70% at 5% 50%,rgba(0,87,255,0.1) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 95% 50%,rgba(14,165,233,0.07) 0%,transparent 55%);"></div>
-          <div class="about-diff-panel-grid" style="position:relative;z-index:1;">
-            <div>
-              <span class="s-eyebrow" style="color:var(--neon-blue);">WHAT MAKES US DIFFERENT</span>
-              <h3 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:400;color:#fff;line-height:1.2;margin-top:16px;letter-spacing:-.02em;">Not a vendor.<br>Not a system integrator.<br><em style="color:var(--neon-blue);">An Expert Hub.</em></h3>
-            </div>
-            <div class="about-diff-cards-grid">
-              <div style="padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;">
-                <div style="width:36px;height:36px;border-radius:8px;background:rgba(0,87,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0ea5e9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                </div>
-                <div style="font-size:.9rem;font-weight:600;color:#fff;margin-bottom:6px;font-family:'Inter',sans-serif;">Senior-led by default</div>
-                <div style="font-size:.82rem;color:rgba(255,255,255,0.5);line-height:1.65;font-family:'Inter',sans-serif;">Every engagement is staffed and governed by senior practitioners — not delegated down.</div>
+          <div class="cv-card-feature">
+            <div style="position:relative;z-index:1;">
+              <div style="font-family:'Sora',sans-serif;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#f59e0b;margin-bottom:20px;">05</div>
+              <div style="width:44px;height:44px;border-radius:12px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
               </div>
-              <div style="padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;">
-                <div style="width:36px;height:36px;border-radius:8px;background:rgba(0,87,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0ea5e9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                </div>
-                <div style="font-size:.9rem;font-weight:600;color:#fff;margin-bottom:6px;font-family:'Inter',sans-serif;">Vendor-neutral</div>
-                <div style="font-size:.82rem;color:rgba(255,255,255,0.5);line-height:1.65;font-family:'Inter',sans-serif;">No technology partnerships. No implementation incentives. Advice shaped entirely by what the client needs.</div>
-              </div>
-              <div style="padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;">
-                <div style="width:36px;height:36px;border-radius:8px;background:rgba(0,87,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0ea5e9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                </div>
-                <div style="font-size:.9rem;font-weight:600;color:#fff;margin-bottom:6px;font-family:'Inter',sans-serif;">Outcome-anchored</div>
-                <div style="font-size:.82rem;color:rgba(255,255,255,0.5);line-height:1.65;font-family:'Inter',sans-serif;">Performance measured against business results, not deliverable completion or billable hours.</div>
-              </div>
-              <div style="padding:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;">
-                <div style="width:36px;height:36px;border-radius:8px;background:rgba(0,87,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="stroke:#0ea5e9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                </div>
-                <div style="font-size:.9rem;font-weight:600;color:#fff;margin-bottom:6px;font-family:'Inter',sans-serif;">Architecture-first</div>
-                <div style="font-size:.82rem;color:rgba(255,255,255,0.5);line-height:1.65;font-family:'Inter',sans-serif;">Operating model and architecture are designed before any technology is selected or deployed.</div>
-              </div>
+              <div style="font-family:'Sora',sans-serif;font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-0.02em;">Results-Driven</div>
+              <p style="font-size:.9rem;color:rgba(255,255,255,0.55);line-height:1.75;font-family:'Inter',sans-serif;margin:0;max-width:480px;">Focused on measurable business impact, not deliverable count. Success is defined by what changes in the organisation's ability to see, decide, and perform.</p>
             </div>
+            <p style="font-family:'Instrument Serif',Georgia,serif;font-size:1.4rem;color:rgba(255,255,255,0.65);font-style:italic;max-width:300px;line-height:1.6;margin:0;position:relative;z-index:1;">"The measure of our work is what changes in your business."</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- VISION & MISSION — strategic anchor -->
-    <section class="about-belief-section">
-      <div class="container">
-        <div class="vision-mission-grid">
-          <div>
-            <span class="s-eyebrow" style="color:var(--neon-blue);">Vision</span>
-            <h2
-              style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;color:#fff;line-height:1.2;margin-top:16px;letter-spacing:-.02em;">
-              To become a trusted global partner in building <em style="color:var(--neon-blue);">intelligent, adaptive, and decision-driven enterprises.</em></h2>
+    <!-- VISION & MISSION — Enhanced -->
+    <section style="background:#040c1c;padding:clamp(80px,12vw,140px) clamp(20px,4vw,52px);position:relative;overflow:hidden;">
+      <!-- Background elements -->
+      <div style="position:absolute;inset:0;pointer-events:none;">
+        <div style="position:absolute;left:-120px;top:50%;transform:translateY(-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,87,255,0.12) 0%,transparent 70%);"></div>
+        <div style="position:absolute;right:-120px;top:50%;transform:translateY(-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,200,255,0.07) 0%,transparent 70%);"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,12,28,0) 0%,rgba(4,12,28,0.4) 100%);"></div>
+      </div>
+
+      <div style="max-width:1200px;margin:0 auto;position:relative;z-index:1;">
+        <!-- Section header -->
+        <div style="text-align:center;margin-bottom:80px;">
+          <span style="display:inline-flex;align-items:center;gap:10px;font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--neon-blue);margin-bottom:20px;">
+            <span style="width:28px;height:1px;background:var(--neon-blue);display:inline-block;"></span>
+            Strategic Direction
+            <span style="width:28px;height:1px;background:var(--neon-blue);display:inline-block;"></span>
+          </span>
+          <h2 style="font-family:'Sora',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1.15;margin:0;">Where we are going.<br><span style="color:#60a5fa;">Why it matters.</span></h2>
+        </div>
+
+        <!-- Vision & Mission cards -->
+        <div style="display:grid;grid-template-columns:1fr 1px 1fr;gap:0;align-items:stretch;">
+
+          <!-- VISION -->
+          <div style="padding:56px 60px 56px 0;position:relative;">
+
+            <!-- Icon badge -->
+            <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(0,87,255,0.3),rgba(0,200,255,0.15));border:1px solid rgba(0,200,255,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:28px;box-shadow:0 0 20px rgba(0,200,255,0.12);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/><path d="m14.5 4.5-5 1"/></svg>
+            </div>
+            <div style="font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--neon-blue);margin-bottom:20px;display:flex;align-items:center;gap:8px;">
+              <span style="width:18px;height:2px;background:var(--neon-blue);display:inline-block;border-radius:2px;"></span>Vision
+            </div>
+            <h3 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:400;color:#fff;line-height:1.25;letter-spacing:-.02em;margin-bottom:24px;">To become a trusted global partner in building <em style="color:#60a5fa;font-style:normal;">intelligent, adaptive, and decision-driven enterprises.</em></h3>
+
           </div>
-          <div>
-            <span class="s-eyebrow" style="color:var(--neon-blue);">Mission</span>
-            <h2
-              style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;color:#fff;line-height:1.2;margin-top:16px;letter-spacing:-.02em;">
-              We enable organisations to operate with intelligence at their core. Through integrated data and execution frameworks that deliver <em style="color:var(--neon-blue);">real-time visibility, sharper decisions, and measurable business impact.</em></h2>
+
+          <!-- Divider -->
+          <div style="background:linear-gradient(180deg,transparent 5%,rgba(0,200,255,0.2) 30%,rgba(0,200,255,0.2) 70%,transparent 95%);margin:0 0;position:relative;">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:#040c1c;border:1px solid rgba(0,200,255,0.25);display:flex;align-items:center;justify-content:center;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(0,200,255,0.6)" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- MISSION -->
+          <div style="padding:56px 0 56px 60px;position:relative;">
+
+            <!-- Icon badge -->
+            <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(14,165,233,0.25),rgba(0,87,255,0.12));border:1px solid rgba(14,165,233,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:28px;box-shadow:0 0 20px rgba(14,165,233,0.1);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div style="font-family:'Inter',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#38bdf8;margin-bottom:20px;display:flex;align-items:center;gap:8px;">
+              <span style="width:18px;height:2px;background:#38bdf8;display:inline-block;border-radius:2px;"></span>Mission
+            </div>
+            <h3 style="font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:400;color:#fff;line-height:1.25;letter-spacing:-.02em;margin-bottom:24px;">We enable organisations to operate with intelligence at their core — through frameworks that deliver <em style="color:#38bdf8;font-style:normal;">real-time visibility, sharper decisions, and measurable business impact.</em></h3>
+
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHY WE EXIST -->
-    <section class="section" style="background:var(--bg-silver);">
-      <div class="container">
-        <div style="text-align:center;margin-bottom:56px;">
-          <span class="s-eyebrow" style="justify-content:center;">THE DEXXORA THESIS</span>
-          <h2 class="s-title" style="max-width:760px;margin:0 auto;">Transformation fails not because of technology, but because operations were never designed to be <em>intelligent.</em></h2>
-          <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;max-width:720px;margin:24px auto 0;font-family:'Inter',sans-serif;">For two decades, enterprises have invested in platforms, integrations, and digital programs. The systems are in place. The data exists. The talent is skilled. And yet decisions still move slowly. Visibility remains incomplete. Performance is measured long after it could have been influenced.</p>
-          <p style="font-size:1rem;color:var(--text-muted);line-height:1.85;max-width:720px;margin:16px auto 0;font-family:'Inter',sans-serif;">Dexxora was founded to close that gap. We do not build systems. We do not rewrite strategy decks. We design and enable how organisations operate, so that intelligence stops being a report and starts being the default state of the business.</p>
-        </div>
-        <div class="about-think-grid">
-          <div class="about-think-card">
-            <div class="about-think-num">01</div>
-            <div class="about-think-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M12 20h9" />
-                <path d="M16.5 3.5a2.12 2.12 0 1 1 3 3L7 19l-4 1 1-4z" />
-              </svg></div>
-            <h3>The systems are in place.</h3>
-            <p>For two decades, enterprises have invested in platforms, integrations, and digital programs. The data exists. The talent is skilled.</p>
-            <div class="about-think-bar"></div>
-          </div>
-          <div class="about-think-card">
-            <div class="about-think-num">02</div>
-            <div class="about-think-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M9 11l3 3L22 4" />
-                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
-              </svg></div>
-            <h3>And yet decisions still move slowly.</h3>
-            <p>Visibility remains incomplete, and performance is measured long after it could have been influenced.</p>
-            <div class="about-think-bar"></div>
-          </div>
-          <div class="about-think-card">
-            <div class="about-think-num">03</div>
-            <div class="about-think-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <line x1="18" y1="20" x2="18" y2="10" />
-                <line x1="12" y1="20" x2="12" y2="4" />
-                <line x1="6" y1="20" x2="6" y2="14" />
-              </svg></div>
-            <h3>Dexxora was founded to close that gap.</h3>
-            <p>We design and enable how organisations operate, so that intelligence stops being a report and starts being the default state of the business.</p>
-            <div class="about-think-bar"></div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- CLOSING STATEMENT -->
-    <section class="about-closing-section">
-      <div class="container">
-        <div class="about-closing-inner">
-          <h2>See how we put this into practice.</h2>
-          <p>Dexxora partners with organisations ready to move from complexity to clarity, from activity to intelligence, from investment to performance.</p>
-        </div>
-      </div>
-    </section>
 
-    <div class="dark-band">
-      <div class="dark-band-inner">
-        <div class="dark-band-text">
-          <h2>The Expert Hub is how<br><span>intelligence gets built.</span></h2>
+    <!-- CLOSING — text band with amber accent -->
+    <div class="text-band">
+      <div class="text-band-inner">
+        <div>
+          <div class="text-band-label">Where to next</div>
         </div>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;">
-          <button class="btn-primary" onclick="showPage('services')">Explore our services</button>
-          <button class="btn-secondary" onclick="showPage('expert')">Meet the Expert Hub</button>
+        <div>
+          <p class="text-band-heading">The Expert Hub is how<br><em>intelligence gets built.</em></p>
+          <p class="text-band-body" style="margin-top:16px;margin-bottom:28px;">Senior practitioners, on-demand advisory, and execution support — deployed directly into your transformation and accountable for outcomes.</p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <button class="btn-primary" onclick="showPage('services')">Explore our services</button>
+            <button class="btn-secondary" onclick="showPage('expert')">Meet the Expert Hub</button>
+          </div>
         </div>
       </div>
     </div>
@@ -310,7 +476,7 @@
           <div class="footer-contact-item"><svg viewBox="0 0 24 24">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
               <polyline points="22,6 12,13 2,6" />
-            </svg><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></div>
+            </svg><a href="mailto:info@dexxora.com">info@dexxora.com</a></div>
           <a href="https://linkedin.com/company/dexxora" target="_blank" class="footer-contact-item" style="text-decoration:none;color:inherit;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             <span>LinkedIn</span>
@@ -324,13 +490,14 @@
             <li><button onclick="showPage('services')">Services</button></li>
             <li><button onclick="showPage('expert')">Expert Hub</button></li>
             <li><button onclick="showPage('industries')">Industries</button></li>
+            <li><button onclick="showPage('aiproduct')">AI-Led Product Development</button></li>
             <li><button onclick="showPage('contact')">Contact</button></li>
           </ul>
         </div>
         <div>
           <p class="footer-col-heading">Connect</p>
           <ul class="footer-links">
-            <li><a href="mailto:hello@dexxora.com">hello@dexxora.com</a></li>
+            <li><a href="mailto:info@dexxora.com">info@dexxora.com</a></li>
             <li><a href="https://linkedin.com/company/dexxora" target="_blank">LinkedIn</a></li>
           </ul>
         </div>
@@ -429,7 +596,7 @@
       const errEl = document.getElementById('formError');
       const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if (!first || !last || !email || !msg || !emailRx.test(email)) {
+      if (!first || !email || !msg || !emailRx.test(email)) {
         errEl.style.display = 'block';
         errEl.textContent = !email || !emailRx.test(email)
           ? 'Please enter a valid email address.'
@@ -443,16 +610,16 @@
       const btnIcon = document.getElementById('submitBtnIcon');
       const spinner = document.getElementById('submitBtnSpinner');
       btn.disabled = true;
-      btnText.textContent = 'Sending…';
+      btnText.textContent = 'Sending...';
       btnIcon.style.display = 'none';
       spinner.style.display = 'inline-block';
 
       const org = document.getElementById('cf_org').value.trim();
       const area = document.getElementById('cf_area').value;
-      const body = `Name: ${first} ${last}\nEmail: ${email}\nOrganisation: ${org || '—'}\nArea of Interest: ${area || '—'}\n\nMessage:\n${msg}`;
+      const body = `Name: ${first} ${last}\nEmail: ${email}\nOrganisation: ${org || '�'}\nArea of Interest: ${area || '�'}\n\nMessage:\n${msg}`;
 
       // Send via mailto as fallback (EmailJS / backend not available in static context)
-      const mailto = `mailto:hello@dexxora.com?subject=Enquiry from ${encodeURIComponent(first + ' ' + last)} — Dexxora Website&body=${encodeURIComponent(body)}`;
+      const mailto = `mailto:info@dexxora.com?subject=Enquiry from ${encodeURIComponent(first + ' ' + last)} � Dexxora Website&body=${encodeURIComponent(body)}`;
       window.location.href = mailto;
 
       // Show success state after short delay
