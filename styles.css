@@ -6174,3 +6174,174 @@
     @media(max-width:768px) {
       .text-band-split-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
     }
+
+    /* ═══════════════════════════════════════════════════
+       MOBILE RESPONSIVENESS — comprehensive pass
+       ═══════════════════════════════════════════════════ */
+
+    /* ── Nav & hamburger ── */
+    @media(max-width:768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ── Hero sections ── */
+    @media(max-width:768px) {
+      .hero { min-height: 480px; padding: 100px 20px 60px; }
+      .hero h1 { font-size: clamp(1.8rem, 6vw, 2.6rem) !important; }
+      .hero-stats { flex-direction: column; gap: 0; padding: 0 20px; }
+      .hero-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 16px 0; }
+      .hero-stat:last-child { border-bottom: none; }
+      .hero-btns { flex-direction: column; gap: 12px; align-items: stretch; }
+      .hero-btns .btn-primary,
+      .hero-btns .btn-secondary { width: 100%; justify-content: center; }
+      .contact-hero-new { min-height: 360px; padding: 100px 20px 60px; }
+      .contact-hero-h1 { font-size: clamp(1.8rem, 6vw, 2.6rem) !important; }
+    }
+
+    /* ── Contact page layout ── */
+    @media(max-width:900px) {
+      .contact-layout { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+    @media(max-width:768px) {
+      .contact-body-section { padding: 48px 20px !important; }
+      .contact-info-card { padding: 28px 20px !important; }
+      .contact-form-card { padding: 28px 20px !important; }
+      .contact-expect-card { padding: 24px 20px !important; }
+      .contact-note-card { padding: 20px !important; }
+      .contact-detail-new { gap: 12px !important; }
+    }
+
+    /* ── Expert page ── */
+    @media(max-width:900px) {
+      .expert-clients-sticky-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .expert-clients-sticky-grid > div:first-child { position: static !important; top: auto !important; }
+      .leadership-grid { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media(max-width:768px) {
+      .expert-clients-sticky-grid > div > div[style*="padding:48px"] { padding: 28px 0 !important; }
+      .leadership-grid { grid-template-columns: 1fr !important; }
+      .leader-card { padding: 24px !important; }
+      .expert-break-inner { flex-direction: column !important; gap: 24px !important; align-items: stretch !important; }
+      .expert-break-inner .btn-primary { width: 100%; justify-content: center; }
+      /* WHY IT MATTERS split */
+      [style*="grid-template-columns:1fr 1fr"][style*="min-height:520px"] {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+      }
+    }
+    @media(max-width:600px) {
+      .expert-principles-grid { grid-template-columns: 1fr !important; }
+    }
+
+    /* ── About page ── */
+    @media(max-width:900px) {
+      .about-diff-wrap { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .about-mission-wrap { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+    @media(max-width:768px) {
+      .about-hero { padding: 100px 20px 60px !important; }
+      .about-hero h1 { font-size: clamp(1.8rem, 6vw, 2.6rem) !important; }
+      .about-stats-strip { flex-direction: column; gap: 0; }
+      .about-stat-item { border-right: none !important; border-bottom: 1px solid var(--border-light); padding: 20px 0 !important; }
+      .about-stat-item:last-child { border-bottom: none; }
+      /* who we are section */
+      [style*="grid-template-columns:1fr 1fr"][style*="gap:80px"] {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+    }
+
+    /* ── Services page ── */
+    @media(max-width:768px) {
+      .srv-panel-image { display: none; }
+      [style*="grid-template-columns:repeat(4,1fr)"],
+      [style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+      }
+    }
+    @media(max-width:480px) {
+      [style*="grid-template-columns:repeat(4,1fr)"],
+      [style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    /* ── AI Product page ── */
+    @media(max-width:900px) {
+      .aipd-intro-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .aipd-positioning-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .aipd-why-diff-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+    }
+    @media(max-width:768px) {
+      .aipd-hero { padding: 100px 20px 60px !important; }
+      .aipd-hero h1 { font-size: clamp(1.8rem, 6vw, 2.6rem) !important; }
+      .aipd-build-grid { grid-template-columns: 1fr 1fr !important; gap: 16px !important; }
+      .aipd-process-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+      .aipd-usecase-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+    }
+    @media(max-width:480px) {
+      .aipd-build-grid { grid-template-columns: 1fr !important; }
+    }
+
+    /* ── Footer ── */
+    @media(max-width:768px) {
+      .footer-main { grid-template-columns: 1fr 1fr !important; gap: 32px 20px !important; padding: 48px 20px !important; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; padding: 20px; }
+      .footer-bottom-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
+    }
+    @media(max-width:480px) {
+      .footer-main { grid-template-columns: 1fr !important; gap: 28px !important; }
+    }
+
+    /* ── Inline CTA dark sections ── */
+    @media(max-width:768px) {
+      [style*="padding:80px 52px"] { padding: 52px 20px !important; }
+      [style*="padding:72px 64px"] { padding: 48px 20px !important; }
+      [style*="padding:56px 60px"] { padding: 40px 20px !important; }
+      [style*="padding:96px 40px"] { padding: 52px 20px !important; }
+      [style*="padding:80px 40px"] { padding: 48px 20px !important; }
+    }
+
+    /* ── Buttons on small screens ── */
+    @media(max-width:480px) {
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+      /* except nav CTA */
+      .nav-cta-btn { width: auto !important; }
+    }
+
+    /* ── General large inline gaps ── */
+    @media(max-width:768px) {
+      [style*="gap:64px"] { gap: 28px !important; }
+      [style*="gap:48px"] { gap: 24px !important; }
+    }
+
+    /* ── About: Core Values & Strategic Direction mobile ── */
+    @media(max-width:768px) {
+      /* Strategic Direction: stack vision & mission, hide divider */
+      .strategic-vm-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .strategic-vm-grid > div:nth-child(2) {
+        display: none !important; /* hide the 1px divider column */
+      }
+      .strategic-vm-grid > div:first-child {
+        padding: 0 0 40px 0 !important;
+        border-bottom: 1px solid rgba(0,200,255,0.15);
+      }
+      .strategic-vm-grid > div:last-child {
+        padding: 40px 0 0 0 !important;
+      }
+      /* Strategic Direction header margin */
+      [style*="margin-bottom:80px"] { margin-bottom: 40px !important; }
+    }
+    @media(max-width:600px) {
+      /* Core Values: single column */
+      .cv-cards-grid { grid-template-columns: 1fr !important; }
+    }

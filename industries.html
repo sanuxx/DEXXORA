@@ -183,16 +183,26 @@
     </section>
 
     <!-- CLOSING CTA — Cinematic Band -->
-    <div class="text-band" style="background: #040c1c; padding: 96px 52px; border-top: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden;">
-      <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 50%, rgba(37, 99, 235, 0.12) 0%, transparent 70%); pointer-events: none;"></div>
-      <div class="text-band-inner" style="grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1;">
+    <style>
+      .ind-cta-band { background:#040c1c; padding:clamp(52px,8vw,96px) clamp(20px,4vw,52px); border-top:1px solid rgba(255,255,255,0.05); position:relative; overflow:hidden; }
+      .ind-cta-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:center; position:relative; z-index:1; }
+      .ind-cta-btns { display:flex; gap:16px; justify-content:flex-end; flex-wrap:wrap; }
+      @media(max-width:768px) {
+        .ind-cta-inner { grid-template-columns:1fr; gap:32px; }
+        .ind-cta-btns { justify-content:flex-start; flex-direction:column; }
+        .ind-cta-btns button { width:100%; }
+      }
+    </style>
+    <div class="ind-cta-band">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 70% 50%,rgba(37,99,235,0.12) 0%,transparent 70%);pointer-events:none;"></div>
+      <div class="ind-cta-inner">
         <div>
-          <h2 class="text-band-heading" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.15;">Looking for an industry-specific <span style="color: #22d3f5;">conversation?</span></h2>
-          <p class="text-band-body" style="margin-top: 16px; font-size: 1.05rem; opacity: 0.7;">Tell us about your sector and the decisions you're trying to sharpen.</p>
+          <h2 class="text-band-heading" style="font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.15;">Looking for an industry-specific <span style="color:#22d3f5;">conversation?</span></h2>
+          <p class="text-band-body" style="margin-top:16px;font-size:1.05rem;opacity:0.7;">Tell us about your sector and the decisions you're trying to sharpen.</p>
         </div>
-        <div style="display: flex; gap: 18px; justify-content: flex-end; flex-wrap: wrap;">
-          <button class="btn-primary" onclick="showPage('contact')" style="height: 56px; padding: 0 36px; border-radius: 50px; font-size: 1rem; box-shadow: 0 0 25px rgba(37, 99, 235, 0.45);">Start a Conversation</button>
-          <button class="btn-secondary" onclick="showPage('expert')" style="height: 56px; padding: 0 36px; border-radius: 50px; font-size: 1rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.15);">Explore the Expert Hub</button>
+        <div class="ind-cta-btns">
+          <button class="btn-primary" onclick="showPage('contact')" style="height:56px;padding:0 36px;border-radius:50px;font-size:1rem;">Start a Conversation</button>
+          <button class="btn-secondary" onclick="showPage('expert')" style="height:56px;padding:0 36px;border-radius:50px;font-size:1rem;">Explore the Expert Hub</button>
         </div>
       </div>
     </div>
